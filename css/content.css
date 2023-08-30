@@ -1,0 +1,284 @@
+:root {
+    --primaryColor: #3F3354;
+    --color: #121212;
+}
+
+.banner-container { 
+    height: 22rem; 
+    width: 100%;  
+    background: var(--primaryColor);;
+}
+
+.banner-title {
+    display: block;
+    margin: 1rem 0 1rem 0;
+    font-size: 2rem;
+    line-height: 1;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.banner-text { 
+    display: block; 
+    margin: 1rem 0 1.6rem 0; 
+    font-size: 0.8rem; 
+    line-height: 1.3; 
+    color:#FFFFFF; 
+}
+
+.container-half { 
+    position: relative; 
+    top: 3rem; 
+    text-align: center; 
+    padding: 2rem 2rem 2rem 2rem; 
+}
+
+.search-input{
+    margin: 0 0 0 0; 
+    width: 30%;
+    height: 1.8rem;
+    padding: 0;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+@media (max-width:768px){ 
+    .search-input{ width: 30%; }
+}
+@media (max-width:1200px){ 
+    .search-input{ width: 50%; }
+}
+@media (max-width:1400px){ 
+    .search-input{ width: 70%; }
+}
+
+.processo-integracao {
+    top: 0.5rem;
+    position: relative; 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.block {
+    cursor: pointer;
+    padding-right: 25px;  
+    width: 68%;
+    height: 18rem;
+    text-align: center;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+}
+
+.block:hover, .block-tipo:hover {
+    transform: scale(1.05);
+    transition: 500ms linear;
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.block-title{
+    display: block;
+    margin: 3.5rem 0.8rem 1rem 17rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--primaryColor);;
+    font-weight: 600;
+}
+
+.block-text{
+    display: block; 
+    margin: 1rem 3rem 0 20rem;
+    font-size: 0.8rem; 
+    line-height: 1.3; 
+    color: var(--primaryColor);; 
+}
+
+.block-link{
+    font-weight: 600;
+}
+
+.block-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/integracao.png);
+    position: relative;
+    display: block;
+    margin: 0.5rem 0 0 1rem; 
+    width: 16.5rem;
+    height: 16.5rem;
+    float: left;
+}
+
+@media (max-width:755px){ 
+    .block{ display: block}
+    .block-image{ display: none; }
+    .block-title{ margin: 2rem 0 0 1rem; }
+    .block-text{ margin: 1.5rem 0 0 1.5rem; }
+}
+
+.tipo-integracao { 
+    position: relative; 
+    width: 100%; 
+    margin: 16rem 0 0 0; 
+}
+
+.duvidas-frequentes {
+    position: relative;
+    width: 100%;
+    margin: 5rem 0 0 0;
+}
+
+.title { 
+    position: relative; 
+    top: 0; 
+    width: 99.99%; 
+}
+
+.title span{ 
+    position: relative; 
+    display: inline-block; 
+    font-size: 1.5rem; 
+    line-height: 2rem; 
+    font-weight: 600; 
+    padding: 0 2.5rem; 
+    color: var(--primaryColor); 
+}
+
+.title:before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1.4rem;
+    top: 0.4rem;
+    background-color: var(--primaryColor);
+}
+
+#right {
+    text-align: right; 
+}
+
+#right span{
+    right: 12%;
+}
+
+#left span{
+    left: 12%;
+}
+
+#right:before {
+    right: 60%;
+}
+
+#left:before {
+    left: 60%;
+}
+
+.blocks-integracao{
+    top: 3rem;
+    position: relative; 
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.block-tipo {
+    cursor: pointer;
+    margin: 0 3.7rem 0 3.7rem;
+    width: 16%;
+    height: 10rem;
+    text-align: center;
+    display: block;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+}
+
+.block-tipo-title{
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1;
+    color: var(--primaryColor);
+    font-weight: 600;
+}
+
+.block-tipo-text{
+    display: block; 
+    margin: 0.5rem 0 0 0; 
+    font-size: 0.7rem; 
+    line-height: 1.3; 
+    color: var(--primaryColor);; 
+}
+
+.block-tipo-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: block;
+    margin: 1.3rem 4rem 0.6rem 4rem; 
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+#requisicao{
+    background-image: url(../img/limite.png);
+}
+
+#estoque{
+    background-image: url(../img/estoque.png);
+}
+
+#preco{
+    background-image: url(../img/preco.png);
+}
+
+#cliente{
+    background-image: url(../img/cliente.png);
+}
+
+#status{
+    background-image: url(../img/status.png);
+}
+
+#credito{
+    background-image: url(../img/credito.png);
+}
+
+#pedido{
+    background-image: url(../img/pedido.png);
+}
+
+#pagamento{
+    background-image: url(../img/pagamento.png);
+}
+
+#trackings{
+    background-image: url(../img/tracking.png);
+}
+
+#valeca{
+    background-image: url(../img/vca.png);
+}
+
+#verbaflex{
+    background-image: url(../img/verbaflex.png);
+}
+
+#carteira{
+    background-image: url(../img/carteira.png);
+}
+
+#financeiro{
+    background-image: url(../img/financeiro.png);
+}
