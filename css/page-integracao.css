@@ -58,13 +58,13 @@
     justify-content: center;
 }
 
-.regras-envio {
+.fase-projeto {
     position: relative;
     width: 100%;
-    margin: 68rem 0 0 0;
+    margin: 63rem 0 0 0;
 }
 
-.duvidas-frequentes {
+.teste-homologacao {
     position: relative;
     width: 100%;
     margin: 5rem 0 0 0;
@@ -124,7 +124,7 @@
 }
 
 .block-check {
-    margin: 3rem 0 0 0;
+    margin: 2rem 0 0 0;
 }
 
 .block-check-image {
@@ -156,7 +156,7 @@
     color: var(--primaryColor); 
 }
 
-.block-pergunta {
+.block-etapa {
     cursor: pointer;
     top: 3rem;
     margin: 0 12rem 1rem 11rem;
@@ -165,13 +165,14 @@
     height: 2rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     border-radius: 1rem;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
     box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
 }
 
-.block-pergunta-text{
+.block-etapa-title{
     display: block; 
     margin: 0.4rem 0 0 1rem; 
     font-size: 0.9rem;
@@ -180,22 +181,21 @@
     color: var(--primaryColor);
 }
 
-.block-pergunta-res {
+.block-etapa-text {
     display: block; 
     margin: 5rem 17rem 0 14rem; 
     font-size: 0.9rem;
     line-height: 1.3;
 }
 
-.block-pergunta-icon{
+.block-etapa-icon{
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
     display: block;
-    margin: 0.2rem 0 0 30rem; 
+    margin: 0.3rem 1.5rem 0 0; 
     width: 1.4rem;
     height: 1.4rem;
-    float: right;
     background-image: url(../img/abaixo.png);
 }
 
@@ -251,54 +251,6 @@
     left: 60%;
 }
 
-#requisicao {
-    background-image: url(../img/limite.png);
-}
-
-#estoque {
-    background-image: url(../img/estoque.png);
-}
-
-#preco {
-    background-image: url(../img/preco.png);
-}
-
-#cliente {
-    background-image: url(../img/cliente.png);
-}
-
-#status { 
-    background-image: url(../img/status.png);
-}
-
-#credito {
-    background-image: url(../img/credito.png);
-}
-
-#pedido {
-    background-image: url(../img/pedido.png);
-}
-
-#pagamento {
-    background-image: url(../img/pagamento.png);
-}
-
-#trackings {
-    background-image: url(../img/tracking.png);
-}
-
-#valeca {
-    background-image: url(../img/vca.png);
-}
-
-#verbaflex {
-    background-image: url(../img/verbaflex.png);
-}
-
-#carteira {
-    background-image: url(../img/carteira.png);
-}
-
-#financeiro {
-    background-image: url(../img/financeiro.png);
+#p-integracao{
+    background-image: url(../img/p-integracao.png);
 }

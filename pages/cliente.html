@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
   <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/pages.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/page-cliente.css" rel="stylesheet" type="text/css"/>
   <title>Cliente | Infracommerce</title>
 </head>
 
@@ -67,10 +67,15 @@
             <div class="block-image" id="cliente"></div>
             <div class="block-title">Cliente</div>
             <div class="block-text">
-              Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-              ratione error est porro sint et facilis soluta qui delectus quasi.
-              Non cupiditate atque qui obcaecati laudantium et architecto
-              placeat?
+                Nossa plataforma funciona como intermediária, conectando fornecedores e compradores de forma
+                eficiente, tornando o processo de aquisição de produtos mais ágil e conveniente para ambas as 
+                partes. Os clientes, por meio da plataforma, podem pesquisar produtos, comparar preços, acessar 
+                informações detalhadas, fazer pedidos e muito mais.
+                <br><br>
+                A integração de clientes nasce na plataforma, no ato que um cliente realiza o cadastro no site, que é 
+                integrado com o Sintegra onde a maior parte dos dados cadastrais são extraídos por ele como o 
+                nome da empresa e o endereço completo dela.
+              <br><br><br>
             </div>
           </div>
         </div>
@@ -84,45 +89,47 @@
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Status dos novos cliente</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Todo novo cliente cadastrado na plataforma é enviado para o distribuidor e seu o retorno de 
+                status deverá ser PEN.
+                <br>
+                A partir desta, será possível realizar pedidos com os meios de pagamentos gerenciados pela 
+                Infracommerce (Exceto boleto faturado, pois depende de aprovação e limite de crédito).
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Status para clientes já integrados</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Quando um cliente já existente na plataforma recebe uma atualização dos dados, é enviado uma 
+                nova notificação de cadastro para o distribuidor por completa. Neste caso, o distribuidor pode
+                retornar APV ou RPV dependendo do cenário atual em que o cliente se encontra. 
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Envio massivo de clientes</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Durante a implantação será enviado para o distribuidor os clientes de forma massiva, atendidos 
+                pelo seu range de CEP. 
+                <br>
+                Por este motivo, é importante que toda estrutura do distribuidor, de banco, infraestrutura, 
+                seja capaz de receber esses dados e integrá-los. Na etapa de homologação é possível antecipar 
+                essa carga, a fim de evitar quaisquer eventuais problemas na etapa de produção.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Atualização de cadastro</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Importante ressaltar que caso o distribuidor não deseja que informações cadastrais enviadas 
+                via plataforma atualizem dados internos de sua base já existente, como telefone, endereço, 
+                etc é necessário que o distribuidor desenvolva uma condição para não atualizar os campos 
+                desejados, e caso optar por essa restrição, ela não retorne erro para plataforma.
             </div>
         </div>
 
@@ -135,58 +142,89 @@
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                Por que não consigo efetuar um pedido de boleto faturado sendo que o cliente possui limite de crédito ou status APV?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Sempre tentar efetuar um novo envio de limite para esse cliente e caso não apareça verificar se 
+            o distribuidor efetuou o envio de preços para os meios de pagamentos que ele deseja efetuar o 
+            pedido. 
+            <br><br>
+            <strong>
+                Se mesmo assim não estiver disponível deve ser verificado se os tipos de pagamento estão 
+                habilitados para o distribuidor (Essa verificação deve ser realizada via NRP).
+            </strong>
         </div>
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                Porque o cliente está visualizando os preços errados ou de outra política de preço?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Sempre deve ser verificado os preços enviados para a plataforma e validado se esse cliente está 
+            atribuído a uma política que não deveria. Sugerimos o envio atualizado da requisição de preços para 
+            plataforma que faça a inclusão do cliente para a política desejada.
         </div>
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                Os clientes que já tenho na minha base já possuem cadastro da plataforma Infracommerce?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Todos os clientes cadastrados na plataforma que atendem a faixa de CEP do distribuidor serão enviados
+            e caso o cliente já existente em sua base não tenha sido enviado pode ser que o mesmo não tenha se cadastrado
+            em nossas lojas. Nesse caso recomendamos o registro do mesmo para envio ao ERP do distribuidor.
+            <br><br>
+            <strong>
+                Observação: Caso os dados do cliente não devam ser sobrescritos, o distribuidor deverá 
+                realizar uma tratativapara que os dados não sejam atualizados.
+            </strong>
         </div>
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                Porque clientes específicos não visualizam alguns produtos?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Nesse caso, é necessário verificar se o cliente está incluído em uma política de preço específica,
+            da qual não há preços enviados para aquele produto.
+            <br>
+            Recomendamos o envio atualizado dos preços para aquele produto. Assim ele ficará visível para os usuários.
+        </div>
+
+        <div class="block-pergunta">
+            <div class="block-pergunta-text">
+                Como impossibilitar um cliente de efetuar compras no site?
+            </div>
+            <div class="block-pergunta-icon"></div>
+        </div>
+
+        <div class="block-pergunta-res">
+            Para isso, é necessário enviar status <strong>RPV (Reprovado)</strong> ao cliente.
+            Dessa forma ele não conseguirá efetuar compras com nenhum método de pagamento.
+        </div>
+
+        <div class="block-pergunta">
+            <div class="block-pergunta-text">
+                E como fazer com que esse(s) cliente(s) voltem a comprar?
+            </div>
+            <div class="block-pergunta-icon"></div>
+        </div>
+
+        <div class="block-pergunta-res">
+            Para isso, é necessário enviar status <strong>APV (Aprovado)</strong> ao cliente.
+            Com isso, os produtos ficarão disponíveis novamente para compra.
         </div>
 
     </div>

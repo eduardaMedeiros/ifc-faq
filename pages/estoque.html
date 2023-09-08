@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
   <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/pages.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/page-estoque.css" rel="stylesheet" type="text/css"/>
   <title>Estoque | Infracommerce</title>
 </head>
 
@@ -67,10 +67,26 @@
             <div class="block-image" id="estoque"></div>
             <div class="block-title">Estoque</div>
             <div class="block-text">
-              Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-              ratione error est porro sint et facilis soluta qui delectus quasi.
-              Non cupiditate atque qui obcaecati laudantium et architecto
-              placeat?
+                O Estoque de produtos para e-commerce B2B é uma parte crucial da cadeia de suprimentos e requer uma 
+                gestão cuidadosa para garantir a satisfação dos clientes e o sucesso do negócio. Geralmente a 
+                quantidade de estoque é controlado pelo sistema gerenciador (ERP) e enviado a informação parcial ou 
+                completa da quantidade de produtos que o distribuidor deseja comercializar via sistema integrador 
+                (Plataforma que envia as informações para o e commerce).
+                <br><br>
+                O padrão utilizado pela plataforma segue o padrão EAN/SKU sendo necessário que os produtos 
+                estejam cadastrados no ERP e também no nosso ambiente, podendo ter diferenciações tanto em 
+                unidade quanto em produtos com caixa.
+                <br><br>
+                Para os produtos caixa, o SKU segue o modelo: EAN + C + Quantidade de produtos vendidos 
+                naquela caixa, sendo necessário que o distribuidor configure e cadastre os produtos
+                nesse padrão em seu ERP.
+                <br><br>
+                Segue 2 exemplos de SKU mostrando a diferença dele em unidade e em caixa:
+                <br><br>
+                <strong>Exemplo de SKU/EAN unitário: </strong>7891150058428
+                <br>
+	            <strong>Exemplo do SKU/EAN 7891150058428 sendo vendido em uma caixa de 4 unidades: </strong>7891150058428C4.
+                <br><br><br>
             </div>
           </div>
         </div>
@@ -84,45 +100,49 @@
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Requisições</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Importante que não seja enviada a carga FULL dos produtos a todo momento para não onerar 
+                a fila de processamento da plataforma ocasionando limite excedido de requisições.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Quantidade de estoque</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                A quantidade enviada deve ser em número, sem casas decimais e, consequentemente, 
+                sem ponto ou vírgula.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Atualização de estoque</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Só enviar a integração de atualização de estoque para SKUs que tenham alteração 
+                em sua quantidade de 5% ou mais desde a última integração enviado.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Período de envio</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                O distribuidor deve ser capaz de definir de quanto em quanto tempo a integração de estoque deve ocorrer, 
+                para que sejam enviadas em períodos pré-determinados e não a todo momento que há alguma alteração de 
+                estoque em algum SKU.
+            </div>
+        </div>
+
+        <div class="block-check">
+            <div class="block-check-image"></div>
+            <div class="block-check-title">Produtos caixa</div>
+            <div class="block-check-text">
+                Para distribuidores que trabalham com venda de caixas ou múltiplos mas controlam seus 
+                estoques em sistemas internos e centro de distribuição por unidades, é necessário que os 
+                estoques sejam enviados para cada SKU respeitando a lógica de unidade ou caixa vendida no site.
+                Ou seja, neste caso, o estoque deve ser calculado para a versão da caixa.
             </div>
         </div>
 
@@ -135,60 +155,30 @@
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                Porque o produto não está disponível no site?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Para o produto estar visível é necessário que o mesmo tenha estoque e preço. Nesses casos é
+            recomendado um novo envio atualizado para validação na plataforma.
         </div>
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                O que é necessário enviar para que o produto seja desativado no site?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Existem duas formas, sugerimos que as ambas sejam feitas para desativação:
+            <br>
+            Enviar <strong>estoque 0(zero)</strong> para o produto.
+            <br> 
+            Enviar <strong>preço 0 (zero)</strong> para o produto.
         </div>
-
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
-        </div>
-
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
-        </div>
-
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
-        </div>
-
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
-        </div>
-
     </div>
 
     <footer>

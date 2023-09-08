@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
   <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/pages.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/page-integracao.css" rel="stylesheet" type="text/css"/>
   <title>Processo de Integração | Infracommerce</title>
 </head>
 
@@ -32,8 +32,8 @@
                         integrações </a>
                     </li>
                     <li class="header-menu-item">
-                      <a href="#duvidas">
-                        dúvidas frequentes </a>
+                      <a href="#testes">
+                        testes homologação </a>
                     </li>
                     <li class="header-menu-item">
                       <a href="../index.html#fale">
@@ -101,7 +101,7 @@
                 Após o término dos testes em homologação, são solicitadas as informações necessárias aos testes no ambiente de produção.
                 <br><br><br>
 
-                <div class="block-title-secondary">Desenvolvimento</div>
+                <div class="block-title-secondary">Desenvolvimento e Homologação</div>
                 Após a reunião de apresentação do projeto, é disponibilizado o manual de integração, onde o 
                 distribuidor deve efetuar o desenvolvimento dos 3 Endpoints, sendo eles: CUSTOMER, ORDER e 
                 PAYMENT, necessários para a comunicação entre plataforma e ERP.
@@ -115,14 +115,18 @@
                 Após a finalização do desenvolvimento por parte do distribuidor, é realizada a etapa de 
                 validação dos endpoints solicitados. Obtendo os retornos corretos, é orientado à equipe de 
                 projetos a emissão do ticket de premissas e iniciada a etapa de homologação.
-                <br><br><br>
+                <br><br>
+                Em homologação é efetuado a validação de todos os cenários possíveis dentro da plataforma. A equipe
+                de integração mantém um escopo de testes padrão que pode ser customizado e adaptado de acordo com as necessidades
+                do Distribuidor.
+                <br><br><br><br>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="regras-envio">
+    <div class="fase-projeto">
         <div id="left" class="title">
             <span>Fases do Projeto</span>
         </div>
@@ -137,7 +141,7 @@
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Liberação de Acessos (Caso o projeto seja integrado junto a Consultoria)</div>
+            <div class="block-check-title">Liberação de Acessos (Projetos Consultoria)</div>
             <div class="block-check-text">
                 Parametrizações entre o ERP do Distribuidor e Integradora. 
             </div>
@@ -145,7 +149,7 @@
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Desenvolvimento (Caso o projeto seja Desenvolvimento Próprio)</div>
+            <div class="block-check-title">Desenvolvimento (Projeto Desenvolvimento Próprio)</div>
             <div class="block-check-text">
                 Desenvolvimento das API’s por parte do Seller de acordo com o manual de integração. 
             </div>
@@ -185,65 +189,87 @@
 
     </div>
 
-    <div class="duvidas-frequentes" id="duvidas">
+    <div class="teste-homologacao" id="testes">
         <div id="right" class="title">
-            <span>Dúvidas Frequentes</span>
+            <span>Testes de Homologação</span>
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+        <div class="block-etapa">
+            <div class="block-etapa-title">
+                Testes Pré-Rollout
             </div>
-            <div class="block-pergunta-icon"></div>
+            <div class="block-etapa-icon"></div>
         </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+        <div class="block-etapa-text">
+            Nessa fase é testado o fundamental do processo para que o distribuidor possa inicialmente deixar
+            funcional o essencial. Os cenários são divididos em: 
+            <br><br>
+            Envio de estoque, política de preço, integração de cliente, integração limite de crédito e 
+            atualização, integração de pedido e faturamento, validação retorno de pedido duplicado,
+            atualização de status de cliente e atualização de cadastro de cliente.
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+        <div class="block-etapa">
+            <div class="block-etapa-title">
+                Testes de Pedido Política Default + Pagamento + Trackings
             </div>
-            <div class="block-pergunta-icon"></div>
+            <div class="block-etapa-icon"></div>
         </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+        <div class="block-etapa-text">
+            Na etapa de pedido será testado as integrações mais aprofundadas, efetuando o fluxo completo de um pedido
+            dentro da plataforma. Será validado o recebimento do pedido dentro do ERP, o envio de pagamento e o faturamento
+            do pedido, assim como o cancelamento do mesmo também.
+            <br><br> 
+            Os cenários são divididos em: fluxo de devolução, pedidos com promoções e bonificações,
+            faturamento completo e parcial, confirmação de pagamento e cancelamento de pedidos.
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+        <div class="block-etapa">
+            <div class="block-etapa-title">
+                Testes de Pedido Política Cluster + Pagamento + Cancelamento
             </div>
-            <div class="block-pergunta-icon"></div>
+            <div class="block-etapa-icon"></div>
         </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+        <div class="block-etapa-text">
+            Na segunda etapa de pedido será testado além da integração deles com diversos métodos de pagamento,
+            o envio de preços clusterizados, atualização de preços e inclusão de CNPJ's em diversas políticas de preço.
+            <br><br> 
+            Os cenários são divididos em: envio e atualização dos preços, movimentação de CNPJ's em novas
+            políticas de preço, pedidos pagos com PIX, Vale Troca e com mais de um 
+            método de pagamento.
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+        <div class="block-etapa">
+            <div class="block-etapa-title">
+                Testes de Novas Melhorias
             </div>
-            <div class="block-pergunta-icon"></div>
+            <div class="block-etapa-icon"></div>
         </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+        <div class="block-etapa-text">
+            Essa etapa é exclusiva para a realização de testes das melhorias implementadas dentro da nossa plataforma.
+            As melhorias são exclusivas de cada loja e deve ser verificado comercialmente a implementação delas.
+            <br><br>
+            As validações dependem de acordo com o que foi contratado comercialmente e alinhado junto a equipe responsável
+            pelo acompanhamento do projeto.
+        </div>
+
+        <div class="block-etapa">
+            <div class="block-etapa-title">
+                Finalização projeto: Virada Produção
+            </div>
+            <div class="block-etapa-icon"></div>
+        </div>
+
+        <div class="block-etapa-text">
+            Na etapa final de homologação é iniciada as configurações finais do Distribuidor em ambiente de produção.
+            Será efetuado o envio da carga total de estoque e preço para os produtos que serão comercializados.
+            <br><br>
+            Além disso iremos realizar o envio da base de clientes que atendem a faixa de CEP do distribuidor e caso
+            necessário algumas validações de status de cliente, limite de crédito e pedido.
         </div>
 
     </div>

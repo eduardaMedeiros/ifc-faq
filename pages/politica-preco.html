@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
   <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/pages.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/page-politica-preco.css" rel="stylesheet" type="text/css"/>
   <title>Política de Preço | Infracommerce</title>
 </head>
 
@@ -67,10 +67,34 @@
             <div class="block-image" id="preco"></div>
             <div class="block-title">Política de Preço</div>
             <div class="block-text">
-              Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-              ratione error est porro sint et facilis soluta qui delectus quasi.
-              Non cupiditate atque qui obcaecati laudantium et architecto
-              placeat?
+                Política de preço trata-se de um conjunto de estratégias que têm como objetivo 
+                determinar um padrão a ser seguido para preços e meios de pagamento, 
+                podendo trazer vantagens e flexibilidade aos seus planos de negócios. 
+                Hoje a plataforma trabalha com dois tipos de política de preços, padrão 
+                <strong>(DEFAULT)</strong> e personalizado <strong>(CLUSTER)</strong>.
+                <br><br><br>
+
+                <div class="block-title-secondary">Política Default</div>
+                São os preços base para a negociação com os clientes B2B. O preço de padrão é o preço inicial
+                antes de quaisquer descontos ou condições especiais serem aplicados de acordo com a regra de negócio
+                do Distribuidor.
+                <br><br>
+	            Vale ressaltar que todos os clientes na plataforma que não estão atrelados a uma Política 
+                Cluster estarão automaticamente incluídos para Política DEFAULT. Como o próprio nome já 
+                sugere, trata-se da política padrão reconhecida pela plataforma e a partir desse ponto o 
+                Distribuidor pode optar por mantê-lo nessa política ou enviá-lo para uma política CLUSTER
+                <br><br><br>
+
+                <div class="block-title-secondary">Política Cluster</div>
+                São preços personalizados para cada cliente ou grupo de clientes. Esses preços levam em 
+                consideração fatores como os preços especiais, condições de pagamento, relacionamento comercial
+                e outros critérios específicos acordados entre as partes envolvidas.
+                <br><br>
+                Preços Clusterizados permite que o distribuidor aplique preços diferenciados para os seus 
+                clientes, devido a possibilidade de enviar inúmeras políticas de preços, cada política possui
+                os produtos, tabelas de preços e grupo de clientes que deseja vincular. Uma vez que a 
+                plataforma permite trabalhar com várias políticas, é possível aplicar os preços diferenciados.
+              <br><br><br>
             </div>
           </div>
         </div>
@@ -84,48 +108,44 @@
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Envio das requisições</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Os envios não devem ultrapassar 100 produtos dentro da mesma requisição, em casos onde será 
+                feita uma carga alta, é necessário quebrar em blocos de no máximo 100 produtos por requisição. 
+                <br><br>
+                <strong>
+                    É de suma importância controlar o fluxo de envios. A plataforma sempre trabalha em forma de 
+                    atualização para apenas do que foi enviado, portanto os produtos que não sofreram alteração, 
+                    não devem ser enviados nas próximas requisições (enviar apenas o que sofreu alteração com 
+                    relação às últimas requisições).
+                </strong>
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Inclusão de clientes</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Um cliente só pode fazer parte de uma política de preço por vez, então é preciso que as 
+                políticas contenham os preços dos produtos que serão comercializados para aquele cliente
+                respectivo.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Atualização de preços</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                As políticas trabalham em forma de atualização, ou seja: Caso o distribuidor envie a 
+                primeira requisição para política X contendo 50 produtos, e outra requisição contendo 
+                somente 1 produto, a política irá conter 51 produtos dentro da plataforma. 
+                <br>
+                Isso vale para inclusão de clientes na política: Caso houver a necessidade de incluir clientes
+                em políticas existentes, basta seguir o exemplo de inclusão de clientes, não há necessidade de
+                repetir as requisições anteriores, pois sobrecarregará o tempo de integração, devido ao volume 
+                dos pacotes.
             </div>
         </div>
-
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
-            <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
-            </div>
-        </div>
-
     </div>
 
     <div class="duvidas-frequentes" id="duvidas">
@@ -135,60 +155,86 @@
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                Como faço para mover clientes para as políticas Clusters?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            É necessário apenas enviar a requisição com a inclusão do CNPJ. Assim o cliente já estará na 
+            tabela de preço atualizada.
+            <strong>(O mesmo deve ocorrer para mudança de políticas)</strong>
         </div>
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                Como faço para mover um cliente para a política Default?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Todos os clientes cadastrados na plataforma automaticamente visualizam os preços da política 
+            Default. O único caso de inclusão de cliente na política default que deve ser feito é quando 
+            um cliente estava em outra política e deseja ser movido novamente para default.
+            <br>
+            O envio segue o mesmo realizado para a política Cluster, a única diferença é que o ID da política
+            atribuida será a DEFAULT.
         </div>
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                É necessário enviar todos os preços novamente quando um novo cliente é incluído nela?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Para mover o cliente em uma nova política é necessário apenas o envio da requisição de inclusão
+            respeitando o modelo padrão especificado no manual de integração.
+            <br>
+            Não há necessidade de enviar produtos e preços novamente, a plataforma sempre armazena a última 
+            requisição enviada e recomendamos que atualizações de novos clientes, produtos e tabelas de preços 
+            sejam realizadas conforme a necessidade para que esse processo não onere a fila e o tempo de 
+            processamento.
         </div>
 
         <div class="block-pergunta">
             <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
+                Não utilizo mais uma política de preço. O que devo fazer?
             </div>
             <div class="block-pergunta-icon"></div>
         </div>
 
         <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+            Nesses casos recomendamos que seja enviado o preço zerado para todos os produtos e suas condições 
+            de pagamento. Além disso, os clientes incluídos nela devem ser movidos para as suas 
+            novas respectivas tabelas de preços. 
         </div>
 
+        <div class="block-pergunta">
+            <div class="block-pergunta-text">
+                Como faço para que meu cliente tenha disponibilidade apenas em condições de pagamentos específicas?
+            </div>
+            <div class="block-pergunta-icon"></div>
+        </div>
+
+        <div class="block-pergunta-res">
+            Recomendamos o envio de uma política apenas com as condições desejadas e o mesmo seja incluído nela. 
+            Dessa forma ele só irá visualizar os preços daquela política em especifíco. 
+        </div>
+
+        <div class="block-pergunta">
+            <div class="block-pergunta-text">
+                Não irei trabalhar mais com uma condição de pagamento. Como faço para indisponibiliza-la?
+            </div>
+            <div class="block-pergunta-icon"></div>
+        </div>
+
+        <div class="block-pergunta-res">
+            Só é necessário enviar preço zerado à condição desejada de todas as políticas de preço disponíveis
+            na plataforma. Assim, esse método de pagamento não ficará mais disponível.
+        </div>
     </div>
 
     <footer>

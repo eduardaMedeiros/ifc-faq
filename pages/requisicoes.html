@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
   <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/pages.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/page-requisicoes.css" rel="stylesheet" type="text/css"/>
   <title>Limite de Requisições | Infracommerce</title>
 </head>
 
@@ -67,62 +67,82 @@
             <div class="block-image" id="requisicao"></div>
             <div class="block-title">Limite de Requisições</div>
             <div class="block-text">
-              Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-              ratione error est porro sint et facilis soluta qui delectus quasi.
-              Non cupiditate atque qui obcaecati laudantium et architecto
-              placeat?
+                Para que possamos ter uma boa prática no recebimento das requisições e na utilização da plataforma, 
+                viu-se a necessidade de criar uma política de limite de requisições, e dessa forma atender nossos 
+                clientes com mais qualidade e segurança. 
+                <br><br>
+                Cada integração terá seu limite permitido no período de 1 hora. Caso a quantidade de requisições 
+                sejam superadas, o responsável pelo envio terá suas integrações bloqueadas e divididas para serem 
+                processadas durante seu bloqueio, e o tempo de bloqueio será calculado pelo tempo necessário a ser 
+                processado os registros excedentes ao limite enviado.
+                <br><br>
+                <div class="block-title-secondary">Retorno de envio</div>
+                Após a exceção de envio, a plataforma retornará a seguinte mensagem de erro para as 
+                requisições enviadas:
+                <br>
+                <strong>“Não foi possível executar essa integração, pois excede 
+                ao limite permitido.”</strong>
+                <br><br>
+                Para o tipo de integração excedida, durante o tempo de bloqueio não serão aceitas novas integrações, 
+                todas as demais requisições serão aceitas normalmente se respeitarem os seus limites. Além disso, elas serão 
+                diluídas ao longo do tempo de bloqueio, conforme o limite de envios autorizados por hora.
+                <br><br><br>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="regras-envio">
+    <div class="tabela-referencia">
         <div id="left" class="title">
-            <span>Regras de Envio</span>
+            <span>Valores Permitidos</span>
         </div>
 
         <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-image" id="estoque"></div>
+            <div class="block-check-title">Estoque</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                25.000 requisições de atualização de estoque para SKU's por hora.
             </div>
         </div>
 
         <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-image" id="preco"></div>
+            <div class="block-check-title">Política de Preço</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                320 requisições atualizadas/enviadas de política de preços por hora.
             </div>
         </div>
 
         <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-image" id="preco-xml"></div>
+            <div class="block-check-title">Preços XML</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                4.000 requisições de alterações de preços em SKU's por hora.
             </div>
         </div>
 
         <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-image" id="status"></div>
+            <div class="block-check-title">Status de Cliente</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                4.000 requisições de alterações de Status de Cliente por hora.
+            </div>
+        </div>
+
+        <div class="block-check">
+            <div class="block-check-image" id="credito"></div>
+            <div class="block-check-title">Limite de Crédito</div>
+            <div class="block-check-text">
+                25.000 requisições de atualizações de limite de crédito para CNPJ's por hora.
+            </div>
+        </div>
+
+        <div class="block-check">
+            <div class="block-check-image" id="trackings"></div>
+            <div class="block-check-title">Trackings</div>
+            <div class="block-check-text">
+                1.000 requisições de Trackings alteradas por hora.
             </div>
         </div>
 

@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
   <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/pages.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/page-pedido.css" rel="stylesheet" type="text/css"/>
   <title>Pedido | Infracommerce</title>
 </head>
 
@@ -67,10 +67,71 @@
             <div class="block-image" id="pedido"></div>
             <div class="block-title">Pedido</div>
             <div class="block-text">
-              Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-              ratione error est porro sint et facilis soluta qui delectus quasi.
-              Non cupiditate atque qui obcaecati laudantium et architecto
-              placeat?
+                Refere-se a uma solicitação feita por um cliente para adquirir produtos ou serviços através de
+                uma loja online. É o processo pelo qual um cliente seleciona os itens que deseja comprar, 
+                coloca-os em seu carrinho de compras virtual e, em seguida, completa o processo de compra 
+                ao fornecer informações de pagamento, endereço de entrega e outras informações relevantes.
+                <br><br>
+                Para resumir um pedido no e-commerce é o processo completo que vai desde a seleção de produtos
+                até a entrega bem-sucedida desses produtos ao cliente, incluindo todas as etapas 
+                intermediárias de pagamento, processamento e entrega.
+                <br><br>
+                <strong>
+                    É importante ressaltar que terá a possibilidade de surgir pedidos contendo itens com valores
+                    promocionais e bonificações.
+                </strong>
+                <br><br><br>
+                
+                <div class="block-title-secondary">Pedidos com promoções</div>
+                Promoções referem-se a estratégias de marketing usadas por empresas para oferecer descontos ou 
+                incentivos temporários aos consumidores, a fim de aumentar as vendas, atrair novos clientes ou 
+                fidelizar os existentes.
+                <br><br>
+                Essas promoções podem ser aplicadas de diversas formas, podendo ser atrelada por clientes, 
+                por sortimentos, ou por produtos. Nelas podem ser incorporadas condições
+                (Ex: A promoção só vale para primeira compra na plataforma). Todas essas especificações serão
+                alinhadas comercialmente com o Distribuidor no Go-Live do projeto.   
+                <br><br><br>
+
+                <div class="block-title-secondary">Pedidos com bonificação (Kit Bonificado)</div>
+                O termo "Kit Bonificado" no contexto do e-commerce refere-se a um tipo específico de oferta ou 
+                promoção em que um conjunto de produtos ou serviços relacionados é vendido como um pacote, muitas
+                vezes com algum tipo de benefício adicional incluído. 
+                <br><br>
+                Essa estratégia visa incentivar os clientes a comprar mais do que apenas um produto individual, 
+                proporcionando-lhes uma vantagem econômica ou algum tipo de valor agregado.
+                <br><br>
+                Esses kits geralmente são compostos por produtos complementares ou relacionados, de modo que a 
+                compra do kit seja mais vantajosa do que adquirir cada item separadamente. Isso pode estimular 
+                os consumidores a experimentarem produtos adicionais que normalmente não comprariam isoladamente.
+                <br><br>
+                <strong>
+                    Nesse caso um dos itens deve ser bonificado, sendo faturado com o valor igual a zero na nota 
+                    (Nota Bonificada) que é enviada para a plataforma.
+                    <br><br>
+                    O distribuidor também deve informar na nota o código do kitSkuId, que deve ser identificado
+                    no XML do pedido.
+                    <br><br> 
+                    Vale ressaltar que um produto do tipo bonificado é identificado no pedido através da tag “skuType”. 
+                    Podemos identificar quando o texto neste campo for igual a FFR, assim podemos saber quando o produto 
+                    é bonificado ou não.
+                </strong>
+                <br><br><br>
+
+                <div class="block-title-secondary">Processo de devolução</div>
+                Os pedidos que foram faturados mas não foram entregues ou que o cliente devolveu no ato 
+                da entrega, devem receber o envio da tracking de CAN, mesmo que tenha sido faturados 
+                anteriormente.
+                <br><br>
+                <strong>Passo a Passo Devolução</strong>
+                <br><br>
+                <strong>1 - </strong>Distribuidor deve enviar a Tracking de cancelamento, sinalizando que o 
+                pedido foi ou não será entregue.
+                <br><br> 
+                <strong>2 - </strong>Cliente entra em contato com o SAC para iniciar a solicitação de reembolso dos valores que houveram o pagamento efetivado com o meio de pagamento a vista
+                <br><br>
+                <strong>3 - </strong>Infracommerce realiza o reembolso para o cliente.  
+                <br><br><br>
             </div>
           </div>
         </div>
@@ -84,45 +145,44 @@
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Integração de pedido</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Devido ao fato da plataforma Infrashop trabalhar com filas distintas de integração, 
+                é necessário que o Distribuidor esteja preparado para que, eventualmente, o primeiro pedido 
+                do cliente seja informado antes da Notificação de Criação do Cliente.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Reprocessamento do pedido</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Caso haja alguma falha no envio do pedido (Por conta de erro no web service do
+                distribuidor) ele é enfileirado para futuras tentativas. Após <strong>cinco tentativas</strong>
+                falhas de integração o pedido automaticamente cai em um alarme para que passe por análise manual.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Retorno da requisição de pedido</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                É necessário que o Distribuidor receba a requisição e retorne uma resposta imediatamente para
+                a plataforma. Somente após retornar a resposta para a plataforma o distribuidor deve realizar
+                a integração do pedido com o seu ERP.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Processamento do pedido</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+                Caso o distribuidor tenha regras de validação de estoque ou outros pontos, não deve rejeitar 
+                a integração do pedido, uma vez que um pedido pode ser faturado parcialmente e caso houver 
+                necessidade de não seguir com o mesmo, deverá ser tratado com cancelamento.
+                <br> 
+                Ou seja, o ERP deve se comportar de maneira com que a integração ocorra para os pedidos 
+                emitidos no e-commerce.
             </div>
         </div>
 
