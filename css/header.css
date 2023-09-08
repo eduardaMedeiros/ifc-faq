@@ -1,3 +1,8 @@
+:root {
+    --primaryColor: #3F3354;
+    --color: #121212;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +29,7 @@ html, body {
 	html, body{ font-size:20px; }
 }
 
-body, input {
+body, input, textarea, button {
     font-family: 'brother-1816', sans-serif;
     font-weight: 400;
 }
@@ -145,5 +150,115 @@ a, a:active, a:hover, a:link, a:visited {
 
 .header-menu-item a:hover{ 
     text-shadow:rgba(0,0,0,.2) 0px 2 2px; 
+}
+
+footer { 
+    top: 5rem;
+    width: 100%;
+    height: 26rem;
+    position: relative; 
+    display: block; 
+    background: var(--primaryColor); 
+}
+
+.footer-head{
+    width: 20%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    margin: 0 3rem 0 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.footer-logo { 
+    position: relative; 
+    width: 23%; 
+    float: left;
+    height: 4.2rem; 
+    padding: 0; 
+    margin: 1rem 0 2rem 0.5rem;
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    background-image: url(../img/logo-branco.png); 
+    background-position: left center;  
+}
+
+.footer-head-title { 
+    float: left;
+    font-size: 0.8rem; 
+    margin: 2rem 0 2rem 0;
+    color: white; 
+    font-weight: 200; 
+    text-transform: uppercase; 
+}
+
+.footer-links { 
+    position: relative; 
+    display: block; 
+    padding: 0; 
+    list-style: none;
+    float: left; 
+}
+
+.footer-links li { 
+    display: block; 
+    margin: 0.5rem 0; 
+    padding: 0; 
+    font-size: .76rem; 
+    color: white; 
+    font-weight: 300; 
+}
+
+.footer-links li a { 
+    font-size: .9rem; 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 300; 
+}
+
+.social-media { 
+    position: relative; 
+    display: inline-block;  
+    padding: 0; 
+    list-style: none; 
+}
+
+.social-media li { 
+    display: inline-block; 
+    width: 1.3rem; 
+    height: 1.3rem; 
+    margin: 0 0.7rem 0 0; 
+    padding: 0; 
+}
+
+.ico {
+    display: block; 
+    width: 1.3rem; 
+    height: 1.3rem; 
+    background-position: top left; 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+}
+
+
+#instagram {
+    background-image: url(../img/instagram.png);
+}
+
+#whatsapp {
+    background-image: url(../img/whatsapp.png);
+}
+
+#linkedin {
+    background-image: url(../img/linkedin.png);
+}
+
+#facebook {
+    background-image: url(../img/facebook.png);
+}
+
+#youtube {
+    background-image: url(../img/youtube.png);
 }
 

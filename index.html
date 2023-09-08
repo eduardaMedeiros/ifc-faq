@@ -28,15 +28,15 @@
                       início </a>
                   </li>
                   <li class="header-menu-item">
-                    <a href="#">
+                    <a href="#integracao">
                       integrações </a>
                   </li>
                   <li class="header-menu-item">
-                    <a href="#">
+                    <a href="#duvidas">
                       dúvidas frequentes </a>
                   </li>
                   <li class="header-menu-item">
-                    <a href="#">
+                    <a href="#fale">
                       fale conosco </a>
                   </li>
                 </ul>
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="processo-integracao">
+        <div class="processo-integracao" onclick="atualizarpag('pages/processo-integracao')">
           <div class="block">
             <div class="block-image"></div>
             <div class="block-title"> Conheça o processo e as etapas da Integração de
@@ -79,22 +79,21 @@
         </div>
       </div>
 
-      <div class="tipo-integracao">
+      <div class="tipo-integracao" id="integracao">
         <div id="right" class="title">
           <span>Tipos de Integração</span>
         </div>
 
         <div class="blocks-integracao">
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/requisicoes')">
             <div id="requisicao" class="block-tipo-image"></div>
             <div class="block-tipo-title">Limite Requisições</div>
             <div class="block-tipo-text">
               Aut saepe rerum et excepturi dolorem vel.
             </div>
-            
           </div>
 
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/estoque')">
             <div id="estoque" class="block-tipo-image"></div>
             <div class="block-tipo-title">Estoque</div>
             <div class="block-tipo-text">
@@ -102,7 +101,7 @@
             </div>
           </div>
 
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/politica-preco')">
             <div id="preco" class="block-tipo-image"></div>
             <div class="block-tipo-title">Política de Preço</div>
             <div class="block-tipo-text">
@@ -112,7 +111,7 @@
         </div>
 
         <div class="blocks-integracao">
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/cliente')">
             <div id="cliente" class="block-tipo-image"></div>
             <div class="block-tipo-title">Cliente</div>
             <div class="block-tipo-text">
@@ -120,7 +119,7 @@
             </div>
           </div>
 
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/status-cliente')">
             <div id="status" class="block-tipo-image"></div>
             <div class="block-tipo-title">Status Cliente</div>
             <div class="block-tipo-text">
@@ -128,7 +127,7 @@
             </div>
           </div>
 
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/limite-credito')">
             <div id="credito" class="block-tipo-image"></div>
             <div class="block-tipo-title">Limite de Crédito</div>
             <div class="block-tipo-text">
@@ -138,7 +137,7 @@
         </div>
 
         <div class="blocks-integracao">
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/pedido')">
             <div id="pedido" class="block-tipo-image"></div>
             <div class="block-tipo-title">Pedido</div>
             <div class="block-tipo-text">
@@ -146,7 +145,7 @@
             </div>
           </div>
 
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/pagamento')">
             <div id="pagamento" class="block-tipo-image"></div>
             <div class="block-tipo-title">Pagamento</div>
             <div class="block-tipo-text">
@@ -154,7 +153,7 @@
             </div>
           </div>
 
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/trackings')">
             <div id="trackings" class="block-tipo-image"></div>
             <div class="block-tipo-title">Trackings</div>
             <div class="block-tipo-text">
@@ -164,7 +163,7 @@
         </div>
 
         <div class="blocks-integracao">
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/programa-pontos')">
             <div id="valeca" class="block-tipo-image"></div>
             <div class="block-tipo-title">Programa de Pontos</div>
             <div class="block-tipo-text">
@@ -172,7 +171,7 @@
             </div>
           </div>
 
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/verba-flex')">
             <div id="verbaflex" class="block-tipo-image"></div>
             <div class="block-tipo-title">Verba Flex</div>
             <div class="block-tipo-text">
@@ -180,7 +179,7 @@
             </div>
           </div>
 
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/carteira-vendedores')">
             <div id="carteira" class="block-tipo-image"></div>
             <div class="block-tipo-title">Carteira Vendedores</div>
             <div class="block-tipo-text">
@@ -190,7 +189,7 @@
         </div>
 
         <div class="blocks-integracao">
-          <div class="block-tipo">
+          <div class="block-tipo" onclick="atualizarpag('pages/hub-financeiro')">
             <div id="financeiro" class="block-tipo-image"></div>
             <div class="block-tipo-title">HUB Financeiro</div>
             <div class="block-tipo-text">
@@ -200,11 +199,218 @@
         </div>
       </div>
 
-      <div class="duvidas-frequentes">
+      <div class="duvidas-frequentes" id="duvidas">
         <div id="left" class="title">
           <span>Dúvidas Frequentes</span>
         </div>
+
+        <div class="block-pergunta">
+          <div class="block-pergunta-text">
+            Aut saepe rerum et excepturi dolorem vel.
+          </div>
+          <div class="block-pergunta-icon"></div>
+        </div>
+
+        <div class="block-pergunta-res">
+          Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
+          ratione error est porro sint et facilis soluta qui delectus quasi.
+          Non cupiditate atque qui obcaecati laudantium et architecto
+          placeat?
+        </div>
+
+        <div class="block-pergunta">
+          <div class="block-pergunta-text">
+            Aut saepe rerum et excepturi dolorem vel.
+          </div>
+          <div class="block-pergunta-icon"></div>
+        </div>
+
+        <div class="block-pergunta-res">
+          Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
+          ratione error est porro sint et facilis soluta qui delectus quasi.
+          Non cupiditate atque qui obcaecati laudantium et architecto
+          placeat?
+        </div>
+
+        <div class="block-pergunta">
+          <div class="block-pergunta-text">
+            Aut saepe rerum et excepturi dolorem vel.
+          </div>
+          <div class="block-pergunta-icon"></div>
+        </div>
+
+        <div class="block-pergunta-res">
+          Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
+          ratione error est porro sint et facilis soluta qui delectus quasi.
+          Non cupiditate atque qui obcaecati laudantium et architecto
+          placeat?
+        </div>
+
+        <div class="block-pergunta">
+          <div class="block-pergunta-text">
+            Aut saepe rerum et excepturi dolorem vel.
+          </div>
+          <div class="block-pergunta-icon"></div>
+        </div>
+
+        <div class="block-pergunta-res">
+          Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
+          ratione error est porro sint et facilis soluta qui delectus quasi.
+          Non cupiditate atque qui obcaecati laudantium et architecto
+          placeat?
+        </div>
       </div>
+
+      <div class="fale-conosco" id="fale">
+        <div id="right" class="title">
+          <span>Fale Conosco</span>
+        </div>
+
+        <div class="fale-conosco-text">
+          Preencha os campos abaixo com dúvidas que não foram encontradas
+          <br>
+          em nossa FAQ até o momento.
+        </div>
+
+        <div class="fale-conosco-image"></div>
+        <div class="fale-conosco-formulario">
+						<input type=hidden name="retURL" value="https://www.infracommerce.com.br/">
+
+						<div class="form-group">
+							<input type="text" class="form-input" name="name" alt="char=2" title="Nome" placeholder="Nome" />
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-input" name="loja" alt="char=2" title="Loja integrada" placeholder="Loja integrada" />
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-input" name="company" alt="char=2" title="Distribuidor" placeholder="Distribuidor" />
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-input" name="Contact_Email" alt="email" title="E-mail" placeholder="E-mail" />
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-input mask-phone" name="phone" alt="char=2" title="Telefone" placeholder="Telefone" />
+						</div>
+						<div class="form-group">
+							<textarea class="form-input" name="00N8Y00000FTpjI" alt="char=2" title="Mensagem" placeholder="Como podemos ajudar?"></textarea>
+						</div>
+
+            <button type="submit" class="btn-enviar">Enviar Dados</button>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-logo"></div>
+
+        <div class="footer-head">
+          <div class="footer-head-title">
+            Tipos de integração
+          </div>
+
+          <ul class="footer-links">
+            <li>
+              <a href="pages/processo-integracao.html" target="_blank">
+                Processo de integração </a>
+            </li>
+            <li>
+              <a href="pages/requisicoes.html" target="_blank">
+                Limite de Requisições </a>
+            </li>
+            <li>
+              <a href="pages/estoque.html" target="_blank">
+                Estoque </a>
+            </li>
+            <li>
+              <a href="pages/politica-preco.html" target="_blank">
+                Política de Preço </a>
+            </li>
+            <li>
+              <a href="pages/cliente.html" target="_blank">
+                Cliente </a>
+            </li>
+            <li>
+              <a href="pages/status-cliente.html" target="_blank">
+                Status Cliente </a>
+            </li>
+            <li>
+              <a href="pages/limite-credito.html" target="_blank">
+                Limite de Crédito </a>
+            </li>
+            <li>
+              <a href="pages/pedido.html" target="_blank">
+                Pedido </a>
+            </li>
+            <li>
+              <a href="pages/pagamento.html" target="_blank">
+                Pagamento </a>
+            </li>
+            <li>
+              <a href="pages/trackings.html" target="_blank">
+                Tracking </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-head">
+          <div class="footer-head-title">
+            Melhorias	Integração
+          </div>
+
+          <ul class="footer-links">
+            <li>
+              <a href="pages/programa-pontos.html" target="_blank">
+                Programa de pontos </a>
+            </li>
+            <li>
+              <a href="pages/verba-flex.html" target="_blank">
+                Verba Flex </a>
+            </li>
+            <li>
+              <a href="pages/carteira-vendedores.html" target="_blank">
+                Carteira de Vendedores </a>
+            </li>
+            <li>
+              <a href="pages/hub-financeiro.html" target="_blank">
+                Hub financeiro </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="footer-head">
+          <div class="footer-head-title">
+            Redes Sociais
+          </div>
+
+          <ul class="social-media">
+            <li>
+              <a href="https://www.instagram.com/infracommerce/" target="_blank">
+                <span id="instagram" class="ico"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0" target="_blank">
+                <span id="whatsapp" class="ico"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
+                <span id="linkedin" class="ico"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/infracommerce/" target="_blank">
+                <span id="facebook" class="ico"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
+                <span id="youtube" class="ico"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
 
     <script src="js/script.js"></script>
 
