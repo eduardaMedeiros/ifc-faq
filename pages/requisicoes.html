@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="processo-integracao">
+        <div class="container-block">
           <div class="block">
             <div class="block-image" id="requisicao"></div>
             <div class="block-title">Limite de Requisições</div>
@@ -75,17 +75,6 @@
                 sejam superadas, o responsável pelo envio terá suas integrações bloqueadas e divididas para serem 
                 processadas durante seu bloqueio, e o tempo de bloqueio será calculado pelo tempo necessário a ser 
                 processado os registros excedentes ao limite enviado.
-                <br><br>
-                <div class="block-title-secondary">Retorno de envio</div>
-                Após a exceção de envio, a plataforma retornará a seguinte mensagem de erro para as 
-                requisições enviadas:
-                <br>
-                <strong>“Não foi possível executar essa integração, pois excede 
-                ao limite permitido.”</strong>
-                <br><br>
-                Para o tipo de integração excedida, durante o tempo de bloqueio não serão aceitas novas integrações, 
-                todas as demais requisições serão aceitas normalmente se respeitarem os seus limites. Além disso, elas serão 
-                diluídas ao longo do tempo de bloqueio, conforme o limite de envios autorizados por hora.
                 <br><br><br>
             </div>
           </div>
@@ -93,9 +82,32 @@
       </div>
     </div>
 
-    <div class="tabela-referencia">
-        <div id="left" class="title">
-            <span>Valores Permitidos</span>
+    <div class="container" id="inicio">
+      <div id="left" class="title">
+        <span>Retorno de envio</span>
+      </div>
+
+      <div class="container-block">
+        <div class="block">
+          <div class="block-text">
+              Após a exceção de envio, a plataforma retornará a seguinte mensagem de erro para as 
+              requisições enviadas:
+              <br>
+              <strong>“Não foi possível executar essa integração, pois excede 
+              ao limite permitido.”</strong>
+              <br><br>
+              Para o tipo de integração excedida, durante o tempo de bloqueio não serão aceitas novas integrações, 
+              todas as demais requisições serão aceitas normalmente se respeitarem os seus limites. Além disso, elas serão 
+              diluídas ao longo do tempo de bloqueio, conforme o limite de envios autorizados por hora.
+              <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div id="right" class="title">
+            <span>Valores Permitidos por hora</span>
         </div>
 
         <div class="block-check">
@@ -148,67 +160,83 @@
 
     </div>
 
-    <div class="duvidas-frequentes" id="duvidas">
-        <div id="right" class="title">
+    <div class="container" id="duvidas">
+        <div id="left" class="title">
             <span>Dúvidas Frequentes</span>
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
-        </div>
+        <div class="block-pergunta" onclick="show_question('a')">
+          <div class="block-pergunta-text" onclick="show_question('a')">
+            Caso o limite de requisições seja ultrapassado e o envio continue, a plataforma processa as demais requisições quando o bloqueio finalizar?
+          </div>
+          <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
-        </div>
+      <div class="block-pergunta-res" id="a">
+        Não! Após a exceção do limite permitido, todas as demais requisições serão desconsideradas pela plataforma, sendo necessário o reenvio delas após o desbloqueio.
+      </div>
+      
+      <div class="block-pergunta" onclick="show_question('b')">
+          <div class="block-pergunta-text" onclick="show_question('b')">
+            Qual a média de tempo de bloqueio para o envio de requisições?
+          </div>
+          <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
+      </div>
+      <div class="block-pergunta-res" id="b">
+        O período de bloqueio varia de acordo com o tempo necessário para o processamento das requisições enviadas. Para novos envios após o bloqueio, a plataforma informa o 
+        tempo previsto para liberação da fila. Segue em exemplo de retorno: 
+        <br>
+        <strong>
+          "Não conseguimos processar todas as suas integrações, pois a quantidade de registros que você enviou está acima do limite permitido por hora. Seu limite por hora é: 2.000, 
+          já o seu tempo de bloqueio é até 01/01/2023 às 17:00, para as demais filas, respeite seus limites de envio.”
+        </strong>
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
-        </div>
+      <div class="block-pergunta" onclick="show_question('c')">
+          <div class="block-pergunta-text" onclick="show_question('c')">
+            Caso seja enviado uma requisição com diversos CNPJ's para o envio de status de cliente ou limite de crédito, será considerado pela plataforma apenas uma requisição?
+          </div>
+          <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
+      </div>
+      <div class="block-pergunta-res" id="c">
+        Não! Conforme a tabela de referência, é considerado o CNPJ enviado para atualização e não uma requisição com diversos CNPJs inclusos.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
-        </div>
+      <div class="block-pergunta" onclick="show_question('d')">
+          <div class="block-pergunta-text" onclick="show_question('d')">
+            Trabalho com diversos produtos na plataforma e eles precisam ser atualizados recorrentemente para que o estoque físico bata com o que 
+            está disponível na plataforma. Como proceder?
+          </div>
+          <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
+      </div>
+      <div class="block-pergunta-res" id="d">
+        Recomendados que o distribuidor atualize apenas os produtos cujo estoque teve alteração ao decorrer do período da última atualização. 
+        Os demais produtos que não tiveram alteração de estoque, não devem ser enviados.       
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
-        </div>
+      <div class="block-pergunta" onclick="show_question('e')">
+          <div class="block-pergunta-text" onclick="show_question('e')">
+            Temos mais de 320 tabelas de preços configuradas na plataforma e realizamos atualizações de preços regularmente, além de inclusão de clientes. Como proceder?
+          </div>
+          <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
+      </div>
+      <div class="block-pergunta-res" id="e">
+        Recomendamos que seja enviada primeiro as políticas de preço com mais exigência para a plataforma sem que o limite seja excedido e as demais sejam enviadas ao decorrer do dia.
+        <br> 
+        Caso não seja possível este cenário, recomendamos que o distribuidor analise quais são as tabelas de preço que possuem realmente clientes incluídos, que efetuam compras e 
+        possuem status aprovado, para que desta forma apenas essas políticas sejam atualizadas no período disponível.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
-        </div>
-
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
-        </div>
-
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
-        </div>
-
+      <div class="block-pergunta" onclick="show_question('f')">
+          <div class="block-pergunta-text" onclick="show_question('f')">
+            De acordo com minha regra de negócio os envios serão excedidos com frequência. Como proceder?
+          </div>
+          <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
+      </div>
+      <div class="block-pergunta-res" id="f">
+        Caso o distribuidor tenha analisado todos os cenários possíveis e ainda assim continue tendo bloqueios de envio o mesmo pode contatar o time 
+        responsável para uma reunião de alinhamento para que todos os envolvidos possam entender o cenário e ajudar com os próximos passos.        
+      </div>
     </div>
 
     <footer>

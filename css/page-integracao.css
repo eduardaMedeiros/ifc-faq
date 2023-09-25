@@ -49,25 +49,23 @@
     .search-input{ width: 70%; }
 }
 
-.processo-integracao {
-    top: 0.5rem;
+.container {
+    position: relative;
+    width: 100%;
+    margin: 7rem 0 0 0;
+}
+
+#inicio {
+    margin: 20rem 0 0 0;
+}
+
+.container-block {
+    top: 2rem;
     position: relative; 
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-.fase-projeto {
-    position: relative;
-    width: 100%;
-    margin: 63rem 0 0 0;
-}
-
-.teste-homologacao {
-    position: relative;
-    width: 100%;
-    margin: 5rem 0 0 0;
 }
 
 .block {
@@ -120,6 +118,17 @@
     margin: 2rem 0 0 3rem; 
     width: 4rem;
     height: 4rem;
+    float: left;
+}
+
+.block-text-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: block;
+    margin-bottom: 2.5rem;
+    width: 50rem;
+    height: 25rem;
     float: left;
 }
 
@@ -182,7 +191,7 @@
 }
 
 .block-etapa-text {
-    display: block; 
+    display: none; 
     margin: 5rem 17rem 0 14rem; 
     font-size: 0.9rem;
     line-height: 1.3;
@@ -194,6 +203,48 @@
     position: relative;
     display: block;
     margin: 0.3rem 1.5rem 0 0; 
+    width: 1.4rem;
+    height: 1.4rem;
+    background-image: url(../img/abaixo.png);
+}
+
+.block-pergunta {
+    cursor: pointer;
+    top: 3rem;
+    margin: 0 12rem 1rem 11rem;
+    position: relative; 
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
+}
+
+.block-pergunta-text{
+    display: block; 
+    margin: 0.4rem 0 0.4rem 1rem; 
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.3; 
+    color: var(--primaryColor);
+}
+
+.block-pergunta-res {
+    display: none;
+    margin: 5rem 17rem 0 14rem; 
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.block-pergunta-icon{
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: block;
+    margin: 0.3rem 1.5rem 0 0;  
     width: 1.4rem;
     height: 1.4rem;
     background-image: url(../img/abaixo.png);
@@ -253,4 +304,8 @@
 
 #p-integracao{
     background-image: url(../img/p-integracao.png);
+}
+
+#responsabilidade-projeto{
+    background-image: url(../img/responsabilidade-projeto.png);
 }

@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="processo-integracao">
+        <div class="container-block">
           <div class="block">
             <div class="block-image" id="estoque"></div>
             <div class="block-title">Estoque</div>
@@ -93,7 +93,7 @@
       </div>
     </div>
 
-    <div class="regras-envio">
+    <div class="container" id="inicio">
         <div id="left" class="title">
             <span>Regras de Envio</span>
         </div>
@@ -146,39 +146,132 @@
             </div>
         </div>
 
+        <div class="block-check">
+          <div class="block-check-image"></div>
+          <div class="block-check-title">Limite dentro das requisições</div>
+          <div class="block-check-text">
+            O distribuidor deve seguir as boas práticas de requisições para a plataforma, independente do serviço. Sendo assim, solicitamos que não ultrapasse
+            100 SKUS em uma única requisição de estoque
+          </div>
+      </div>
     </div>
 
-    <div class="duvidas-frequentes" id="duvidas">
+    <div class="container" id="duvidas">
         <div id="right" class="title">
             <span>Dúvidas Frequentes</span>
         </div>
+        
+        <div class="block-pergunta" onclick="show_question('a')">
+          <div class="block-pergunta-text" onclick="show_question('a')">
+            Trabalho com estoque por disponibilidade. Como devo realizar o envio para a plataforma?
+          </div>
+          <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Porque o produto não está disponível no site?
-            </div>
-            <div class="block-pergunta-icon"></div>
-        </div>
+      <div class="block-pergunta-res" id="a">
+        É possível efetuar o envio de estoque por disponibilidade do produto para a plataforma! Para mais informações de como a requisição é enviada,
+        acesse nosso manual de integração.
+      </div>
+      
+      <div class="block-pergunta" onclick="show_question('b')">
+          <div class="block-pergunta-text" onclick="show_question('b')">
+            A atualização de estoque na plataforma é imediata após o envio?
+          </div>
+          <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
+      </div>
+      <div class="block-pergunta-res" id="b">
+        Não! Temos uma fila de processamento e o envio pode demorar cerca de alguns minutos para atualizar na loja. Lembrando que nesses casos 
+        recomendamos a atualização da página para validar a disponibilidade do produto.
+      </div>
 
-        <div class="block-pergunta-res">
-            Para o produto estar visível é necessário que o mesmo tenha estoque e preço. Nesses casos é
-            recomendado um novo envio atualizado para validação na plataforma.
-        </div>
+      <div class="block-pergunta" onclick="show_question('c')">
+          <div class="block-pergunta-text" onclick="show_question('c')">
+            A quantidade de estoque disponível para compra fica visível para o cliente na loja?
+          </div>
+          <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
+      </div>
+      <div class="block-pergunta-res" id="c">
+        Não! O cliente só saberá a quantidade disponível de estoque para um produto caso coloque no carrinho a quantidade que excede este valor.
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                O que é necessário enviar para que o produto seja desativado no site?
-            </div>
-            <div class="block-pergunta-icon"></div>
-        </div>
+      <div class="block-pergunta" onclick="show_question('d')">
+          <div class="block-pergunta-text" onclick="show_question('d')">
+            Porque o produto não está disponível no site?
+          </div>
+          <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
+      </div>
+      <div class="block-pergunta-res" id="d">
+        Para o produto estar visível é necessário que o mesmo tenha estoque e preço. Nesses casos é recomendado um novo envio atualizado para validação na plataforma.        
+      </div>
 
-        <div class="block-pergunta-res">
-            Existem duas formas, sugerimos que as ambas sejam feitas para desativação:
-            <br>
-            Enviar <strong>estoque 0(zero)</strong> para o produto.
-            <br> 
-            Enviar <strong>preço 0 (zero)</strong> para o produto.
+      <div class="block-pergunta" onclick="show_question('e')">
+          <div class="block-pergunta-text" onclick="show_question('e')">
+            Realizei o envio de estoque e preço porém o meu produto não está disponível no site. Como proceder?
+          </div>
+          <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
+      </div>
+      <div class="block-pergunta-res" id="e">
+        Nesses casos o produto enviado pode não ter sido cadastrado na plataforma. Recomendamos que seja aberto um chamado para o time de NRP para que possam verificar se o produto faz parte do 
+        portfólio e assim, seja realizado o cadastro dele.
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('f')">
+          <div class="block-pergunta-text" onclick="show_question('f')">
+            Realizei o envio de estoque para um produto caixa que possui na plataforma em unidade porém não está visível na loja. Como proceder?
+          </div>
+          <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
+      </div>
+      <div class="block-pergunta-res" id="f">
+        Recomendados a abertura de um chamado para o time de NRP efetuar o cadastro do múltiplo na plataforma. Dependendo da regra de negócio habilitada de cada loja, 
+        o cadastro é realizado automaticamente.
+        
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('g')">
+        <div class="block-pergunta-text" onclick="show_question('g')">
+          Como devemos lidar com produtos vendidos em caixas ou múltiplos, mas controlados em unidades no estoque interno?
         </div>
+        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
+      </div>
+      <div class="block-pergunta-res" id="g">
+        Para distribuidores que vendem caixas ou múltiplos mas controlam o estoque em unidades, o estoque deve ser calculado com base na versão da caixa, 
+        garantindo que a quantidade disponível seja precisa para a venda em unidades ou caixas.     
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('h')">
+        <div class="block-pergunta-text" onclick="show_question('h')">
+          De quanto em quanto tempo devo programar meus envios de estoque?
+        </div>
+        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
+      </div>
+      <div class="block-pergunta-res" id="h">
+        As atualizações devem ser enviadas apenas quando houver uma alteração de estoque de 5% ou mais desde do produto desde a última integração. Recomendados que não seja enviado
+         a carga completa, apenas os produtos com a quantidade alterada para que não seja sobrecarregada a fila.
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('i')">
+        <div class="block-pergunta-text" onclick="show_question('i')">
+          O que é necessário enviar para que o produto seja desativado no site?
+        </div>
+        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
+      </div>
+      <div class="block-pergunta-res" id="i">
+        O produto pode ser desativado apenas enviando estoque ou preço zerado para ele. Recomendamos que sejam realizados os dois envios por via das dúvidas.    
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('j')">
+        <div class="block-pergunta-text"  onclick="show_question('j')">
+          Trabalho com uma numeração interna de produtos. Posso seguir com o envio de estoque com a numeração que tenho cadastrada em meu ERP?
+        </div>
+        <div class="block-pergunta-icon" id="qj"  onclick="show_question('j')"></div>
+      </div>
+      <div class="block-pergunta-res" id="j">
+        Não! A plataforma integra como padrão os produtos por sua SKU/EAN. Portanto, caso seja enviado algum produto fora desse padrão, o mesmo não será integrado na plataforma e 
+        por consequência não aparecerá para venda no site.
+        <br>
+        Neste caso recomendamos a parametrização do código SKU/EAN para os produtos no ERP do distribuidor.
+      </div>
+
     </div>
 
     <footer>
