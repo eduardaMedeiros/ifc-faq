@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="processo-integracao">
+        <div class="container-block">
           <div class="block">
             <div class="block-image" id="status"></div>
             <div class="block-title">Status Cliente</div>
@@ -95,118 +95,147 @@
       </div>
     </div>
 
-    <div class="regras-envio">
+    <div class="container" id="inicio">
         <div id="left" class="title">
             <span>Regras de Envio</span>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Envio de Status de Cliente</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+              Todo cliente recebido deverá ter um status atrelado a ele de acordo com a política empregada pelo distribuidor. Recomendados a atualização do status logo 
+              que o cliente é recebido para que ele possa efetuar compras
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Atualização de Status de Cliente</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+              Para atualizar o status de um cliente na plataforma é apenas necessário enviar a requisição com o nosso status atribuído. Lembrando que pode levar 
+              alguns minutos para ser atualizado na plataforma e recomendamos a atualização da página.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Habilitar Status PEN</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+              O status PEN já é habilitado para todos os distribuidores, mas caso o mesmo opte por não utilizar este status é necessário apenas a solicitação da desativação 
+              para a equipe responsável de acordo com a fase do projeto.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Limite dentro das requisições</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+              O distribuidor deve seguir as boas práticas de requisições para a plataforma, independente do serviço. Sendo assim, solicitamos que não ultrapasse 100 CNPJs 
+              em uma única requisição de status de cliente.
             </div>
         </div>
 
     </div>
 
-    <div class="duvidas-frequentes" id="duvidas">
-        <div id="right" class="title">
-            <span>Dúvidas Frequentes</span>
-        </div>
+    <div class="container" id="duvidas">
+      <div id="right" class="title">
+          <span>Dúvidas Frequentes</span>
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('a')">
+        <div class="block-pergunta-text" onclick="show_question('a')">
+          Como impossibilitar um cliente de efetuar compras no site?
         </div>
-
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+        <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
+      </div>
+      <div class="block-pergunta-res" id="a">
+        Para isso, é necessário enviar status RPV(Reprovado) ao cliente. Dessa forma ele não conseguirá efetuar compras com nenhum método de pagamento.
+      </div>
+    
+      <div class="block-pergunta" onclick="show_question('b')">
+        <div class="block-pergunta-text" onclick="show_question('b')">
+          E como fazer com que esse(s) clientes voltem a comprar?
         </div>
+        <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
+      </div>
+      <div class="block-pergunta-res" id="b">
+        Para que seja possível efetuar compras novamente, os clientes devem receber status APV(Aprovado). Com isso, os produtos ficarão disponíveis novamente.
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('c')">
+        <div class="block-pergunta-text" onclick="show_question('c')">
+          Os clientes atualmente logo que se cadastram tem o status PEN mas gostaria de possibilitar a compra para os mesmos após análise interna da empresa. Como proceder?
         </div>
+        <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
+      </div>
+      <div class="block-pergunta-res" id="c">
+        Podemos desabilitar essa opção na etapa de integração ou após o Go-live do distribuidor via chamado para o time de NRP. Neste caso, a partir da desabilitação, 
+        os clientes só poderão efetuar compras após o envio de status de cliente aprovado.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('d')">
+        <div class="block-pergunta-text" onclick="show_question('d')">
+          Quando o cliente possui status PEN quais são os métodos de pagamento disponíveis para compra?
         </div>
+        <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
+      </div>
+      <div class="block-pergunta-res" id="d">
+        O cliente poderá efetuar apenas pedidos com as condições de pagamento à vista, onde o processamento é responsável pela IFC.        
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('e')">
+        <div class="block-pergunta-text" onclick="show_question('e')">
+          O cliente consegue efetuar pedidos com a condição de pagamento boleto faturado tendo apenas status APV?
         </div>
+        <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
+      </div>
+      <div class="block-pergunta-res" id="e">
+        Não! Lembrando que o cliente precisa obrigatoriamente possuir limite de crédito na plataforma para realizar pedidos com o método boleto faturado.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('f')">
+        <div class="block-pergunta-text" onclick="show_question('f')">
+          Quais são os critérios que devo utilizar para determinar o status RPV para um cliente?
         </div>
+        <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
+      </div>
+      <div class="block-pergunta-res" id="f">
+        Isso vai depender da regra de negócio de cada distribuidor, mas recomendamos o envio de status RPV para 
+        todos os clientes que não são confiáveis e que não devem efetuar compras na plataforma.        
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('g')">
+        <div class="block-pergunta-text" onclick="show_question('g')">
+          Como um cliente pode verificar seu status atual na plataforma?
         </div>
+        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
+      </div>
+      <div class="block-pergunta-res" id="g">
+        Caso o cliente tenha status PEN ou APV, os produtos estarão disponíveis para adicionar no carrinho. Já com o status RPV, ao visualizar os produtos, o cliente terá a 
+        seguinte mensagem: “Seu cadastro não foi aprovado para este sortimento” e consequentemente não irá conseguir selecionar o produto para o carrinho.      
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('h')">
+        <div class="block-pergunta-text" onclick="show_question('h')">
+          Quais são as opções disponíveis para um cliente com o status "RPV" resolver sua situação e voltar a fazer compras na plataforma?
         </div>
+        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
+      </div>
+      <div class="block-pergunta-res" id="h">
+        O cliente poderá entrar em contato com o SAC para poder verificar a questão do seu status RPV. Será validado internamente com o distribuidor e caso o status 
+        esteja incorreto, será solicitado um novo envio de status e atualizado na plataforma.      
+      </div>
 
+      <div class="block-pergunta" onclick="show_question('i')">
+        <div class="block-pergunta-text" onclick="show_question('i')">
+          Quais são as políticas de devolução e reembolso para clientes com diferentes status?
+        </div>
+        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
+      </div>
+      <div class="block-pergunta-res" id="i">
+        O processo segue o mesmo para todos os clientes cadastrados na plataforma independente do seu status atual para determinado distribuidor.      
+      </div>
     </div>
 
     <footer>

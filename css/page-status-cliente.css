@@ -52,8 +52,8 @@
     .search-input{ width: 60%; }
 }
 
-.processo-integracao {
-    top: 0.5rem;
+.container-block {
+    top: 2rem;
     position: relative; 
     width: 100%;
     display: flex;
@@ -61,16 +61,14 @@
     justify-content: center;
 }
 
-.regras-envio {
-    position: relative;
-    width: 100%;
-    margin: 25rem 0 0 0;
-}
-
-.duvidas-frequentes {
+.container {
     position: relative;
     width: 100%;
     margin: 5rem 0 0 0;
+}
+
+#inicio {
+    margin: 25rem 0 0 0;
 }
 
 .block {
@@ -91,15 +89,6 @@
     font-size: 1.5rem;
     line-height: 1;
     color: var(--primaryColor);
-    font-weight: 600;
-}
-
-.block-title-secondary {
-    display: block;
-    margin: 0 0.8rem 1rem 0;
-    font-size: 1.5rem;
-    line-height: 1;
-    color: var(--primaryColor);;
     font-weight: 600;
 }
 
@@ -184,7 +173,7 @@
 }
 
 .block-pergunta-res {
-    display: block; 
+    display: none;
     margin: 5rem 17rem 0 14rem; 
     font-size: 0.9rem;
     line-height: 1.3;
