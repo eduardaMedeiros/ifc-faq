@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
   <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/pages.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/page-pagamento.css" rel="stylesheet" type="text/css"/>
   <title>Pagamento | Infracommerce</title>
 </head>
 
@@ -62,133 +62,191 @@
           </div>
         </div>
 
-        <div class="processo-integracao">
+        <div class="container-block">
           <div class="block">
             <div class="block-image" id="pagamento"></div>
             <div class="block-title">Pagamento</div>
             <div class="block-text">
-              Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-              ratione error est porro sint et facilis soluta qui delectus quasi.
-              Non cupiditate atque qui obcaecati laudantium et architecto
-              placeat?
+              Refere-se a uma transação financeira em que uma empresa paga a outra empresa por produtos fornecidos. Essas transações ocorrem entre duas empresas como parte das 
+              suas operações comerciais regulares.
+              <br><br>
+              A integração de pagamento, tem como objetivo informar ao distribuidor se os pedidos integrados em seu ERP houveram pagamento aprovado ou reprovado, para que assim, o 
+              ciclo de vida dos pedidos evoluam para as trackings (status atual do pedido). A integração de pagamento se aplica somente para pedidos cujo o meio de pagamento é
+              gerenciado pela Infracommerce, sendo eles: Boleto antecipado, Cartão de crédito, PIX e Vale Troca.
+              <br><br>
+              Vale ressaltar que os pedidos cujo gerenciamento do pagamento é feito por responsabilidade do distribuidor (Pedidos realizados com a forma de pagamento em boleto 
+              faturado) não recebem da plataforma confirmações de pagamento, pois é responsabilidade do distribuidor em decidir seguir ou não com o pedido, esses pedidos uma vez 
+              que recebidos já devem ser tratados no fluxo de trackings (Aprovando ou não o pedido).
+              <br><br><br>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="regras-envio">
+    <div class="container" id="inicio">
         <div id="left" class="title">
             <span>Regras de Envio</span>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Integração de pagamento</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+              ERP integrar e identificar corretamente se o pedido houve o pagamento confirmado ou reprovado.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Bloqueio de pedidos sem pagamento enviado</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+              Uma boa prática a ser implantada seria cadastrar um bloqueio, se possível, para que os pedidos com o meio de pagamento gerenciados pela Infracommerce só sejam liberados 
+              para o faturamento caso receba o pagamento aprovado, dessa forma evita que um pedido seja faturado antes de receber o pagamento.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Pedidos com Boleto Faturado</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+              Pedidos cujo gerenciamento do pagamento é feito por responsabilidade do distribuidor não recebem da plataforma confirmações de pagamento, pois é responsabilidade do distribuidor
+              em decidir seguir ou não com o pedido, esses pedidos uma vez que recebidos já devem ser tratados no fluxo de trackings.
             </div>
         </div>
 
         <div class="block-check">
             <div class="block-check-image"></div>
-            <div class="block-check-title">Título da regra de envio</div>
+            <div class="block-check-title">Reservas de estoque</div>
             <div class="block-check-text">
-                Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-                ratione error est porro sint et facilis soluta qui delectus quasi.
-                Non cupiditate atque qui obcaecati laudantium et architecto
-                placeat?
+              A confirmação de pagamento é enviada em até 8 dias corridos (Em exceção a pedidos efetuados com o método de pagamento PIX, que podem receber a confirmação em até 
+              1 dia corrido). Importante que neste prazo, o distribuidor mantenha a reserva de estoque e que o pedido não seja cancelado.
             </div>
         </div>
-
     </div>
 
-    <div class="duvidas-frequentes" id="duvidas">
-        <div id="right" class="title">
-            <span>Dúvidas Frequentes</span>
-        </div>
+    <div class="container" id="duvidas">
+      <div id="right" class="title">
+        <span>Dúvidas Frequentes</span>
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('a')">
+        <div class="block-pergunta-text" onclick="show_question('a')">
+          Quais são os tipos de meios de pagamento que temos atualmente na plataforma?
         </div>
-
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+        <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
+      </div>
+      <div class="block-pergunta-res" id="a">
+        Atualmente temos em nossa plataforma 5 diferentes tipos de pagamento.<br><br>
+        <strong>Boleto antecipado: </strong>Quando o cliente opta por gerar um boleto a vista, gerado e gerenciado direto pela plataforma na qual o cliente efetua o pagamento do boleto e 
+        assim que compensar enviamos a confirmação através do Endpoint de pagamento. (Enviado na requisição de pedido como “BILL”).<br><br>
+        <strong>Cartão de crédito: </strong>Esse meio de pagamento é gerenciado pela plataforma e aplicado uma taxa diretamente em cima do Valor DFL (valor da taxa definida em contrato) enviado 
+        na integração de Preço, e assim que a compra for aprovada enviamos a confirmação através do Endpoint de pagamento. (Enviado na requisição de pedido como “CREDIT_CARD”).<br><br>
+        <strong>PIX: </strong>Quando o cliente opta por efetuar o pagamento via transferência PIX, meio de pagamento gerenciado pela plataforma e assim que a transferência for confirmada enviamos 
+        a confirmação através do Endpoint de pagamento. (Enviado na requisição de pedido como “PIX”).<br><br>
+        <strong>Boleto faturado: </strong>Esse meio de pagamento é gerenciado pelo Distribuidor, portanto prazos de boletos e flexibilidade deles é definido pelo Distribuidor, para que o cliente 
+        opte por esse meio de pagamento é necessário que tenha um valor disponível como Limite de Crédito, assim quando efetuar um pedido o valor será consumido de seu limite 
+        de crédito disponível. (Enviado na requisição de pedido como “CRL-Prazo escolhido” EX. para boleto 7 dias “CRL-7” para boleto 21 dias “CRL-21”).<br><br>
+        <strong>Vale-troca: </strong>Esse meio de pagamento é gerado quando o cliente efetua uma compra e efetua o pagamento porém por algum motivo a compra foi cancelada ou faturada parcialmente, 
+        nesse caso o cliente entrará em contato com o SAC e pode solicitar o reembolso como “Vale-troca”, esse meio de pagamento pode ser mesclado com os meios de pagamentos 
+        gerenciados pela Infracommerce Boleto antecipado ou Cartão de Crédito, exceto PIX. (Enviado na requisição de pedido como “COUPON”)
+      </div>
+    
+      <div class="block-pergunta" onclick="show_question('b')">
+        <div class="block-pergunta-text" onclick="show_question('b')">
+          Não quero mais trabalhar com algumas condições de pagamento à vista. Como proceder?
         </div>
+        <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
+      </div>
+      <div class="block-pergunta-res" id="b">
+        Neste caso é necessário a abertura de um chamado para o time de NRP solicitando a inabilitação da condição de preço desejada. Lembrando que para as condições de 
+        boleto faturado o distribuidor pode apenas enviar o preço 0 para o meio de pagamento.
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('c')">
+        <div class="block-pergunta-text" onclick="show_question('c')">
+          Porque não há todas as formas de pagamento disponíveis no site?
         </div>
+        <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
+      </div>
+      <div class="block-pergunta-res" id="c">
+        Para disponibilidade na plataforma, é necessário o envio do preço ao produto para o método de pagamento desejado. Caso ainda assim a condição não esteja disponível, 
+        contate o nosso time de NRP para a ativação dela ou verificação do ocorrido.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('d')">
+        <div class="block-pergunta-text" onclick="show_question('d')">
+          Quais são as formas de pagamento que não recebem confirmações de pagamento da plataforma?
         </div>
+        <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
+      </div>
+      <div class="block-pergunta-res" id="d">
+        As condições de pagamento que não recebem confirmação de pagamento da plataforma são as que o responsável pelo gerenciamento é 
+        o distribuidor (Pedidos pagos com Boleto Faturado).        
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('e')">
+        <div class="block-pergunta-text" onclick="show_question('e')">
+          Qual é o prazo para o envio da confirmação de pagamento pela plataforma?
         </div>
+        <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
+      </div>
+      <div class="block-pergunta-res" id="e">
+        A confirmação de pagamento é enviada em até 8 dias corridos em exceção a pedidos efetuados com o método de pagamento PIX, que podem receber a confirmação em até 1 dia corrido.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('f')">
+        <div class="block-pergunta-text" onclick="show_question('f')">
+          Qual é o prazo para o cliente realizar o pagamento do pedido com Boleto Antecipado?
         </div>
+        <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
+      </div>
+      <div class="block-pergunta-res" id="f">
+        O prazo de pagamento para esta condição é de 3 dias úteis a partir da emissão do boleto enviado por e-mail ao cliente.        
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('g')">
+        <div class="block-pergunta-text" onclick="show_question('g')">
+          Quais são as informações enviadas na requisição de pagamento?
         </div>
+        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
+      </div>
+      <div class="block-pergunta-res" id="g">
+        É enviado na requisição de pagamento o número do pedido realizado, o valor total do pedido e o status do pagamento, sendo AP para pagamento Aprovado e RP para pagamento Reprovado.      
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('h')">
+        <div class="block-pergunta-text" onclick="show_question('h')">
+          Como a plataforma gerencia os reembolsos ou estornos de pagamento na plataforma?
         </div>
+        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
+      </div>
+      <div class="block-pergunta-res" id="h">
+        Recebendo o cancelamento do pedido, o cliente deve entrar em contato com o SAC solicitando o reembolso, onde ele poderá receber o débito/estorno em conta ao receber um vale-troca com o valor 
+        do pedido cancelado. Lembrando que esta opção só é disponível para os métodos de pagamento a vista gerenciados pela IFC.      
+      </div>
 
+      <div class="block-pergunta" onclick="show_question('i')">
+        <div class="block-pergunta-text" onclick="show_question('i')">
+          Quais são as opções de parcelamento disponíveis na plataforma para pedidos com condição de pagamento Cartão de Crédito?
+        </div>
+        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
+      </div>
+      <div class="block-pergunta-res" id="i">
+        O cliente pode optar por pagar o pedido com Cartão de Crédito mas a plataforma não possibilita o parcelamento do pedido. Sendo assim, 
+        ele só pode fazer o pedido em até 1x no cartão sem juros.     
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('j')">
+        <div class="block-pergunta-text"  onclick="show_question('j')">
+          É gerado um custo para o distribuidor ao optar por trabalhar com os métodos de à vista?
+        </div>
+        <div class="block-pergunta-icon" id="qj"  onclick="show_question('j')"></div>
+      </div>
+      <div class="block-pergunta-res" id="j">
+        O custo depende das regras de negócio de cada indústria. Neste caso todos os custos e demais particularidades são tratadas diretamente com a equipe responsável no 
+        início da integração do distribuidor ou caso ele opte por trabalhar com algumas das condições posteriormente.      
+      </div>
     </div>
 
     <footer>
