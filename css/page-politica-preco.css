@@ -48,6 +48,9 @@
 @media (max-width:1400px){ 
     .search-input{ width: 70%; }
 }
+@media (max-width:2000px){ 
+    .search-input{ width: 60%; }
+}
 
 .processo-integracao {
     top: 0.5rem;

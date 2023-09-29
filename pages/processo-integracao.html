@@ -94,33 +94,38 @@
 
       <div class="block-check">
           <div class="block-check-image"></div>
+          <div class="block-check-title">Comercial</div>
+          <div class="block-check-text">
+            Análise de distribuidores e alinhamento de interesse para o início do projeto, envio e assinatura 
+            do Termo de Adesão e preenchimento da Ficha Cadastral.
+          </div>
+      </div>
+
+      <div class="block-check">
+          <div class="block-check-image"></div>
           <div class="block-check-title">Inicialização</div>
           <div class="block-check-text">
-              Realização Kick-Off, Preenchimento da Ficha Cadastral, FAQ e Lista Pré-Requisitos.
+            Realização Kick-Off e envio do Manual de Integração. 
           </div>
       </div>
 
       <div class="block-check">
           <div class="block-check-image"></div>
-          <div class="block-check-title">Liberação de Acessos (Projetos Consultoria)</div>
+          <div class="block-check-title">Planejamento</div>
           <div class="block-check-text">
-              Parametrizações entre o ERP do Distribuidor e Integradora. 
+            Setup ferramentas de Gestão e Comunicação e alinhamento sobre o Manual Técnico e Certificado. 
           </div>
       </div>
 
       <div class="block-check">
           <div class="block-check-image"></div>
-          <div class="block-check-title">Desenvolvimento (Projeto Desenvolvimento Próprio)</div>
+          <div class="block-check-title">Desenvolvimento</div>
           <div class="block-check-text">
-              Desenvolvimento das API’s por parte do Seller de acordo com o manual de integração. 
-          </div>
-      </div>
-
-      <div class="block-check">
-          <div class="block-check-image"></div>
-          <div class="block-check-title">Validação</div>
-          <div class="block-check-text">
-              Validação dos 3 endpoints junto ao Analista Técnico IFC.
+            Para projetos com <strong>Desenvolvimento Próprio</strong> é realizado o desenvolvimento das API’s por parte do Seller de acordo com o manual de integração.
+            <br>
+            Para projetos com <strong>Integradora</strong> IFC é realizada as parametrizações entre o ERP do Distribuidor e Integradora. 
+            <br>
+            Após a finalização do desenvolvimento, é validado os 3 endpoints junto ao analista técnico IFC.
           </div>
       </div>
 
@@ -134,17 +139,10 @@
 
       <div class="block-check">
           <div class="block-check-image"></div>
-          <div class="block-check-title">Conclusão da Integração</div>
-          <div class="block-check-text">
-              Conclusão de todas as etapas e agendamento da Capacitação.
-          </div>
-      </div>
-
-      <div class="block-check">
-          <div class="block-check-image"></div>
           <div class="block-check-title">Operação Assistida</div>
           <div class="block-check-text">
-              Suporte de 10 dias úteis após Go-live da loja em nossa plataforma.
+            Agendamento da capacitação após conclusão de todas as etapas e 
+            suporte de 10 dias úteis após Go-live da loja na plataforma 
           </div>
       </div>
     </div>
@@ -163,7 +161,9 @@
             Desta forma podemos verificar com o responsável qualquer dúvida referente a sua responsabilidade ao decorrer da integração e analisarmos para que seja alocado o 
             máximo de energia ao projeto com o objetivo de trazer mais pró-atividade.
             <br><br>
-            <div class="block-text-image" id="responsabilidade-projeto"></div>
+            <div class="container-image">
+              <div class="block-text-image"></div>
+            </div>
             <br><br><br>
           </div>
         </div>
@@ -199,7 +199,7 @@
             Será informado via planilha todos os range inicial e final de cada CEP que o 
             distribuidor trabalha/comercializa. Além disso, para cada faixa deve ser preenchido seu prazo de entrega.
             <br><br>
-            <strong>Os dados serão preenchidos após a reunião de Kick-Off junto a equipe responsável. Será 
+            <strong>Os dados serão preenchidos logo na etapa de Inicialização do projeto. Será 
               disponibilizado o formulário para preenchimento das informações.
             </strong> 
             <br><br><br>
@@ -616,6 +616,35 @@
         para a equipe responsável. Lembrando que todos os métodos de pagamento devem ser informados no formulário da ficha cadastral.
       </div>
 
+      <div class="block-pergunta" onclick="show_question('x')">
+        <div class="block-pergunta-text" onclick="show_question('x')">
+          É possível que eu atribua valor de frete para cada região que for gerado o pedido? 
+        </div>
+        <div class="block-pergunta-icon" id="qr" onclick="show_question('x')"></div>
+      </div>
+      <div class="block-pergunta-res" id="r">
+        Infelizmente não! Até o momento não temos essa funcionalidade de atrelar valores de frete por pedido, 
+        o que indicamos é que esse valor seja embutido no valor do produto, assim você pode dividir os valores 
+        por Políticas de preços atrelados a diversas regiões.
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('y')">
+        <div class="block-pergunta-text" onclick="show_question('y')">
+          Tenho clientes que atendo de forma particular. Como inicio o atendimento deles pela plataforma?
+        </div>
+        <div class="block-pergunta-icon" id="qr" onclick="show_question('y')"></div>
+      </div>
+      <div class="block-pergunta-res" id="r">
+        Nesse caso deve-se verificar se o cliente em questão já está cadastrado na plataforma.
+        <br> 
+        Caso o mesmo já tenha cadastro na plataforma,  ele será enviado para seu ERP com os dados cadastrados 
+        por ele. Recebendo o cliente, basta atualizar o seu  status e limite de crédito para que ele possa 
+        efetuar pedidos na loja.
+        <br>
+        Caso o cliente não esteja cadastrado em nosso ambiente, deverá seguir com o fluxo de cadastro 
+        pelo site e ele será enviado para seu ERP, recebendo status e limite de crédito o cliente já
+        estará apto a efetuar compras também!
+      </div>
   </div>
 
     <footer>
