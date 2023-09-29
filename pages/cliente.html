@@ -136,96 +136,153 @@
     </div>
 
     <div class="container" id="duvidas">
-        <div id="right" class="title">
-            <span>Dúvidas Frequentes</span>
-        </div>
+      <div id="right" class="title">
+        <span>Dúvidas Frequentes</span>
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Por que não consigo efetuar um pedido de boleto faturado sendo que o cliente possui limite de crédito ou status APV?
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('a')">
+        <div class="block-pergunta-text" onclick="show_question('a')">
+          Quais as informações do cliente são enviadas para os distribuidores?
         </div>
+        <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
+      </div>
+      <div class="block-pergunta-res" id="a">
+        O distribuidor irá receber os seguintes dados do cliente: Nome, E-mail, CNPJ, Inscrição Estadual, Telefone, 
+        Telefone Celular e Endereço (Logradouro, Número, Complemento, Bairro, Cidade, Estado e CEP).
+      </div>
+      
+      <div class="block-pergunta" onclick="show_question('b')">
+        <div class="block-pergunta-text" onclick="show_question('b')">
+          Preciso de mais informações do cliente para concluir o cadastro dele dentro do ERP. Como proceder?
+        </div>
+        <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
+      </div>
+      <div class="block-pergunta-res" id="b">
+        A plataforma envia apenas os dados informados na requisição. Recomendamos que o distribuidor contacte o cliente para obter todos os demais dados necessários.
+      </div>
 
-        <div class="block-pergunta-res">
-            Sempre tentar efetuar um novo envio de limite para esse cliente e caso não apareça verificar se 
-            o distribuidor efetuou o envio de preços para os meios de pagamentos que ele deseja efetuar o 
-            pedido. 
-            <br><br>
-            <strong>
-                Se mesmo assim não estiver disponível deve ser verificado se os tipos de pagamento estão 
-                habilitados para o distribuidor (Essa verificação deve ser realizada via NRP).
-            </strong>
+      <div class="block-pergunta" onclick="show_question('c')">
+        <div class="block-pergunta-text" onclick="show_question('c')">
+          Quais os dados que o cliente pode atualizar na plataforma?
         </div>
+        <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
+      </div>
+      <div class="block-pergunta-res" id="c">
+        O cliente pode atualizar dados como E-mail e Telefone. A única informação que ele não poderá atualizar via plataforma é seu Endereço.
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Porque o cliente está visualizando os preços errados ou de outra política de preço?
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('d')">
+        <div class="block-pergunta-text" onclick="show_question('d')">
+          O endereço de um dos meus clientes está desatualizado na receita. Consequentemente acontece o mesmo na plataforma. Como proceder?
         </div>
+        <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
+      </div>
+      <div class="block-pergunta-res" id="d">
+        Neste caso recomendamos que o cliente atualize o seu endereço na receita e logo que atualizado solicite ao SAC a atualização do mesmo na plataforma.        
+      </div>
 
-        <div class="block-pergunta-res">
-            Sempre deve ser verificado os preços enviados para a plataforma e validado se esse cliente está 
-            atribuído a uma política que não deveria. Sugerimos o envio atualizado da requisição de preços para 
-            plataforma que faça a inclusão do cliente para a política desejada.
+      <div class="block-pergunta" onclick="show_question('e')">
+        <div class="block-pergunta-text" onclick="show_question('e')">
+          O endereço do meu cliente foi atualizado na receita, porém não houve atualização na plataforma. Como proceder?
         </div>
+        <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
+      </div>
+      <div class="block-pergunta-res" id="e">
+        Caso o cliente precise mudar o endereço com base na atualização da receita solicitamos que o mesmo contate o SAC para providenciar a alteração.
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Os clientes que já tenho na minha base já possuem cadastro da plataforma Infracommerce?
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('f')">
+        <div class="block-pergunta-text" onclick="show_question('f')">
+          Por que não consigo efetuar um pedido de boleto faturado sendo que o cliente possui limite de crédito ou status APV?
         </div>
+        <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
+      </div>
+      <div class="block-pergunta-res" id="f">
+        Sempre tentar efetuar um novo envio de limite para esse cliente e caso não apareça verificar se o distribuidor efetuou o envio de preços para os meios de pagamentos que ele 
+        deseja efetuar o pedido.
+        <br> 
+        Se mesmo assim não estiver disponível deve ser verificado se os tipos de pagamento 
+        estão habilitados para o distribuidor (Essa verificação deve ser realizada via NRP pelo distribuidor).
+      </div>
 
-        <div class="block-pergunta-res">
-            Todos os clientes cadastrados na plataforma que atendem a faixa de CEP do distribuidor serão enviados
-            e caso o cliente já existente em sua base não tenha sido enviado pode ser que o mesmo não tenha se cadastrado
-            em nossas lojas. Nesse caso recomendamos o registro do mesmo para envio ao ERP do distribuidor.
-            <br><br>
-            <strong>
-                Observação: Caso os dados do cliente não devam ser sobrescritos, o distribuidor deverá 
-                realizar uma tratativapara que os dados não sejam atualizados.
-            </strong>
+      <div class="block-pergunta" onclick="show_question('g')">
+        <div class="block-pergunta-text" onclick="show_question('g')">
+          Porque o cliente está visualizando os preços errados ou de outra política de preço?
         </div>
+        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
+      </div>
+      <div class="block-pergunta-res" id="g">
+        Sempre deve ser verificado os preços enviados para a plataforma e se esse cliente está atribuído a uma política que não deveria. 
+        Recomendamos o envio da requisição de preços para plataforma que faça a inclusão do cliente para a política desejada.      
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Porque clientes específicos não visualizam alguns produtos?
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('h')">
+        <div class="block-pergunta-text" onclick="show_question('h')">
+          Porque clientes específicos não visualizam alguns produtos?
         </div>
+        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
+      </div>
+      <div class="block-pergunta-res" id="h">
+        Nesse caso, é necessário verificar se o cliente está incluído em uma política de preço específica, da qual não há preços enviados para aquele produto.      
+      </div>
 
-        <div class="block-pergunta-res">
-            Nesse caso, é necessário verificar se o cliente está incluído em uma política de preço específica,
-            da qual não há preços enviados para aquele produto.
-            <br>
-            Recomendamos o envio atualizado dos preços para aquele produto. Assim ele ficará visível para os usuários.
+      <div class="block-pergunta" onclick="show_question('i')">
+        <div class="block-pergunta-text" onclick="show_question('i')">
+          Após a virada de produção, como os clientes da Infracommerce são enviados para o distribuidor?
         </div>
+        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
+      </div>
+      <div class="block-pergunta-res" id="i">
+        Quando o distribuidor é integrado em nossa plataforma na etapa final de homologação é efetuado o envio de todos os clientes com base nas faixas de CEP que o distribuidor 
+        atende. Não conseguimos ter uma estimativa de quantos clientes podem ser enviados, neste caso recomendamos que o distribuidor prepare seu ERP para receber uma possível 
+        quantidade massiva de clientes.      
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Como impossibilitar um cliente de efetuar compras no site?
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('j')">
+        <div class="block-pergunta-text"  onclick="show_question('j')">
+          Os clientes que já tenho na minha base precisam possuir cadastro na plataforma Infracommerce para efetuar pedidos?
         </div>
+        <div class="block-pergunta-icon" id="qj"  onclick="show_question('j')"></div>
+      </div>
+      <div class="block-pergunta-res" id="j">
+        Sim! Pode ser que o cliente de seu ERP já tenha cadastro em nossa plataforma, porém temos que ressaltar que todos os clientes da plataforma Infracommerce são 
+        enviados para o distribuidor.
+        <br>
+        Tendo ciência que isso possa ocorrer, existe a possibilidade dele ser enviado novamente (podendo ter o cadastro sobrescrito). 
+        <br>
+        <strong>Observação: </strong>Caso os dados do cliente não devam ser sobrescritos, o distribuidor deverá realizar uma tratativa (Parametrização) para que os dados não sejam atualizados.
+      </div>
 
-        <div class="block-pergunta-res">
-            Para isso, é necessário enviar status <strong>RPV (Reprovado)</strong> ao cliente.
-            Dessa forma ele não conseguirá efetuar compras com nenhum método de pagamento.
+      <div class="block-pergunta" onclick="show_question('k')">
+        <div class="block-pergunta-text" onclick="show_question('k')">
+          Os clientes atualmente logo que se cadastram tem o status PEN mas gostaria de possibilitar a compra para os mesmos após análise interna. Como proceder?
         </div>
+        <div class="block-pergunta-icon" id="qk" onclick="show_question('k')"></div>
+      </div>
+      <div class="block-pergunta-res" id="k">
+        Podemos desabilitar essa opção na etapa de integração ou após o Go-live do distribuidor via chamado para o time de NRP. 
+        Neste caso, a partir da desabilitação, os clientes só poderão efetuar compras após o envio de status de cliente aprovado.
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                E como fazer com que esse(s) cliente(s) voltem a comprar?
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('l')">
+        <div class="block-pergunta-text" onclick="show_question('l')">
+          Como impossibilitar um cliente de efetuar compras no site?
         </div>
+        <div class="block-pergunta-icon" id="ql" onclick="show_question('l')"></div>
+      </div>
+      <div class="block-pergunta-res" id="l">
+        Para isso, é necessário enviar status RPV(Reprovado) ao cliente. Dessa forma ele não conseguirá efetuar compras com nenhum método de pagamento. 
+      </div>
 
-        <div class="block-pergunta-res">
-            Para isso, é necessário enviar status <strong>APV (Aprovado)</strong> ao cliente.
-            Com isso, os produtos ficarão disponíveis novamente para compra.
+      <div class="block-pergunta" onclick="show_question('m')">
+        <div class="block-pergunta-text" onclick="show_question('m')">
+          E como fazer com que esse(s) clientes voltem a comprar?
         </div>
+        <div class="block-pergunta-icon" id="qm" onclick="show_question('m')"></div>
+      </div>
+      <div class="block-pergunta-res" id="m">
+        Para que seja possível efetuar compras novamente, os clientes devem receber status APV(Aprovado). Com isso, os produtos ficarão disponíveis novamente.      
+      </div>        
 
     </div>
 
