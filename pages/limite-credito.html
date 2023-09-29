@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="processo-integracao">
+        <div class="container-block">
           <div class="block">
             <div class="block-image" id="credito"></div>
             <div class="block-title">Limite de Crédito</div>
@@ -85,50 +85,165 @@
       </div>
     </div>
 
-    <div class="regras-envio">
-        <div id="left" class="title">
-            <span>Regras de Envio</span>
-        </div>
+    <div class="container" id="inicio">
+      <div id="left" class="title">
+          <span>Regras de Envio</span>
+      </div>
 
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Envio de limite de crédito</div>
-            <div class="block-check-text">
-                É de suma importância o envio de limite de crédito para os clientes na plataforma.
-                Desta forma ficará disponível o método de pagamento faturado para compras.
-            </div>
+      <div class="block-check">
+        <div class="block-check-image"></div>
+        <div class="block-check-title">Envio de limite de crédito</div>
+        <div class="block-check-text">
+          É de suma importância o envio de limite de crédito para os clientes na plataforma.
+          Desta forma ficará disponível o método de pagamento faturado para compras.
         </div>
+      </div>
 
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Atualização de limite de crédito</div>
-            <div class="block-check-text">
-                Após a realização e faturamento do pedido a plataforma automaticamente retira o valor 
-                utilizado e atualiza o limite. 
-                <br>
-                Porém, para <strong>cancelamento de pedidos</strong> a plataforma não repõe o valor utilizado
-                novamente. Nesse caso deve ser enviado uma nova requisição atualizada de limite de crédito 
-                após cancelar o pedido.
-            </div>
+      <div class="block-check">
+        <div class="block-check-image"></div>
+        <div class="block-check-title">Atualização de limite de crédito</div>
+        <div class="block-check-text">
+          Após a realização e faturamento do pedido a plataforma automaticamente retira o valor 
+          utilizado e atualiza o limite. 
+          <br>
+          Porém, para <strong>cancelamento de pedidos</strong> a plataforma não repõe o valor utilizado
+          novamente. Nesse caso deve ser enviado uma nova requisição atualizada de limite de crédito 
+          após cancelar o pedido.
         </div>
+      </div>
+
+      <div class="block-check">
+        <div class="block-check-image"></div>
+        <div class="block-check-title">Limite dentro das requisições</div>
+        <div class="block-check-text">
+          O distribuidor deve seguir as boas práticas de requisições para a plataforma, 
+          independente do serviço. Sendo assim, solicitamos que não ultrapasse 100 CNPJS em uma única requisição de limite de crédito.
+        </div>
+      </div>
     </div>
 
-    <div class="duvidas-frequentes" id="duvidas">
-        <div id="right" class="title">
-            <span>Dúvidas Frequentes</span>
-        </div>
+    <div class="container" id="duvidas">
+      <div id="right" class="title">
+        <span>Dúvidas Frequentes</span>
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Porque o cliente não consegue efetuar pedidos com boleto faturado?
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('a')">
+        <div class="block-pergunta-text" onclick="show_question('a')">
+          Porque o cliente não consegue efetuar pedidos com boleto faturado?
         </div>
+        <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
+      </div>
+      <div class="block-pergunta-res" id="a">
+        O cliente obrigatoriamente precisa ter status APV(Aprovado) e Limite de crédito disponível. Sem uma das informações integradas, não será possível efetuar o pedido.
+      </div>
+    
+      <div class="block-pergunta" onclick="show_question('b')">
+        <div class="block-pergunta-text" onclick="show_question('b')">
+          Como impossibilitar um cliente de não efetuar pedidos apenas com boleto faturado?
+        </div>
+        <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
+      </div>
+      <div class="block-pergunta-res" id="b">
+        Neste caso recomendamos apenas o envio de limite de crédito 0 para este cliente. Assim ele poderá ainda realizar pedidos com o método à vista.
+      </div>
 
-        <div class="block-pergunta-res">
-            O cliente <strong>obrigatoriamente</strong> precisa ter status APV(Aprovado) e Limite de crédito 
-            disponível. Sem uma das informações integradas, não será possível efetuar o pedido.
+      <div class="block-pergunta" onclick="show_question('c')">
+        <div class="block-pergunta-text" onclick="show_question('c')">
+          Onde o cliente consegue verificar o valor de limite de crédito disponível?
         </div>
+        <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
+      </div>
+      <div class="block-pergunta-res" id="c">
+        O valor de limite disponível para o cliente ficará disponível no carrinho ao selecionar a opção de pagamento e também na página do cliente em “Limite de Crédito”.
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('d')">
+        <div class="block-pergunta-text" onclick="show_question('d')">
+          Dependendo da confiabilidade do cliente, deixamos que o mesmo realize pedidos com boleto faturado ainda que não tenha limite de crédito disponível. 
+          A plataforma possibilita a compra nesses casos?
+        </div>
+        <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
+      </div>
+      <div class="block-pergunta-res" id="d">
+        Não! Uma vez que o cliente tem limite de crédito 0, ele não poderá efetuar mais nenhuma compra de boleto faturado. 
+        Fica a critério do distribuidor enviar mais limite para determinado cliente.        
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('e')">
+        <div class="block-pergunta-text" onclick="show_question('e')">
+          Como é feito o acompanhamento do pagamento dos boletos faturados?
+        </div>
+        <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
+      </div>
+      <div class="block-pergunta-res" id="e">
+        A IFC não se responsabiliza pelos pagamentos para pedidos com boleto faturado. O distribuidor fica responsável por efetuar o envio do boleto e acompanhar se o mesmo foi pago corretamente. 
+        Lembrando que ainda que a IFC não acompanhe, precisamos receber o status dos pedidos na plataforma.
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('f')">
+        <div class="block-pergunta-text" onclick="show_question('f')">
+          O cliente pode obter a opção de pagamento Vale Troca para reembolso de pedidos com boleto faturado?
+        </div>
+        <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
+      </div>
+      <div class="block-pergunta-res" id="f">
+        Infelizmente, não! Como a Infracommerce não é responsável pelo pagamento para essa condição, não é possível solicitar ao SAC para gerar o vale troca com o 
+        valor do pedido realizado, apenas para pedidos com condições a vista. Lembrando que nesses casos o cliente deve tratar o reembolso diretamente com o distribuidor.  
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('g')">
+        <div class="block-pergunta-text" onclick="show_question('g')">
+          O cliente realizou a compra de um pedido com boleto faturado na plataforma e teve seu pedido cancelado. O valor do limite de crédito é restaurado?
+        </div>
+        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
+      </div>
+      <div class="block-pergunta-res" id="g">
+        Não! A plataforma atualiza automaticamente o valor do limite apenas quando o pedido é gerado. Caso o mesmo seja cancelado, o distribuidor deve efetuar um novo envio atualizado do limite de crédito para o cliente. 
+        Recomendamos que o envio seja realizado logo após o cancelamento do pedido.      
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('h')">
+        <div class="block-pergunta-text" onclick="show_question('h')">
+          Como é feito o acompanhamento e controle do limite de crédito enviado pelo distribuidor para a plataforma?
+        </div>
+        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
+      </div>
+      <div class="block-pergunta-res" id="h">
+        A plataforma recebe apenas as informações e reflete na loja de acordo com o enviado pelo distribuidor. Todo o controle e análise de crédito é de responsabilidade do mesmo.      
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('i')">
+        <div class="block-pergunta-text" onclick="show_question('i')">
+          Quais são as opções disponíveis para a plataforma caso o distribuidor não envie o limite de crédito?
+        </div>
+        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
+      </div>
+      <div class="block-pergunta-res" id="i">
+        O cliente ainda terá as opções de pagamento à vista disponíveis na plataforma caso seu status seja PEN ou APV. Sendo elas: Boleto Antecipado, Cartão de Crédito, PIX e 
+        Vale Troca.
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('j')">
+        <div class="block-pergunta-text"  onclick="show_question('j')">
+          Quais são as políticas da plataforma em relação ao uso do limite de crédito enviado pelo distribuidor?
+        </div>
+        <div class="block-pergunta-icon" id="qj"  onclick="show_question('j')"></div>
+      </div>
+      <div class="block-pergunta-res" id="j">
+        A única política estabelecida na plataforma é que o cliente deve utilizar o limite para apenas os produtos comercializados pelo distribuidor que liberou o crédito para ele. Uma vez 
+        que o cliente possua limite positivo e os pedidos atendem o valor mínimo, ele pode realizar compras à vontade.   
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('k')">
+        <div class="block-pergunta-text" onclick="show_question('k')">
+          O Limite de crédito é restituído assim que o cliente efetuar o pagamento do boleto? 
+        </div>
+        <div class="block-pergunta-icon" id="qk" onclick="show_question('k')"></div>
+      </div>
+      <div class="block-pergunta-res" id="k">
+        Tudo depende da sua regra de negócio, pois se trata de um processo gerenciado pelo lado do distribuidor. Assim, se optar por seguir com o procedimento dessa forma, deve 
+        ser enviado a atualização de limite de crédito para o cliente assim que o pedido for pago.       
+      </div> 
     </div>
 
     <footer>
