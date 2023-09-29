@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="processo-integracao">
+        <div class="container-block">
           <div class="block">
             <div class="block-image" id="pedido"></div>
             <div class="block-title">Pedido</div>
@@ -81,64 +81,73 @@
                     promocionais e bonificações.
                 </strong>
                 <br><br><br>
-                
-                <div class="block-title-secondary">Pedidos com promoções</div>
-                Promoções referem-se a estratégias de marketing usadas por empresas para oferecer descontos ou 
-                incentivos temporários aos consumidores, a fim de aumentar as vendas, atrair novos clientes ou 
-                fidelizar os existentes.
-                <br><br>
-                Essas promoções podem ser aplicadas de diversas formas, podendo ser atrelada por clientes, 
-                por sortimentos, ou por produtos. Nelas podem ser incorporadas condições
-                (Ex: A promoção só vale para primeira compra na plataforma). Todas essas especificações serão
-                alinhadas comercialmente com o Distribuidor no Go-Live do projeto.   
-                <br><br><br>
-
-                <div class="block-title-secondary">Pedidos com bonificação (Kit Bonificado)</div>
-                O termo "Kit Bonificado" no contexto do e-commerce refere-se a um tipo específico de oferta ou 
-                promoção em que um conjunto de produtos ou serviços relacionados é vendido como um pacote, muitas
-                vezes com algum tipo de benefício adicional incluído. 
-                <br><br>
-                Essa estratégia visa incentivar os clientes a comprar mais do que apenas um produto individual, 
-                proporcionando-lhes uma vantagem econômica ou algum tipo de valor agregado.
-                <br><br>
-                Esses kits geralmente são compostos por produtos complementares ou relacionados, de modo que a 
-                compra do kit seja mais vantajosa do que adquirir cada item separadamente. Isso pode estimular 
-                os consumidores a experimentarem produtos adicionais que normalmente não comprariam isoladamente.
-                <br><br>
-                <strong>
-                    Nesse caso um dos itens deve ser bonificado, sendo faturado com o valor igual a zero na nota 
-                    (Nota Bonificada) que é enviada para a plataforma.
-                    <br><br>
-                    O distribuidor também deve informar na nota o código do kitSkuId, que deve ser identificado
-                    no XML do pedido.
-                    <br><br> 
-                    Vale ressaltar que um produto do tipo bonificado é identificado no pedido através da tag “skuType”. 
-                    Podemos identificar quando o texto neste campo for igual a FFR, assim podemos saber quando o produto 
-                    é bonificado ou não.
-                </strong>
-                <br><br><br>
-
-                <div class="block-title-secondary">Processo de devolução</div>
-                Os pedidos que foram faturados mas não foram entregues ou que o cliente devolveu no ato 
-                da entrega, devem receber o envio da tracking de CAN, mesmo que tenha sido faturados 
-                anteriormente.
-                <br><br>
-                <strong>Passo a Passo Devolução</strong>
-                <br><br>
-                <strong>1 - </strong>Distribuidor deve enviar a Tracking de cancelamento, sinalizando que o 
-                pedido foi ou não será entregue.
-                <br><br> 
-                <strong>2 - </strong>Cliente entra em contato com o SAC para iniciar a solicitação de reembolso dos valores que houveram o pagamento efetivado com o meio de pagamento a vista
-                <br><br>
-                <strong>3 - </strong>Infracommerce realiza o reembolso para o cliente.  
-                <br><br><br>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="regras-envio">
+    <div class="container" id="inicio">
+      <div id="left" class="title">
+        <span>Pedidos com promoções</span>
+      </div>
+
+      <div class="container-block">
+        <div class="block">
+          <div class="block-text">
+            Promoções referem-se a estratégias de marketing usadas por empresas para oferecer descontos ou 
+            incentivos temporários aos consumidores, a fim de aumentar as vendas, atrair novos clientes ou 
+            fidelizar os existentes.
+            <br><br>
+            Essas promoções podem ser aplicadas de diversas formas, podendo ser atrelada por clientes, 
+            por sortimentos, ou por produtos. Nelas podem ser incorporadas condições de acordo com a finalidade de determinado desconto.
+            (Ex: A promoção só vale para primeira compra na plataforma). 
+            <br><br>
+            Na etapa da Operação Assistida será alinhado com a equipe comercial da loja junto com o distribuidor todas as promoções habilitadas atualmente na plataforma.
+            Assim, o distribuidor poderá entender o funcionamento de cada uma e parametrizá-las em seu ERP de acordo com a sua regra de négocio.
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="right" class="title">
+        <span>Pedidos com bonificação (Kit Bonificado)</span>
+      </div>
+
+      <div class="container-block">
+        <div class="block">
+          <div class="block-text">
+            O termo "Kit Bonificado" no contexto do e-commerce refere-se a um tipo específico de oferta ou 
+            promoção em que um conjunto de produtos ou serviços relacionados é vendido como um pacote, muitas
+            vezes com algum tipo de benefício adicional incluído. 
+            <br><br>
+            Essa estratégia visa incentivar os clientes a comprar mais do que apenas um produto individual, 
+            proporcionando-lhes uma vantagem econômica ou algum tipo de valor agregado.
+            <br><br>
+            Esses kits geralmente são compostos por produtos complementares ou relacionados, de modo que a 
+            compra do kit seja mais vantajosa do que adquirir cada item separadamente. Isso pode estimular 
+            os consumidores a experimentarem produtos adicionais que normalmente não comprariam isoladamente.
+            <br><br>
+            <strong>
+              Nesse caso um dos itens será bonificado, sendo faturado com o valor igual a zero na nota fiscal 
+              (Nota Bonificada) que é enviada para a plataforma.
+              <br><br>
+              O distribuidor também deve informar na nota o código do kitSkuId, que deve ser identificado
+              no XML do pedido.
+              <br><br> 
+              Vale ressaltar que um produto do tipo bonificado é identificado no pedido através da tag “skuType”. 
+              Podemos identificar quando o texto neste campo for igual a FFR, assim podemos saber quando o produto 
+              é bonificado ou não.
+            </strong>
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
         <div id="left" class="title">
             <span>Regras de Envio</span>
         </div>
@@ -188,67 +197,145 @@
 
     </div>
 
-    <div class="duvidas-frequentes" id="duvidas">
-        <div id="right" class="title">
-            <span>Dúvidas Frequentes</span>
-        </div>
+    <div class="container" id="duvidas">
+      <div id="right" class="title">
+        <span>Dúvidas Frequentes</span>
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('a')">
+        <div class="block-pergunta-text" onclick="show_question('a')">
+          Quais são as informações enviadas dentro da requisição de pedido?
         </div>
-
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+        <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
+      </div>
+      <div class="block-pergunta-res" id="a">
+        Dentro da requisição do pedido temos as seguintes informações: Número do pedido, valor total do pedido, valor total de desconto caso tenha, todos os produtos selecionados 
+        junto ao seu preço de venda e quantidade selecionada. 
+        <br>
+        Caso o produto tenha desconto para um dos produtos também será informado qual o valor descontado no preço do produto. 
+        <br>
+        Além disso, é informado os dados do cliente, o endereço de entrega e o método de pagamento escolhido.
+      </div>
+    
+      <div class="block-pergunta" onclick="show_question('b')">
+        <div class="block-pergunta-text" onclick="show_question('b')">
+          É possível que um pedido seja enviado primeiro antes que o cadastro do cliente integre no ERP do distribuidor?
         </div>
+        <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
+      </div>
+      <div class="block-pergunta-res" id="b">
+        Sim! Pela plataforma tratar as integrações em filas diferentes pode ser que a fila de cliente no momento em que o pedido foi realizado esteja mais sobrecarregada e com um 
+        tempo maior de processamento. Para minimizar esse empecilho, é enviado na requisição do pedido todos os dados necessários do cliente. 
+        <br>
+        Neste caso recomendamos, caso seja possível, que o ERP esteja desenvolvido para receber essas informações e o pedido integre corretamente. Caso não, será necessário 
+        aguardar a integração do cliente para que o pedido integre realmente em seu ERP. Lembrando que a plataforma realiza o envio do pedido até 5 vezes, ainda que tenha obtido retorno de erro.
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('c')">
+        <div class="block-pergunta-text" onclick="show_question('c')">
+          Como identificar uma promoção (desconto) aplicado em um produto na requisição de pedido?
         </div>
+        <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
+      </div>
+      <div class="block-pergunta-res" id="c">
+        No pedido enviado via plataforma são descritas as características e informações pertinentes ao desconto. <br>
+        Exemplos: <br> 
+        Tag totalDiscountAmount - que informa o total de descontos que o pedido possui. <br>  
+        Tag promotionList - lista de informações pertinentes ao produto que está com promoção. <br>
+        Assim como também pode ser verificado o nome da promoção, tipo de promoção, etc. Toda particularidade pertinente ao tipo de pedido sempre 
+        será enviado nos campos do XML. É essencial que o ERP esteja tratado para distinguir essas informações.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('d')">
+        <div class="block-pergunta-text" onclick="show_question('d')">
+          Como identificar a condição de pagamento escolhida para aquele pedido?
         </div>
+        <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
+      </div>
+      <div class="block-pergunta-res" id="d">
+        No final da requisição do pedido é identificado a tag paymentList onde será listado todas as condições de pagamento utilizadas naquele pedido. Geralmente o cliente opta 
+        por apenas uma condição de pagamento porém em alguns casos específicos a plataforma envia mais de uma condição. Nessas situações recomendamos que o ERP do 
+        distribuidor esteja preparado para receber essas informações.        
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('e')">
+        <div class="block-pergunta-text" onclick="show_question('e')">
+          Como funciona o Kit Bonificado?
         </div>
+        <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
+      </div>
+      <div class="block-pergunta-res" id="e">
+        O kit bonificado na plataforma funciona como um combo, onde uma quantidade N de produtos recebe bonificação. Pode ser um kit composto tanto por um único produto 
+        ou diversos produtos. <br>
+        Exemplo: Compre 2 produtos X e Leve 4 produtos X ou Compre 3 produtos Y e Leve 1 produto X.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('f')">
+        <div class="block-pergunta-text" onclick="show_question('f')">
+          Como identifico a bonificação de itens dentro da uma requisição de pedido?
         </div>
+        <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
+      </div>
+      <div class="block-pergunta-res" id="f">
+        Produtos bonificados dentro da requisição de pedidos são identificados pela tag skuType que contém o valor FFR. Além disso, o preço de venda desses produtos, 
+        identificado na requisição com a tag salePrice. irá conter o valor 0.        
+      </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Aut saepe rerum et excepturi dolorem vel.
-            </div>
-            <div class="block-pergunta-icon"></div>
+      <div class="block-pergunta" onclick="show_question('g')">
+        <div class="block-pergunta-text" onclick="show_question('g')">
+          É possível personalizar ou criar Kits Bonificados de acordo com as preferências dos clientes?
         </div>
+        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
+      </div>
+      <div class="block-pergunta-res" id="g">
+        A criação dos Kits Bonificados acontecem de acordo com as regras de negócio entre a equipe comercial e a indústria. 
+        Caso o distribuidor queira disponibilizar um Kit dentro da plataforma o mesmo deve verificar essa questão com a indústria responsável e 
+        também a possibilidade com a equipe de NRP.
+      </div>
 
-        <div class="block-pergunta-res">
-            Lorem ipsum dolor sit amet. In repudiandae reprehenderit in
-            ratione error est porro sint et facilis soluta qui delectus quasi.
-            Non cupiditate atque qui obcaecati laudantium et architecto
-            placeat?
+      <div class="block-pergunta" onclick="show_question('h')">
+        <div class="block-pergunta-text" onclick="show_question('h')">
+          Quais são as trackings obrigatórias de envio que fecham o ciclo de um pedido?
         </div>
+        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
+      </div>
+      <div class="block-pergunta-res" id="h">
+        As trackings que fecham o ciclo de um pedido são: ENT que se refere a entrega concluída e a tracking CAN que se refere ao cancelamento do pedido. Lembrando que 
+        após o recebimento desses trackings a plataforma desconsidera qualquer outro status de pedido enviado posteriormente.      
+      </div>
 
+      <div class="block-pergunta" onclick="show_question('i')">
+        <div class="block-pergunta-text" onclick="show_question('i')">
+          Como são tratados os casos de falhas ou erros na integração dos pedidos entre a plataforma e o ERP do distribuidor?
+        </div>
+        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
+      </div>
+      <div class="block-pergunta-res" id="i">
+        Caso haja alguma falha no envio do pedido (Por conta de erro no web service do distribuidor) ele é enfileirado para futuras tentativas. Após cinco tentativas 
+        falhas de integração o pedido automaticamente cai em um alarme para que passe por análise manual.  
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('j')">
+        <div class="block-pergunta-text"  onclick="show_question('j')">
+          O pedido foi faturado, porém não foi entregue ou o cliente devolveu. Como proceder?
+        </div>
+        <div class="block-pergunta-icon" id="qj"  onclick="show_question('j')"></div>
+      </div>
+      <div class="block-pergunta-res" id="j">
+        Os pedidos devem receber o envio da tracking de cancelamento, mesmo que tenha sido efetuado anteriormente. Após isso, o cliente 
+        fará contato com o SAC e a IFC irá efetuar o reembolso do valor do pedido.      
+      </div>
+
+      <div class="block-pergunta" onclick="show_question('k')">
+        <div class="block-pergunta-text" onclick="show_question('k')">
+          Quais são as informações de rastreamento e acompanhamento dos pedidos que são transmitidas na integração?
+        </div>
+        <div class="block-pergunta-icon" id="qk" onclick="show_question('k')"></div>
+      </div>
+      <div class="block-pergunta-res" id="k">
+        As informações de acompanhamento do pedido são atualizadas para o cliente de acordo com as trackings enviadas pelo distribuidor. Uma vez integradas, 
+        são atualizadas na plataforma e visíveis para o cliente em sua aba de pedidos.     
+      </div>
     </div>
 
     <footer>
