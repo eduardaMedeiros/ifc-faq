@@ -62,38 +62,16 @@
           </div>
         </div>
 
-        <div class="processo-integracao">
+        <div class="container-block">
           <div class="block">
             <div class="block-image" id="preco"></div>
             <div class="block-title">Política de Preço</div>
             <div class="block-text">
-                Política de preço trata-se de um conjunto de estratégias que têm como objetivo 
-                determinar um padrão a ser seguido para preços e meios de pagamento, 
-                podendo trazer vantagens e flexibilidade aos seus planos de negócios. 
-                Hoje a plataforma trabalha com dois tipos de política de preços, padrão 
-                <strong>(DEFAULT)</strong> e personalizado <strong>(CLUSTER)</strong>.
-                <br><br><br>
-
-                <div class="block-title-secondary">Política Default</div>
-                São os preços base para a negociação com os clientes B2B. O preço de padrão é o preço inicial
-                antes de quaisquer descontos ou condições especiais serem aplicados de acordo com a regra de negócio
-                do Distribuidor.
-                <br><br>
-	            Vale ressaltar que todos os clientes na plataforma que não estão atrelados a uma Política 
-                Cluster estarão automaticamente incluídos para Política DEFAULT. Como o próprio nome já 
-                sugere, trata-se da política padrão reconhecida pela plataforma e a partir desse ponto o 
-                Distribuidor pode optar por mantê-lo nessa política ou enviá-lo para uma política CLUSTER
-                <br><br><br>
-
-                <div class="block-title-secondary">Política Cluster</div>
-                São preços personalizados para cada cliente ou grupo de clientes. Esses preços levam em 
-                consideração fatores como os preços especiais, condições de pagamento, relacionamento comercial
-                e outros critérios específicos acordados entre as partes envolvidas.
-                <br><br>
-                Preços Clusterizados permite que o distribuidor aplique preços diferenciados para os seus 
-                clientes, devido a possibilidade de enviar inúmeras políticas de preços, cada política possui
-                os produtos, tabelas de preços e grupo de clientes que deseja vincular. Uma vez que a 
-                plataforma permite trabalhar com várias políticas, é possível aplicar os preços diferenciados.
+              Política de preço trata-se de um conjunto de estratégias que têm como objetivo 
+              determinar um padrão a ser seguido para preços e meios de pagamento, 
+              podendo trazer vantagens e flexibilidade aos seus planos de negócios. 
+              Hoje a plataforma trabalha com dois tipos de política de preços, padrão 
+              <strong>(DEFAULT)</strong> e personalizado <strong>(CLUSTER)</strong>.
               <br><br><br>
             </div>
           </div>
@@ -101,7 +79,51 @@
       </div>
     </div>
 
-    <div class="regras-envio">
+    <div class="container" id="inicio">
+      <div id="left" class="title">
+        <span>Política Default</span>
+      </div>
+
+      <div class="container-block">
+        <div class="block">
+          <div class="block-text">
+            São os preços base para a negociação com os clientes B2B. O preço de padrão é o preço inicial
+            antes de quaisquer descontos ou condições especiais serem aplicados de acordo com a regra de negócio
+            do Distribuidor.
+            <br><br>
+            Vale ressaltar que todos os clientes na plataforma que não estão atrelados a uma Política 
+            Cluster estarão automaticamente incluídos para Política DEFAULT. Como o próprio nome já 
+            sugere, trata-se da política padrão reconhecida pela plataforma e a partir desse ponto o 
+            Distribuidor pode optar por mantê-lo nessa política ou enviá-lo para uma política CLUSTER.
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="right" class="title">
+        <span>Política Cluster</span>
+      </div>
+
+      <div class="container-block">
+        <div class="block">
+          <div class="block-text">
+            São preços personalizados para cada cliente ou grupo de clientes. Esses preços levam em 
+            consideração fatores como os preços especiais, condições de pagamento, relacionamento comercial
+            e outros critérios específicos acordados entre as partes envolvidas.
+            <br><br>
+            Preços Clusterizados permite que o distribuidor aplique preços diferenciados para os seus 
+            clientes, devido a possibilidade de enviar inúmeras políticas de preços, cada política possui
+            os produtos, tabelas de preços e grupo de clientes que deseja vincular. Uma vez que a 
+            plataforma permite trabalhar com várias políticas, é possível aplicar os preços diferenciados.
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
         <div id="left" class="title">
             <span>Regras de Envio</span>
         </div>
@@ -148,92 +170,172 @@
         </div>
     </div>
 
-    <div class="duvidas-frequentes" id="duvidas">
+    <div class="container" id="duvidas">
         <div id="right" class="title">
             <span>Dúvidas Frequentes</span>
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Como faço para mover clientes para as políticas Clusters?
-            </div>
-            <div class="block-pergunta-icon"></div>
+        <div class="block-pergunta" onclick="show_question('a')">
+          <div class="block-pergunta-text" onclick="show_question('a')">
+            Como funciona a política de preço na plataforma?
+          </div>
+          <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
+        </div>
+        <div class="block-pergunta-res" id="a">
+          A política de preço possibilita trabalhar com múltiplos preços para os clientes (Consumidor final) através do envio de tabelas de preços distintas, como por exemplo: 
+          Distribuidor envia uma política default, essa será aplicada para todos os clientes como padrão, e pode enviar uma segunda política com preços diferentes da Default 
+          atribuindo para 1 ou N clientes.
+        </div>
+      
+        <div class="block-pergunta" onclick="show_question('b')">
+          <div class="block-pergunta-text" onclick="show_question('b')">
+            Como funciona a atualização de preços na plataforma?
+          </div>
+          <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
+        </div>
+        <div class="block-pergunta-res" id="b">
+          Para atualizar o preço de uma das condições de pagamento do produto é necessário apenas o envio da requisição com o valor modificado. Lembrando que a plataforma processa 
+          apenas as requisições que tenham atualizações entre o último envio.
         </div>
 
-        <div class="block-pergunta-res">
-            É necessário apenas enviar a requisição com a inclusão do CNPJ. Assim o cliente já estará na 
-            tabela de preço atualizada.
-            <strong>(O mesmo deve ocorrer para mudança de políticas)</strong>
+        <div class="block-pergunta" onclick="show_question('c')">
+          <div class="block-pergunta-text" onclick="show_question('c')">
+            É necessário enviar toda a carga de preço ao incluir um cliente ou ao atualizar um preço de um produto para determinada política?
+          </div>
+          <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
+        </div>
+        <div class="block-pergunta-res" id="c">
+          Não! A plataforma não sobrescreve as políticas enviadas, ela trabalha em forma de atualização. Neste caso todos os novos envios serão incluídos ao que já foi integrado anteriormente.
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Como faço para mover um cliente para a política Default?
-            </div>
-            <div class="block-pergunta-icon"></div>
+        <div class="block-pergunta" onclick="show_question('d')">
+          <div class="block-pergunta-text" onclick="show_question('d')">
+            Como faço para mover um cliente para a política Default?
+          </div>
+          <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
+        </div>
+        <div class="block-pergunta-res" id="d">
+          <strong>Todos</strong> os clientes cadastrados na plataforma automaticamente visualizam os preços da política Default. Os únicos casos de inclusão de clientes na 
+          política default que devem ser feitos, é em cenários que um cliente estava em outra política, e deseja ser movido para Default.
         </div>
 
-        <div class="block-pergunta-res">
-            Todos os clientes cadastrados na plataforma automaticamente visualizam os preços da política 
-            Default. O único caso de inclusão de cliente na política default que deve ser feito é quando 
-            um cliente estava em outra política e deseja ser movido novamente para default.
-            <br>
-            O envio segue o mesmo realizado para a política Cluster, a única diferença é que o ID da política
-            atribuida será a DEFAULT.
+        <div class="block-pergunta" onclick="show_question('e')">
+          <div class="block-pergunta-text" onclick="show_question('e')">
+            Como faço para incluir clientes em uma política Cluster?
+          </div>
+          <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
+        </div>
+        <div class="block-pergunta-res" id="e">
+          É necessário apenas enviar a requisição com a inclusão do CNPJ. Assim o cliente já estará na tabela de preço atualizada.(O mesmo deve ocorrer para mudança de políticas)
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                É necessário enviar todos os preços novamente quando um novo cliente é incluído nela?
-            </div>
-            <div class="block-pergunta-icon"></div>
+        <div class="block-pergunta" onclick="show_question('f')">
+          <div class="block-pergunta-text" onclick="show_question('f')">
+            Não utilizo mais uma política de preço. O que devo fazer?
+          </div>
+          <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
+        </div>
+        <div class="block-pergunta-res" id="f">
+          Nesses casos recomendamos que seja enviado o preço zerado para todos os produtos e suas condições e mover os clientes incluídos nela para as suas novas tabelas de preços.     
         </div>
 
-        <div class="block-pergunta-res">
-            Para mover o cliente em uma nova política é necessário apenas o envio da requisição de inclusão
-            respeitando o modelo padrão especificado no manual de integração.
-            <br>
-            Não há necessidade de enviar produtos e preços novamente, a plataforma sempre armazena a última 
-            requisição enviada e recomendamos que atualizações de novos clientes, produtos e tabelas de preços 
-            sejam realizadas conforme a necessidade para que esse processo não onere a fila e o tempo de 
-            processamento.
+        <div class="block-pergunta" onclick="show_question('g')">
+          <div class="block-pergunta-text" onclick="show_question('g')">
+            Quero que meu cliente tenha disponibilidade para apenas condições de pagamentos específicas. Como proceder?
+          </div>
+          <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
+        </div>
+        <div class="block-pergunta-res" id="g">
+          Recomendamos o envio de uma política apenas com as condições desejadas e o mesmo seja incluído nela. Dessa forma ele só irá visualizar os preços para aquela política.      
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Não utilizo mais uma política de preço. O que devo fazer?
-            </div>
-            <div class="block-pergunta-icon"></div>
+        <div class="block-pergunta" onclick="show_question('h')">
+          <div class="block-pergunta-text" onclick="show_question('h')">
+            Não irei trabalhar mais com uma condição de pagamento. Como faço para indisponibilizar?
+          </div>
+          <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
+        </div>
+        <div class="block-pergunta-res" id="h">
+          Só é necessário enviar preço zerado à condição desejada de todas as políticas de preço disponíveis na plataforma. 
+          Assim, esse método de pagamento não ficará mais disponível.     
         </div>
 
-        <div class="block-pergunta-res">
-            Nesses casos recomendamos que seja enviado o preço zerado para todos os produtos e suas condições 
-            de pagamento. Além disso, os clientes incluídos nela devem ser movidos para as suas 
-            novas respectivas tabelas de preços. 
+        <div class="block-pergunta" onclick="show_question('i')">
+          <div class="block-pergunta-text" onclick="show_question('i')">
+            Trabalho apenas com condições de boleto faturado. Sendo assim, é necessário realizar o envio do preço DFL?
+          </div>
+          <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
+        </div>
+        <div class="block-pergunta-res" id="i">
+          Sim! É obrigatório o envio do preço DFL para todos os produtos, ainda que o distribuidor não vá trabalhar com os métodos de pagamento à vista. 
+          Caso o preço desta condição não seja enviada, o produto não ficará disponível na loja.     
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Como faço para que meu cliente tenha disponibilidade apenas em condições de pagamentos específicas?
-            </div>
-            <div class="block-pergunta-icon"></div>
+        <div class="block-pergunta" onclick="show_question('j')">
+          <div class="block-pergunta-text"  onclick="show_question('j')">
+            Quais são as condições de pagamento que não são necessárias para o envio dos preços?
+          </div>
+          <div class="block-pergunta-icon" id="qj" onclick="show_question('j')"></div>
+        </div>
+        <div class="block-pergunta-res" id="j">
+          Algumas condições de pagamentos não precisam ser enviadas o preço pois a plataforma automaticamente utiliza o preço DFL já enviado para elas. São: 
+          Boleto Antecipado (BILL), PIX, Vale Troca (COUPON) e Cartão de Crédito (CREDIT CARD).
+          <br>
+          Lembrando que para a condição de Cartão de Crédito a plataforma gera automaticamente o valor sob o preço DFL e a taxa de cartão específica de cada loja.    
         </div>
 
-        <div class="block-pergunta-res">
-            Recomendamos o envio de uma política apenas com as condições desejadas e o mesmo seja incluído nela. 
-            Dessa forma ele só irá visualizar os preços daquela política em especifíco. 
+        <div class="block-pergunta" onclick="show_question('k')">
+          <div class="block-pergunta-text" onclick="show_question('k')">
+            Realizei o envio dos preços para as condições de pagamento que trabalho porém não estão todas visíveis na plataforma. Como proceder?
+          </div>
+          <div class="block-pergunta-icon" id="qk" onclick="show_question('k')"></div>
+        </div>
+        <div class="block-pergunta-res" id="k">
+          Neste caso pode ocorrer da condição de pagamento ainda não estar habilitada para o distribuidor na plataforma. 
+          Sendo assim é necessário a abertura de um chamado para a equipe de NRP solicitando a ativação.  
         </div>
 
-        <div class="block-pergunta">
-            <div class="block-pergunta-text">
-                Não irei trabalhar mais com uma condição de pagamento. Como faço para indisponibiliza-la?
-            </div>
-            <div class="block-pergunta-icon"></div>
+        <div class="block-pergunta" onclick="show_question('l')">
+          <div class="block-pergunta-text" onclick="show_question('l')">
+            A plataforma automaticamente realiza o cálculo dos impostos e acrescenta nos preços dos produtos?
+          </div>
+          <div class="block-pergunta-icon" id="ql" onclick="show_question('l')"></div>
+        </div>
+        <div class="block-pergunta-res" id="l">
+          Não! O distribuidor deve efetuar o envio dos preços embutidos com todos os cálculos de impostos necessários para o determinado produto.      
         </div>
 
-        <div class="block-pergunta-res">
-            Só é necessário enviar preço zerado à condição desejada de todas as políticas de preço disponíveis
-            na plataforma. Assim, esse método de pagamento não ficará mais disponível.
+        <div class="block-pergunta" onclick="show_question('m')">
+          <div class="block-pergunta-text" onclick="show_question('m')">
+            Utilizamos o mesmo preço para todas as condições de pagamento. Como o envio deve ser feito para a plataforma?
+          </div>
+          <div class="block-pergunta-icon" id="qm" onclick="show_question('m')"></div>
+        </div>
+        <div class="block-pergunta-res" id="m">
+          Neste caso o distribuidor deve enviar o mesmo preço para todas as condições de pagamento que irá trabalhar para assim todos fiquem disponíveis na loja.      
+        </div>
+
+        <div class="block-pergunta" onclick="show_question('n')">
+          <div class="block-pergunta-text" onclick="show_question('n')">
+            Alguns de meus clientes não estão visualizando os preços corretamente de acordo com a tabela enviada para eles. Como proceder?
+          </div>
+          <div class="block-pergunta-icon" id="qn" onclick="show_question('n')"></div>
+        </div>
+        <div class="block-pergunta-res" id="n">
+          Nesses casos recomendamos que o distribuidor realize uma nova requisição incluindo o cliente na determinada política ou limpe o cache da página do cliente e 
+          tente efetuar o login novamente para validar os preços disponíveis.    
+        </div>
+
+        <div class="block-pergunta" onclick="show_question('o')">
+          <div class="block-pergunta-text" onclick="show_question('o')">
+            É possível ter uma política de preço por cliente? 
+          </div>
+          <div class="block-pergunta-icon" id="qo" onclick="show_question('o')"></div>
+        </div>
+        <div class="block-pergunta-res" id="o">
+          Essa é uma prática não recomendada! Pois, além de ser um processo que irá demandar muita manutenção ao seu lado, também poderá ocasionar problemas no envio de requisições. 
+          Suponhamos que você tenha 10.000 clientes, terá que enviar 10.000 requisições de política de preço e nesse envio será barrado por passar o limite de envio de requisições 
+          por hora.
         </div>
     </div>
 

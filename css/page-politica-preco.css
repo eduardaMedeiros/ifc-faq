@@ -52,8 +52,8 @@
     .search-input{ width: 60%; }
 }
 
-.processo-integracao {
-    top: 0.5rem;
+.container-block {
+    top: 2rem;
     position: relative; 
     width: 100%;
     display: flex;
@@ -61,16 +61,14 @@
     justify-content: center;
 }
 
-.regras-envio {
+.container {
     position: relative;
     width: 100%;
-    margin: 34rem 0 0 0;
+    margin: 7rem 0 0 0;
 }
 
-.duvidas-frequentes {
-    position: relative;
-    width: 100%;
-    margin: 5rem 0 0 0;
+#inicio {
+    margin: 12rem 0 0 0;
 }
 
 .block {
@@ -184,7 +182,7 @@
 }
 
 .block-pergunta-res {
-    display: block; 
+    display: none;
     margin: 5rem 17rem 0 14rem; 
     font-size: 0.9rem;
     line-height: 1.3;
