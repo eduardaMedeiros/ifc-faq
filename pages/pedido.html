@@ -2,457 +2,473 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <title>Pedido | Infracommerce</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
-  <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/page-pedido.css" rel="stylesheet" type="text/css"/>
-  <title>Pedido | Infracommerce</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/pages.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-top"></div> 
+    <header>
+        <div class="header-top"></div>
 
-        <div class="container-fluid">
-          <div class="header-container"> 
-            <div class="row">
-              <div class="header-logo"></div>   
-              <div class="header-menu">
-                <ul class="header-menu-nav">
-                    <li class="header-menu-item">
-                      <a href="../index.html">
-                        início </a>
+        <div class="navbar">
+            <div class="logo"></div>
+            <i class='bx bx-menu'></i>
+
+            <div class="nav-links">
+                <div class="sidebar">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="links">
+                    <li><a href="../index.html">início</a></li>
+                    <li>
+                        <a href="#">integrações</a>
+                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a onclick="atualizarpag('processo-integracao')">processo de integração</a></li>
+                            <li><a onclick="atualizarpag('requisicoes')">limite de requisições</a></li>
+                            <li><a onclick="atualizarpag('estoque')">estoque</a></li>
+                            <li><a onclick="atualizarpag('politica-preco')">política de preço</a></li>
+                            <li><a onclick="atualizarpag('cliente')">cliente</a></li>
+                            <li><a onclick="atualizarpag('status-cliente')">status de cliente</a></li>
+                            <li><a onclick="atualizarpag('limite-credito')">limite de crédito</a></li>
+                            <li><a onclick="atualizarpag('pedido')">pedido</a></li>
+                            <li><a onclick="atualizarpag('pagamento')">pagamento</a></li>
+                            <li><a onclick="atualizarpag('trackings')">trackings</a></li>
+                        </ul>
                     </li>
-                    <li class="header-menu-item">
-                      <a href="../index.html#integracao">
-                        integrações </a>
-                    </li>
-                    <li class="header-menu-item">
-                      <a href="#duvidas">
-                        dúvidas frequentes </a>
-                    </li>
-                    <li class="header-menu-item">
-                      <a href="../index.html#fale">
-                        fale conosco </a>
-                    </li>
-                  </ul>
-              </div>
+                    <li><a href="#section_4">dúvidas frequentes</a></li>
+                    <li><a href="../index.html#section_4">fale conosco</a></li>
+                </ul>
             </div>
-          </div>
         </div>
     </header>
-    <div class="header-space"></div>
-        
-    <div class="banner-container">
-        <div class="container-half">
-          <div class="banner-title">Como podemos ajudá-lo?</div>
 
-          <div class="search">
-						<input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Descreva aqui sobre a sua dúvida"/>
-					</div>
+    <section class="banner" id="section_1">
+        <div class="banner-title">Como podemos te ajudar?</div>
 
-          <div class="banner-text">
-            Pesquise sobre as possíveis dúvidas que podem ocorrer durante 
-            <br>
-            o processo de integração.
-          </div>
+        <div class="banner-search">
+            <input type="text" class="search-input" name="duvida" alt="char=500"
+                placeholder="Digite aqui sobre a sua dúvida" />
         </div>
+    </section>
 
-        <div class="container-block">
-          <div class="block">
-            <div class="block-image" id="pedido"></div>
-            <div class="block-title">Pedido</div>
-            <div class="block-text">
-                Refere-se a uma solicitação feita por um cliente para adquirir produtos ou serviços através de
-                uma loja online. É o processo pelo qual um cliente seleciona os itens que deseja comprar, 
-                coloca-os em seu carrinho de compras virtual e, em seguida, completa o processo de compra 
-                ao fornecer informações de pagamento, endereço de entrega e outras informações relevantes.
-                <br><br>
-                Para resumir um pedido no e-commerce é o processo completo que vai desde a seleção de produtos
-                até a entrega bem-sucedida desses produtos ao cliente, incluindo todas as etapas 
-                intermediárias de pagamento, processamento e entrega.
-                <br><br>
-                <strong>
-                    É importante ressaltar que terá a possibilidade de surgir pedidos contendo itens com valores
-                    promocionais e bonificações.
-                </strong>
-                <br><br><br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="inicio">
-      <div id="left" class="title">
-        <span>Pedidos com promoções</span>
-      </div>
-
-      <div class="container-block">
+    <section class="container" id="section_2">
         <div class="block">
-          <div class="block-text">
-            Promoções referem-se a estratégias de marketing usadas por empresas para oferecer descontos ou 
-            incentivos temporários aos consumidores, a fim de aumentar as vendas, atrair novos clientes ou 
+            <div class="block-image" id="pedido"></div>
+            <div class="block-title">
+                Integração de Pedido
+                <br>
+                Conheça o fluxo do processamento na plataforma e
+                tire suas dúvidas.
+            </div>
+        </div>
+
+        <div class="block-text">
+            Refere-se a uma solicitação feita por um cliente para adquirir produtos ou serviços através de
+            uma loja online. É o processo pelo qual um cliente seleciona os itens que deseja comprar,
+            coloca-os em seu carrinho de compras virtual e, em seguida, completa o processo de compra
+            ao fornecer informações de pagamento, endereço de entrega e outras informações relevantes.
+            <br><br>
+            Para resumir um pedido no e-commerce é o processo completo que vai desde a seleção de produtos
+            até a entrega bem-sucedida desses produtos ao cliente, incluindo todas as etapas
+            intermediárias de pagamento, processamento e entrega.
+            <br><br>
+            <strong>
+                É importante ressaltar que terá a possibilidade de surgir pedidos contendo itens com valores
+                promocionais e bonificações.
+            </strong>
+        </div>
+
+        <div class="block-subtitle">Pedidos com promoções</div>
+        <div class="block-text">
+            Promoções referem-se a estratégias de marketing usadas por empresas para oferecer descontos ou
+            incentivos temporários aos consumidores, a fim de aumentar as vendas, atrair novos clientes ou
             fidelizar os existentes.
             <br><br>
-            Essas promoções podem ser aplicadas de diversas formas, podendo ser atrelada por clientes, 
-            por sortimentos, ou por produtos. Nelas podem ser incorporadas condições de acordo com a finalidade de determinado desconto.
-            (Ex: A promoção só vale para primeira compra na plataforma). 
+            Essas promoções podem ser aplicadas de diversas formas, podendo ser atrelada por clientes,
+            por sortimentos, ou por produtos. Nelas podem ser incorporadas condições de acordo com a finalidade de
+            determinado desconto.
+            (Ex: A promoção só vale para primeira compra na plataforma).
             <br><br>
-            Na etapa da Operação Assistida será alinhado com a equipe comercial da loja junto com o distribuidor todas as promoções habilitadas atualmente na plataforma.
-            Assim, o distribuidor poderá entender o funcionamento de cada uma e parametrizá-las em seu ERP de acordo com a sua regra de négocio.
-            <br><br><br>
-          </div>
+            Na etapa da Operação Assistida será alinhado com a equipe comercial da loja junto com o distribuidor todas
+            as promoções habilitadas atualmente na plataforma.
+            Assim, o distribuidor poderá entender o funcionamento de cada uma e parametrizá-las em seu ERP de acordo com
+            a sua regra de négocio.
         </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div id="right" class="title">
-        <span>Pedidos com bonificação (Kit Bonificado)</span>
-      </div>
-
-      <div class="container-block">
-        <div class="block">
-          <div class="block-text">
-            O termo "Kit Bonificado" no contexto do e-commerce refere-se a um tipo específico de oferta ou 
+        <div class="block-subtitle">Pedidos com bonificações (Kit Bonificado)</div>
+        <div class="block-text">
+            O termo "Kit Bonificado" no contexto do e-commerce refere-se a um tipo específico de oferta ou
             promoção em que um conjunto de produtos ou serviços relacionados é vendido como um pacote, muitas
-            vezes com algum tipo de benefício adicional incluído. 
+            vezes com algum tipo de benefício adicional incluído.
             <br><br>
-            Essa estratégia visa incentivar os clientes a comprar mais do que apenas um produto individual, 
+            Essa estratégia visa incentivar os clientes a comprar mais do que apenas um produto individual,
             proporcionando-lhes uma vantagem econômica ou algum tipo de valor agregado.
             <br><br>
-            Esses kits geralmente são compostos por produtos complementares ou relacionados, de modo que a 
-            compra do kit seja mais vantajosa do que adquirir cada item separadamente. Isso pode estimular 
+            Esses kits geralmente são compostos por produtos complementares ou relacionados, de modo que a
+            compra do kit seja mais vantajosa do que adquirir cada item separadamente. Isso pode estimular
             os consumidores a experimentarem produtos adicionais que normalmente não comprariam isoladamente.
             <br><br>
             <strong>
-              Nesse caso um dos itens será bonificado, sendo faturado com o valor igual a zero na nota fiscal 
-              (Nota Bonificada) que é enviada para a plataforma.
-              <br><br>
-              O distribuidor também deve informar na nota o código do kitSkuId, que deve ser identificado
-              no XML do pedido.
-              <br><br> 
-              Vale ressaltar que um produto do tipo bonificado é identificado no pedido através da tag “skuType”. 
-              Podemos identificar quando o texto neste campo for igual a FFR, assim podemos saber quando o produto 
-              é bonificado ou não.
+                Nesse caso um dos itens será bonificado, sendo faturado com o valor igual a zero na nota fiscal
+                (Nota Bonificada) que é enviada para a plataforma.
+                <br><br>
+                O distribuidor também deve informar na nota o código do kitSkuId, que deve ser identificado
+                no XML do pedido.
+                <br><br>
+                Vale ressaltar que um produto do tipo bonificado é identificado no pedido através da tag “skuType”.
+                Podemos identificar quando o texto neste campo for igual a FFR, assim podemos saber quando o produto
+                é bonificado ou não.
             </strong>
-            <br><br><br>
-          </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <div id="left" class="title">
-            <span>Regras de Envio</span>
+    <section class="container" id="section_3">
+        <div class="container-title">Boas práticas para o envio de requisições</div>
+
+        <div class="container-list">
+            <ul class="list">
+                <li class="item">
+                    <span class="list-title">Integração de pedido</span>
+                    <span class="list-text">
+                        Devido ao fato da plataforma Infrashop trabalhar com filas distintas de integração,
+                        é necessário que o Distribuidor esteja preparado para que, eventualmente, o primeiro pedido
+                        do cliente seja informado antes da Notificação de Criação do Cliente.
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Reprocessamento do pedido</span>
+                    <span class="list-text">
+                        Caso haja alguma falha no envio do pedido (Por conta de erro no web service do
+                        distribuidor) ele é enfileirado para futuras tentativas. Após <strong>cinco tentativas</strong>
+                        falhas de integração o pedido automaticamente cai em um alarme para que passe por análise
+                        manual.
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Retorno da requisição de pedido</span>
+                    <span class="list-text">
+                        É necessário que o Distribuidor receba a requisição e retorne uma resposta imediatamente para
+                        a plataforma. Somente após retornar a resposta para a plataforma o distribuidor deve realizar
+                        a integração do pedido com o seu ERP.
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Processamento do pedido</span>
+                    <span class="list-text">
+                        Caso o distribuidor tenha regras de validação de estoque ou outros pontos, não deve rejeitar
+                        a integração do pedido, uma vez que um pedido pode ser faturado parcialmente e caso houver
+                        necessidade de não seguir com o mesmo, deverá ser tratado com cancelamento.
+                        <br>
+                        Ou seja, o ERP deve se comportar de maneira com que a integração ocorra para os pedidos
+                        emitidos no e-commerce.
+                    </span>
+                </li>
+            </ul>
         </div>
+    </section>
 
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Integração de pedido</div>
-            <div class="block-check-text">
-                Devido ao fato da plataforma Infrashop trabalhar com filas distintas de integração, 
-                é necessário que o Distribuidor esteja preparado para que, eventualmente, o primeiro pedido 
-                do cliente seja informado antes da Notificação de Criação do Cliente.
+    <section class="container" id="section_4">
+        <div class="container-title">Dúvidas Frequentes</div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Quais são as informações enviadas dentro da requisição de pedido?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Dentro da requisição do pedido temos as seguintes informações: Número do pedido, valor total do
+                        pedido, valor total de desconto caso tenha, todos os produtos selecionados
+                        junto ao seu preço de venda e quantidade selecionada.
+                        <br>
+                        Caso o produto tenha desconto para um dos produtos também será informado qual o valor descontado
+                        no preço do produto.
+                        <br>
+                        Além disso, é informado os dados do cliente, o endereço de entrega e o método de pagamento
+                        escolhido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    É possível que um pedido seja enviado primeiro antes que o cadastro do cliente integre no ERP do
+                    distribuidor?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Sim! Pela plataforma tratar as integrações em filas diferentes pode ser que a fila de cliente no
+                        momento em que o pedido foi realizado esteja mais sobrecarregada e com um
+                        tempo maior de processamento. Para minimizar esse empecilho, é enviado na requisição do pedido
+                        todos os dados necessários do cliente.
+                        <br>
+                        Neste caso recomendamos, caso seja possível, que o ERP esteja desenvolvido para receber essas
+                        informações e o pedido integre corretamente. Caso não, será necessário
+                        aguardar a integração do cliente para que o pedido integre realmente em seu ERP. Lembrando que a
+                        plataforma realiza o envio do pedido até 5 vezes, ainda que tenha obtido retorno de erro.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como identificar uma promoção (desconto) aplicado em um produto na requisição de pedido?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        No pedido enviado via plataforma são descritas as características e informações pertinentes ao
+                        desconto. <br>
+                        Exemplos: <br>
+                        Tag totalDiscountAmount - que informa o total de descontos que o pedido possui. <br>
+                        Tag promotionList - lista de informações pertinentes ao produto que está com promoção. <br>
+                        Assim como também pode ser verificado o nome da promoção, tipo de promoção, etc. Toda
+                        particularidade pertinente ao tipo de pedido sempre
+                        será enviado nos campos do XML. É essencial que o ERP esteja tratado para distinguir essas
+                        informações.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como identificar a condição de pagamento escolhida para aquele pedido?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        No final da requisição do pedido é identificado a tag paymentList onde será listado todas as
+                        condições de pagamento utilizadas naquele pedido. Geralmente o cliente opta
+                        por apenas uma condição de pagamento porém em alguns casos específicos a plataforma envia mais
+                        de uma condição. Nessas situações recomendamos que o ERP do
+                        distribuidor esteja preparado para receber essas informações.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como funciona o Kit Bonificado?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        O kit bonificado na plataforma funciona como um combo, onde uma quantidade N de produtos recebe
+                        bonificação. Pode ser um kit composto tanto por um único produto
+                        ou diversos produtos. <br>
+                        Exemplo: Compre 2 produtos X e Leve 4 produtos X ou Compre 3 produtos Y e Leve 1 produto X.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como identifico a bonificação de itens dentro da uma requisição de pedido?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Produtos bonificados dentro da requisição de pedidos são identificados pela tag skuType que
+                        contém o valor FFR. Além disso, o preço de venda desses produtos,
+                        identificado na requisição com a tag salePrice. irá conter o valor 0.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    É possível personalizar ou criar Kits Bonificados de acordo com as preferências dos clientes?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        A criação dos Kits Bonificados acontecem de acordo com as regras de negócio entre a equipe
+                        comercial e a indústria.
+                        Caso o distribuidor queira disponibilizar um Kit dentro da plataforma o mesmo deve verificar
+                        essa questão com a indústria responsável e
+                        também a possibilidade com a equipe de NRP.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Quais são as trackings obrigatórias de envio que fecham o ciclo de um pedido?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        As trackings que fecham o ciclo de um pedido são: ENT que se refere a entrega concluída e a
+                        tracking CAN que se refere ao cancelamento do pedido. Lembrando que
+                        após o recebimento desses trackings a plataforma desconsidera qualquer outro status de pedido
+                        enviado posteriormente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como são tratados os casos de falhas ou erros na integração dos pedidos entre a plataforma e o ERP
+                    do distribuidor?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Caso haja alguma falha no envio do pedido (Por conta de erro no web service do distribuidor) ele
+                        é enfileirado para futuras tentativas. Após cinco tentativas
+                        falhas de integração o pedido automaticamente cai em um alarme para que passe por análise
+                        manual.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    O pedido foi faturado, porém não foi entregue ou o cliente devolveu. Como proceder?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Os pedidos devem receber o envio da tracking de cancelamento, mesmo que tenha sido efetuado
+                        anteriormente. Após isso, o cliente
+                        fará contato com o SAC e a IFC irá efetuar o reembolso do valor do pedido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Quais são as informações de rastreamento e acompanhamento dos pedidos que são transmitidas na
+                    integração?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        As informações de acompanhamento do pedido são atualizadas para o cliente de acordo com as
+                        trackings enviadas pelo distribuidor. Uma vez integradas,
+                        são atualizadas na plataforma e visíveis para o cliente em sua aba de pedidos.
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Reprocessamento do pedido</div>
-            <div class="block-check-text">
-                Caso haja alguma falha no envio do pedido (Por conta de erro no web service do
-                distribuidor) ele é enfileirado para futuras tentativas. Após <strong>cinco tentativas</strong>
-                falhas de integração o pedido automaticamente cai em um alarme para que passe por análise manual.
+    <footer class="footer">
+        <div class="footer-col">
+            <div class="footer-logo"></div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Sobre nós</h4>
+            <ul>
+                <li>
+                    <a href="https://www.infracommerce.com.br/solucoes-d2c/" target="_blank">
+                        D2C </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/solucoes-b2b/" target="_blank">
+                        B2B </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-data/" target="_blank">
+                        infra.data </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-digital/" target="_blank">
+                        infra.digital </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-log/" target="_blank">
+                        infra.log </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-pay/" target="_blank">
+                        infra.pay </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-shop/" target="_blank">
+                        infra.shop </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Integrações</h4>
+            <ul>
+                <li>
+                    <a href="processo-integracao.html" target="_blank">
+                        processo de integração </a>
+                </li>
+                <li>
+                    <a href="requisicoes.html" target="_blank">
+                        limite de requisições </a>
+                </li>
+                <li>
+                    <a href="estoque.html" target="_blank">
+                        estoque </a>
+                </li>
+                <li>
+                    <a href="politica-preco.html" target="_blank">
+                        política de preço </a>
+                </li>
+                <li>
+                    <a href="cliente.html" target="_blank">
+                        cliente </a>
+                </li>
+                <li>
+                    <a href="status-cliente.html" target="_blank">
+                        status cliente </a>
+                </li>
+                <li>
+                    <a href="limite-credito.html" target="_blank">
+                        limite de crédito </a>
+                </li>
+                <li>
+                    <a href="pedido.html" target="_blank">
+                        pedido </a>
+                </li>
+                <li>
+                    <a href="pagamento.html" target="_blank">
+                        pagamento </a>
+                </li>
+                <li>
+                    <a href="trackings.html" target="_blank">
+                        tracking </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+                <a href="https://www.instagram.com/infracommerce/" target="_blank">
+                    <span id="instagram" class="ico"></span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0"
+                    target="_blank">
+                    <span id="whatsapp" class="ico"></span>
+                </a>
+                <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
+                    <span id="linkedin" class="ico"></span>
+                </a>
+                <a href="https://www.facebook.com/infracommerce/" target="_blank">
+                    <span id="facebook" class="ico"></span>
+                </a>
+                <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
+                    <span id="youtube" class="ico"></span>
+                </a>
             </div>
-        </div>
-
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Retorno da requisição de pedido</div>
-            <div class="block-check-text">
-                É necessário que o Distribuidor receba a requisição e retorne uma resposta imediatamente para
-                a plataforma. Somente após retornar a resposta para a plataforma o distribuidor deve realizar
-                a integração do pedido com o seu ERP.
-            </div>
-        </div>
-
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Processamento do pedido</div>
-            <div class="block-check-text">
-                Caso o distribuidor tenha regras de validação de estoque ou outros pontos, não deve rejeitar 
-                a integração do pedido, uma vez que um pedido pode ser faturado parcialmente e caso houver 
-                necessidade de não seguir com o mesmo, deverá ser tratado com cancelamento.
-                <br> 
-                Ou seja, o ERP deve se comportar de maneira com que a integração ocorra para os pedidos 
-                emitidos no e-commerce.
-            </div>
-        </div>
-
-    </div>
-
-    <div class="container" id="duvidas">
-      <div id="right" class="title">
-        <span>Dúvidas Frequentes</span>
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('a')">
-        <div class="block-pergunta-text" onclick="show_question('a')">
-          Quais são as informações enviadas dentro da requisição de pedido?
-        </div>
-        <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
-      </div>
-      <div class="block-pergunta-res" id="a">
-        Dentro da requisição do pedido temos as seguintes informações: Número do pedido, valor total do pedido, valor total de desconto caso tenha, todos os produtos selecionados 
-        junto ao seu preço de venda e quantidade selecionada. 
-        <br>
-        Caso o produto tenha desconto para um dos produtos também será informado qual o valor descontado no preço do produto. 
-        <br>
-        Além disso, é informado os dados do cliente, o endereço de entrega e o método de pagamento escolhido.
-      </div>
-    
-      <div class="block-pergunta" onclick="show_question('b')">
-        <div class="block-pergunta-text" onclick="show_question('b')">
-          É possível que um pedido seja enviado primeiro antes que o cadastro do cliente integre no ERP do distribuidor?
-        </div>
-        <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
-      </div>
-      <div class="block-pergunta-res" id="b">
-        Sim! Pela plataforma tratar as integrações em filas diferentes pode ser que a fila de cliente no momento em que o pedido foi realizado esteja mais sobrecarregada e com um 
-        tempo maior de processamento. Para minimizar esse empecilho, é enviado na requisição do pedido todos os dados necessários do cliente. 
-        <br>
-        Neste caso recomendamos, caso seja possível, que o ERP esteja desenvolvido para receber essas informações e o pedido integre corretamente. Caso não, será necessário 
-        aguardar a integração do cliente para que o pedido integre realmente em seu ERP. Lembrando que a plataforma realiza o envio do pedido até 5 vezes, ainda que tenha obtido retorno de erro.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('c')">
-        <div class="block-pergunta-text" onclick="show_question('c')">
-          Como identificar uma promoção (desconto) aplicado em um produto na requisição de pedido?
-        </div>
-        <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
-      </div>
-      <div class="block-pergunta-res" id="c">
-        No pedido enviado via plataforma são descritas as características e informações pertinentes ao desconto. <br>
-        Exemplos: <br> 
-        Tag totalDiscountAmount - que informa o total de descontos que o pedido possui. <br>  
-        Tag promotionList - lista de informações pertinentes ao produto que está com promoção. <br>
-        Assim como também pode ser verificado o nome da promoção, tipo de promoção, etc. Toda particularidade pertinente ao tipo de pedido sempre 
-        será enviado nos campos do XML. É essencial que o ERP esteja tratado para distinguir essas informações.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('d')">
-        <div class="block-pergunta-text" onclick="show_question('d')">
-          Como identificar a condição de pagamento escolhida para aquele pedido?
-        </div>
-        <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
-      </div>
-      <div class="block-pergunta-res" id="d">
-        No final da requisição do pedido é identificado a tag paymentList onde será listado todas as condições de pagamento utilizadas naquele pedido. Geralmente o cliente opta 
-        por apenas uma condição de pagamento porém em alguns casos específicos a plataforma envia mais de uma condição. Nessas situações recomendamos que o ERP do 
-        distribuidor esteja preparado para receber essas informações.        
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('e')">
-        <div class="block-pergunta-text" onclick="show_question('e')">
-          Como funciona o Kit Bonificado?
-        </div>
-        <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
-      </div>
-      <div class="block-pergunta-res" id="e">
-        O kit bonificado na plataforma funciona como um combo, onde uma quantidade N de produtos recebe bonificação. Pode ser um kit composto tanto por um único produto 
-        ou diversos produtos. <br>
-        Exemplo: Compre 2 produtos X e Leve 4 produtos X ou Compre 3 produtos Y e Leve 1 produto X.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('f')">
-        <div class="block-pergunta-text" onclick="show_question('f')">
-          Como identifico a bonificação de itens dentro da uma requisição de pedido?
-        </div>
-        <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
-      </div>
-      <div class="block-pergunta-res" id="f">
-        Produtos bonificados dentro da requisição de pedidos são identificados pela tag skuType que contém o valor FFR. Além disso, o preço de venda desses produtos, 
-        identificado na requisição com a tag salePrice. irá conter o valor 0.        
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('g')">
-        <div class="block-pergunta-text" onclick="show_question('g')">
-          É possível personalizar ou criar Kits Bonificados de acordo com as preferências dos clientes?
-        </div>
-        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
-      </div>
-      <div class="block-pergunta-res" id="g">
-        A criação dos Kits Bonificados acontecem de acordo com as regras de negócio entre a equipe comercial e a indústria. 
-        Caso o distribuidor queira disponibilizar um Kit dentro da plataforma o mesmo deve verificar essa questão com a indústria responsável e 
-        também a possibilidade com a equipe de NRP.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('h')">
-        <div class="block-pergunta-text" onclick="show_question('h')">
-          Quais são as trackings obrigatórias de envio que fecham o ciclo de um pedido?
-        </div>
-        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
-      </div>
-      <div class="block-pergunta-res" id="h">
-        As trackings que fecham o ciclo de um pedido são: ENT que se refere a entrega concluída e a tracking CAN que se refere ao cancelamento do pedido. Lembrando que 
-        após o recebimento desses trackings a plataforma desconsidera qualquer outro status de pedido enviado posteriormente.      
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('i')">
-        <div class="block-pergunta-text" onclick="show_question('i')">
-          Como são tratados os casos de falhas ou erros na integração dos pedidos entre a plataforma e o ERP do distribuidor?
-        </div>
-        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
-      </div>
-      <div class="block-pergunta-res" id="i">
-        Caso haja alguma falha no envio do pedido (Por conta de erro no web service do distribuidor) ele é enfileirado para futuras tentativas. Após cinco tentativas 
-        falhas de integração o pedido automaticamente cai em um alarme para que passe por análise manual.  
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('j')">
-        <div class="block-pergunta-text"  onclick="show_question('j')">
-          O pedido foi faturado, porém não foi entregue ou o cliente devolveu. Como proceder?
-        </div>
-        <div class="block-pergunta-icon" id="qj"  onclick="show_question('j')"></div>
-      </div>
-      <div class="block-pergunta-res" id="j">
-        Os pedidos devem receber o envio da tracking de cancelamento, mesmo que tenha sido efetuado anteriormente. Após isso, o cliente 
-        fará contato com o SAC e a IFC irá efetuar o reembolso do valor do pedido.      
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('k')">
-        <div class="block-pergunta-text" onclick="show_question('k')">
-          Quais são as informações de rastreamento e acompanhamento dos pedidos que são transmitidas na integração?
-        </div>
-        <div class="block-pergunta-icon" id="qk" onclick="show_question('k')"></div>
-      </div>
-      <div class="block-pergunta-res" id="k">
-        As informações de acompanhamento do pedido são atualizadas para o cliente de acordo com as trackings enviadas pelo distribuidor. Uma vez integradas, 
-        são atualizadas na plataforma e visíveis para o cliente em sua aba de pedidos.     
-      </div>
-    </div>
-
-    <footer>
-        <div class="footer-logo"></div>
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Tipos de integração
-          </div>
-
-          <ul class="footer-links">
-            <li>
-              <a href="processo-integracao.html" target="_blank">
-                Processo de integração </a>
-            </li>
-            <li>
-              <a href="requisicoes.html" target="_blank">
-                Limite de Requisições </a>
-            </li>
-            <li>
-              <a href="estoque.html" target="_blank">
-                Estoque </a>
-            </li>
-            <li>
-              <a href="politica-preco.html"target="_blank">
-                Política de Preço </a>
-            </li>
-            <li>
-              <a href="cliente.html" target="_blank">
-                Cliente </a>
-            </li>
-            <li>
-              <a href="status-cliente.html" target="_blank">
-                Status Cliente </a>
-            </li>
-            <li>
-              <a href="limite-credito.html" target="_blank">
-                Limite de Crédito </a>
-            </li>
-            <li>
-              <a href="pedido.html" target="_blank">
-                Pedido </a>
-            </li>
-            <li>
-              <a href="pagamento.html" target="_blank">
-                Pagamento </a>
-            </li>
-            <li>
-              <a href="trackings.html" target="_blank">
-                Tracking </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Melhorias	Integração
-          </div>
-
-          <ul class="footer-links">
-            <li>
-              <a href="programa-pontos.html" target="_blank">
-                Programa de pontos </a>
-            </li>
-            <li>
-              <a href="verba-flex.html" target="_blank">
-                Verba Flex </a>
-            </li>
-            <li>
-              <a href="carteira-vendedores.html" target="_blank">
-                Carteira de Vendedores </a>
-            </li>
-            <li>
-              <a href="hub-financeiro.html" target="_blank">
-                Hub financeiro </a>
-            </li>
-          </ul>
-        </div>
-
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Redes Sociais
-          </div>
-
-          <ul class="social-media">
-            <li>
-              <a href="https://www.instagram.com/infracommerce/" target="_blank">
-                <span id="instagram" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0" target="_blank">
-                <span id="whatsapp" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
-                <span id="linkedin" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/infracommerce/" target="_blank">
-                <span id="facebook" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
-                <span id="youtube" class="ico"></span>
-              </a>
-            </li>
-          </ul>
         </div>
     </footer>
 
     <script src="../js/script.js"></script>
-
 </body>
 
 </html>

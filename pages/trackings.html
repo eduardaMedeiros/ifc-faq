@@ -2,403 +2,451 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <title>Trackings | Infracommerce</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
-  <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/page-trackings.css" rel="stylesheet" type="text/css"/>
-  <title>Trackings | Infracommerce</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/pages.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-top"></div> 
+    <header>
+        <div class="header-top"></div>
 
-        <div class="container-fluid">
-          <div class="header-container"> 
-            <div class="row">
-              <div class="header-logo"></div>   
-              <div class="header-menu">
-                <ul class="header-menu-nav">
-                    <li class="header-menu-item">
-                      <a href="../index.html">
-                        início </a>
+        <div class="navbar">
+            <div class="logo"></div>
+            <i class='bx bx-menu'></i>
+
+            <div class="nav-links">
+                <div class="sidebar">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="links">
+                    <li><a href="../index.html">início</a></li>
+                    <li>
+                        <a href="#">integrações</a>
+                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a onclick="atualizarpag('processo-integracao')">processo de integração</a></li>
+                            <li><a onclick="atualizarpag('requisicoes')">limite de requisições</a></li>
+                            <li><a onclick="atualizarpag('estoque')">estoque</a></li>
+                            <li><a onclick="atualizarpag('politica-preco')">política de preço</a></li>
+                            <li><a onclick="atualizarpag('cliente')">cliente</a></li>
+                            <li><a onclick="atualizarpag('status-cliente')">status de cliente</a></li>
+                            <li><a onclick="atualizarpag('limite-credito')">limite de crédito</a></li>
+                            <li><a onclick="atualizarpag('pedido')">pedido</a></li>
+                            <li><a onclick="atualizarpag('pagamento')">pagamento</a></li>
+                            <li><a onclick="atualizarpag('trackings')">trackings</a></li>
+                        </ul>
                     </li>
-                    <li class="header-menu-item">
-                      <a href="../index.html#integracao">
-                        integrações </a>
-                    </li>
-                    <li class="header-menu-item">
-                      <a href="#duvidas">
-                        dúvidas frequentes </a>
-                    </li>
-                    <li class="header-menu-item">
-                      <a href="../index.html#fale">
-                        fale conosco </a>
-                    </li>
-                  </ul>
-              </div>
+                    <li><a href="#section_4">dúvidas frequentes</a></li>
+                    <li><a href="../index.html#section_4">fale conosco</a></li>
+                </ul>
             </div>
-          </div>
         </div>
     </header>
-    <div class="header-space"></div>
-        
-    <div class="banner-container">
-        <div class="container-half">
-          <div class="banner-title">Como podemos ajudá-lo?</div>
 
-          <div class="search">
-						<input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Descreva aqui sobre a sua dúvida"/>
-					</div>
+    <section class="banner" id="section_1">
+        <div class="banner-title">Como podemos te ajudar?</div>
 
-          <div class="banner-text">
-            Pesquise sobre as possíveis dúvidas que podem ocorrer durante 
-            <br>
-            o processo de integração.
-          </div>
+        <div class="banner-search">
+            <input type="text" class="search-input" name="duvida" alt="char=500"
+                placeholder="Digite aqui sobre a sua dúvida" />
         </div>
+    </section>
 
-        <div class="container-block">
-          <div class="block">
-            <div class="block-image" id="trackings"></div>
-            <div class="block-title">Trackings</div>
-            <div class="block-text">
-              O status de pedidos (Trackings) refere-se ao estado ou etapa em que um pedido comercial se encontra durante todo o processo de compra e venda 
-              entre empresas. Esse status é usado para acompanhar e comunicar o progresso do pedido desde o momento em que é colocado até a sua conclusão.
-              <br><br>
-              Segue as trackings que esperamos serem enviadas para a plataforma:
-              <br><br>
-              <strong>(OPCIONAL) WMS - Separação e embalagem: </strong>Esse status deve ser enviado para plataforma quando o produto entrar em separação e embalagem. <br><br>
-              <strong>(OBRIGATÓRIA) NFS - Nota fiscal emitida: </strong>Nesta tracking devem ser informados todos os SKUs que constam no pedido, bem como outras informações como: 
-              valor unitário, valor promocional (caso algum SKU contenha promoção aplicada a ele), numeração do Kit (caso o pedido contenha um Kit Bonificado), entre outros. <br>
-              A NFS trata-se de uma tracking obrigatória para os pedidos que seguirão o fluxo de vida. <br><br>
-              <strong>(OBRIGATÓRIA) FAT - Finalização de faturamento: </strong>Essa tracking indica o encerramento do faturamento, uma vez que ela é enviada, não será integrada mais nenhuma 
-              nota fiscal. Recomendamos que o distribuidor envie depois de alguns minutos após a NFS para evitar algum erro de integração (Pois um pedido com a tracking 
-              FAT precisa ter uma NFS). Todo pedido que seguir com o fluxo de vida completo, deve conter NFS e FAT, para não ocorrer falha nos repasses enviados para o distribuidor. <br><br>
-              <strong>(OPCIONAL) ETR - Entrega em andamento: </strong>Indica que a entrega está em andamento, deve ser utilizada somente para casos em que o distribuidor disponibilize informações de 
-              rastreio da entrega. <br><br>
-              <strong>(OBRIGATÓRIO) ENT - Entrega concluída: </strong>Essa tracking indica que o pedido foi entregue. <br><br>
-              <strong>(OBRIGATÓRIO) CAN - Cancelamento do pedido: </strong>deverá ser utilizado em casos de cancelamento do pedido. 
-              Pode ser cancelado até a etapa de ETR, após o ENT não será mais possível cancelar um pedido. <br><br>
-              <strong>Observações sobre a tracking CAN:</strong><br><br>
-              <strong>1 - </strong>Tracking CAN não possui ordenação e pode ser enviada a qualquer momento pelo distribuidor. <br>
-              <strong>2 - </strong>Pedidos pagos através de meio de pagamento à vista serão debitados na conta gráfica do distribuidor, mas só após a tracking ser integrada.<br>
-              <strong>3 - </strong>O não envio da tracking em casos necessários, aumenta o contato do cliente com o SAC.<br>
-              <strong>4 - </strong>Após o envio da Tracking não é possível integrar NFS e nem FAT, pois o ciclo do pedido está finalizado<br>
-              <strong>5 - </strong>Não há possibilidade de remover a tracking CAN e nem realizar o envio de cancelamento manual pela plataforma.
-              <br><br><br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="inicio">
-      <div id="left" class="title">
-        <span>Processo de Devolução</span>
-      </div>
-
-      <div class="container-block">
+    <section class="container" id="section_2">
         <div class="block">
-          <div class="block-text">
-            Os pedidos que foram faturados mas não foram entregues ou que o cliente devolveu no ato da entrega, devem receber o envio da tracking de CAN, 
+            <div class="block-image" id="trackings"></div>
+            <div class="block-title">
+                Integração de Trackings
+                <br>
+                Conheça o fluxo do processamento na plataforma e
+                tire suas dúvidas.
+            </div>
+        </div>
+
+        <div class="block-text">
+            O status de pedidos (Trackings) refere-se ao estado ou etapa em que um pedido comercial se encontra durante
+            todo o processo de compra e venda
+            entre empresas. Esse status é usado para acompanhar e comunicar o progresso do pedido desde o momento em que
+            é colocado até a sua conclusão.
+            <br><br>
+            Segue as trackings que esperamos serem enviadas para a plataforma:
+            <br><br>
+            <strong>(OPCIONAL) WMS - Separação e embalagem: </strong>Esse status deve ser enviado para plataforma quando
+            o produto entrar em separação e embalagem. <br><br>
+            <strong>(OBRIGATÓRIA) NFS - Nota fiscal emitida: </strong>Nesta tracking devem ser informados todos os SKUs
+            que constam no pedido, bem como outras informações como:
+            valor unitário, valor promocional (caso algum SKU contenha promoção aplicada a ele), numeração do Kit (caso
+            o pedido contenha um Kit Bonificado), entre outros. <br>
+            A NFS trata-se de uma tracking obrigatória para os pedidos que seguirão o fluxo de vida. <br><br>
+            <strong>(OBRIGATÓRIA) FAT - Finalização de faturamento: </strong>Essa tracking indica o encerramento do
+            faturamento, uma vez que ela é enviada, não será integrada mais nenhuma
+            nota fiscal. Recomendamos que o distribuidor envie depois de alguns minutos após a NFS para evitar algum
+            erro de integração (Pois um pedido com a tracking
+            FAT precisa ter uma NFS). Todo pedido que seguir com o fluxo de vida completo, deve conter NFS e FAT, para
+            não ocorrer falha nos repasses enviados para o distribuidor. <br><br>
+            <strong>(OPCIONAL) ETR - Entrega em andamento: </strong>Indica que a entrega está em andamento, deve ser
+            utilizada somente para casos em que o distribuidor disponibilize informações de
+            rastreio da entrega. <br><br>
+            <strong>(OBRIGATÓRIO) ENT - Entrega concluída: </strong>Essa tracking indica que o pedido foi entregue.
+            <br><br>
+            <strong>(OBRIGATÓRIO) CAN - Cancelamento do pedido: </strong>deverá ser utilizado em casos de cancelamento
+            do pedido.
+            Pode ser cancelado até a etapa de ETR, após o ENT não será mais possível cancelar um pedido. <br><br>
+            <strong>Observações sobre a tracking CAN:</strong><br><br>
+            <strong>1 - </strong>Tracking CAN não possui ordenação e pode ser enviada a qualquer momento pelo
+            distribuidor. <br>
+            <strong>2 - </strong>Pedidos pagos através de meio de pagamento à vista serão debitados na conta gráfica do
+            distribuidor, mas só após a tracking ser integrada.<br>
+            <strong>3 - </strong>O não envio da tracking em casos necessários, aumenta o contato do cliente com o
+            SAC.<br>
+            <strong>4 - </strong>Após o envio da Tracking não é possível integrar NFS e nem FAT, pois o ciclo do pedido
+            está finalizado<br>
+            <strong>5 - </strong>Não há possibilidade de remover a tracking CAN e nem realizar o envio de cancelamento
+            manual pela plataforma.
+        </div>
+
+        <div class="block-subtitle">Processo de Devolução</div>
+        <div class="block-text">
+            Os pedidos que foram faturados mas não foram entregues ou que o cliente devolveu no ato da entrega, devem
+            receber o envio da tracking de CAN,
             mesmo que tenham sido faturados anteriormente.<br><br>
             <strong>Segue o passo a passo do processo de devolução:</strong><br><br>
-            <strong>1 - </strong>O Distribuidor deve enviar a Tracking de cancelamento, sinalizando que o pedido foi ou não será entregue.<br>
-            <strong>2 - </strong>Cliente entra em contato com o SAC para iniciar a solicitação de reembolso dos valores que houveram o pagamento efetivado com o meio de pagamento a vista.<br>
-            <strong>3 - </strong> A Infracommerce realiza o reembolso para o cliente. Onde o cliente pode optar pelo estorno em conta ou a geração de um vale troca com o valor do pedido.<br><br>
-            <strong> Para pedidos com método boleto faturado a plataforma ainda precisa receber a tracking CAN, porém todo o processo de reembolso deve ser tratado diretamente com o distribuidor.</strong> 
-            <br><br><br>
-          </div>
+            <strong>1 - </strong>O Distribuidor deve enviar a Tracking de cancelamento, sinalizando que o pedido foi ou
+            não será entregue.<br>
+            <strong>2 - </strong>Cliente entra em contato com o SAC para iniciar a solicitação de reembolso dos valores
+            que houveram o pagamento efetivado com o meio de pagamento a vista.<br>
+            <strong>3 - </strong> A Infracommerce realiza o reembolso para o cliente. Onde o cliente pode optar pelo
+            estorno em conta ou a geração de um vale troca com o valor do pedido.<br><br>
+            <strong> Para pedidos com método boleto faturado a plataforma ainda precisa receber a tracking CAN, porém
+                todo o processo de reembolso deve ser tratado diretamente com o distribuidor.</strong>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <div id="right" class="title">
-            <span>Regras de Envio</span>
+    <section class="container" id="section_3">
+        <div class="container-title">Boas práticas para o envio de requisições</div>
+
+        <div class="container-list">
+            <ul class="list">
+                <li class="item">
+                    <span class="list-title">Envio da Nota Fiscal (NFS)</span>
+                    <span class="list-text">
+                        Cada NFS só pode ter UM pedido, mas um pedido pode ter N notas fiscais, seja por uma nota
+                        bonificada, uma nota de venda ou um faturamento dividido em algumas notas. Sendo assim, ao
+                        faturar um pedido
+                        com mais de uma nota fiscal, será necessário gerar uma chave para cada nota e enviar todas as
+                        notas e chaves que estão relacionadas a esse pedido.
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Chave da Nota Fiscal (NFS)</span>
+                    <span class="list-text">
+                        O campo invoiceEletronicKey, representa o número da chave da nota fiscal que precisa ser
+                        enviado.
+                        Para cada nota fiscal é emitida uma única chave.
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Envio do Faturamento Concluído (FAT)</span>
+                    <span class="list-text">
+                        A Tracking de FAT notifica a finalização do faturamento e as trackings de NFS, devem, portanto,
+                        ser enviados antes da tracking de FAT. Não é obrigatório o número
+                        da chave. Caso aconteça o envio, é permitido que seja enviado somente uma chave entre todas as
+                        notas emitidas.<br><br>
+                        Além disso, o envio da tracking indica que não será emitida mais nenhuma nota fiscal para o
+                        pedido. Portanto, as trackings de NFS enviados após uma tracking de FAT não serão
+                        contabilizados para os valores das apurações mensais de investimento, podendo causar
+                        divergências nos repasses.
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Limite dentro das requisições</span>
+                    <span class="list-text">
+                        O distribuidor deve seguir as boas práticas de requisições para a plataforma, independente do
+                        serviço. Sendo assim, solicitamos que as
+                        trackings sejam enviadas uma ação por requisição, pois o pedido possui um ciclo único e
+                        contínuo.
+                    </span>
+                </li>
+            </ul>
         </div>
+    </section>
 
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Envio da Nota Fiscal (NFS)</div>
-            <div class="block-check-text">
-              Cada NFS só pode ter UM pedido, mas um pedido pode ter N notas fiscais, seja por uma nota bonificada, uma nota de venda ou um faturamento dividido em algumas notas. Sendo assim, ao faturar um pedido 
-              com mais de uma nota fiscal, será necessário gerar uma chave para cada nota e enviar todas as notas e chaves que estão relacionadas a esse pedido.
+    <section class="container" id="section_4">
+        <div class="container-title">Dúvidas Frequentes</div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como funciona o faturamento parcial dentro da plataforma?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        O faturamento parcial pode ocorrer quando o cliente solicita a quantidade de um produto no
+                        pedido que não está disponível em estoque. Neste caso o distribuidor irá
+                        realizar o faturamento podendo realizar tanto um corte parcial ou total em um dos
+                        produtos.<br><br>
+                        Exemplo: Um pedido foi realizado com 10 unidades de um produto, porém, o distribuidor possui
+                        apenas 9 unidades em seu estoque, para não perder essa venda é possível
+                        faturar os 9 itens para o consumidor.<br><br>
+                        <strong> O envio da nota fiscal (NFS) para a plataforma deve constar 9 itens faturados.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Quais são as trackings obrigatórias de envio que fecham o ciclo de um pedido?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        As trackings que fecham o ciclo de um pedido são: ENT que se refere a entrega concluída e a
+                        tracking CAN que se refere ao cancelamento do pedido. Lembrando que após o
+                        recebimento desses trackings a plataforma desconsidera qualquer outro status de pedido enviado
+                        posteriormente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como realizo o faturamento para pedidos que contém bonificação (Kit Bonificado)?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        O distribuidor pode realizar o envio de duas formas:<br><br>
+                        <strong>1 - </strong>Enviar duas notas fiscais (NFS), uma contendo os produtos que foram
+                        cobrados normalmente tendo o seu valor de venda e a tag kitSkuId sendo informada
+                        e outra nota fiscal contendo os itens bonificados onde o seu valor de venda será 0 e a tag
+                        kitSkuId também é informada no produto.<br><br>
+                        <strong>2 - </strong>Enviar uma única nota fiscal (NFS) contendo nela os produtos cobrados e
+                        bonificados contendo a tag kitSkuId<br><br>
+                        <strong>Vale ressaltar que todos os produtos bonificados obrigatoriamente precisam conter o seu
+                            valor de venda 0 na nota fiscal.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    É possível faturar com produto do tipo unidade um pedido feito com produto de múltiplo caixa?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Não. Produtos em unidade e caixa são gerenciados de forma distinta na plataforma, portanto o
+                        envio da nota fiscal deve ser realizado com a mesma SKU informada no pedido.
+                        (Se for unitário, faturar o unitário. Se for caixa, faturar a caixa). Caso esses ítens não
+                        estejam em conformidade, haverá divergências em repasses e ruptura do pedido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    É possível enviar uma mesma tracking NFS mais de uma vez?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Não! A plataforma identifica uma NFS de acordo com a sua chave informada e uma vez enviada ela
+                        não poderá ser substituída por outra posteriormente. Lembrando que nesse caso
+                        estamos falando de uma mesma NFS sendo reenviada. Ainda assim, um pedido pode ter N notas
+                        fiscais desde que a chave delas seja diferente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    É possível efetuar o faturamento de um pedido após o cancelamento dele?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Não! Após o cancelamento do pedido, o ciclo dele é encerrado. O ideal nesses casos é a geração
+                        de um novo pedido pelo cliente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    É possível efetuar o faturamento do um pedido com método a vista antes de receber o pagamento?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Recomendamos que o distribuidor fature os pedidos à vista somente se receber a confirmação de
+                        pagamento pela plataforma! Apenas pedidos com método de boleto faturado
+                        podem ser faturados antes da confirmação de pagamento de acordo com a regra de negócio do
+                        distribuidor, uma vez que o mesmo faz todo o gerenciamento para esses pedidos.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Qual a média de tempo entre o envio de trackings?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Recomendamos que o ERP do distribuidor demore alguns minutos entre o envio das trackings NFS e
+                        FAT. Pois uma vez que a FAT é integrada, não serão mais aceitas NFS. Já as demais
+                        podem ser enviadas juntas desde que sejam enviadas na ordem correta do fluxo de status de
+                        pedido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Um pedido pode receber mais de uma tracking NFS?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Sim! Cada NFS só pode ter UM pedido, mas um pedido pode ter N notas fiscais, seja por uma nota
+                        bonificada, uma nota de venda ou um faturamento dividido em algumas notas. Sendo
+                        assim, ao faturar um pedido com mais de uma nota fiscal, será necessário gerar uma chave para
+                        cada nota e enviar todas as notas e chaves que estão relacionadas a esse pedido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    É possível efetuar o envio de uma tracking NFS após o envio da tracking FAT?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Não! Todas as trackings de Nota Fiscal devem ser enviadas obrigatoriamente antes da tracking de
+                        Faturamento Concluído. Caso seja enviado depois, as mesmas não serão
+                        integradas pela plataforma, retornando erro de envio.
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Chave da Nota Fiscal (NFS)</div>
-            <div class="block-check-text">
-              O campo invoiceEletronicKey, representa o número da chave da nota fiscal que precisa ser enviado. 
-              Para cada nota fiscal é emitida uma única chave.
+    <footer class="footer">
+        <div class="footer-col">
+            <div class="footer-logo"></div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Sobre nós</h4>
+            <ul>
+                <li>
+                    <a href="https://www.infracommerce.com.br/solucoes-d2c/" target="_blank">
+                        D2C </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/solucoes-b2b/" target="_blank">
+                        B2B </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-data/" target="_blank">
+                        infra.data </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-digital/" target="_blank">
+                        infra.digital </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-log/" target="_blank">
+                        infra.log </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-pay/" target="_blank">
+                        infra.pay </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-shop/" target="_blank">
+                        infra.shop </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Integrações</h4>
+            <ul>
+                <li>
+                    <a href="processo-integracao.html" target="_blank">
+                        processo de integração </a>
+                </li>
+                <li>
+                    <a href="requisicoes.html" target="_blank">
+                        limite de requisições </a>
+                </li>
+                <li>
+                    <a href="estoque.html" target="_blank">
+                        estoque </a>
+                </li>
+                <li>
+                    <a href="politica-preco.html" target="_blank">
+                        política de preço </a>
+                </li>
+                <li>
+                    <a href="cliente.html" target="_blank">
+                        cliente </a>
+                </li>
+                <li>
+                    <a href="status-cliente.html" target="_blank">
+                        status cliente </a>
+                </li>
+                <li>
+                    <a href="limite-credito.html" target="_blank">
+                        limite de crédito </a>
+                </li>
+                <li>
+                    <a href="pedido.html" target="_blank">
+                        pedido </a>
+                </li>
+                <li>
+                    <a href="pagamento.html" target="_blank">
+                        pagamento </a>
+                </li>
+                <li>
+                    <a href="trackings.html" target="_blank">
+                        tracking </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+                <a href="https://www.instagram.com/infracommerce/" target="_blank">
+                    <span id="instagram" class="ico"></span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0"
+                    target="_blank">
+                    <span id="whatsapp" class="ico"></span>
+                </a>
+                <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
+                    <span id="linkedin" class="ico"></span>
+                </a>
+                <a href="https://www.facebook.com/infracommerce/" target="_blank">
+                    <span id="facebook" class="ico"></span>
+                </a>
+                <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
+                    <span id="youtube" class="ico"></span>
+                </a>
             </div>
-        </div>
-
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Envio do Faturamento Concluído (FAT)</div>
-            <div class="block-check-text">
-              A Tracking de FAT notifica a finalização do faturamento e as trackings de NFS, devem, portanto, ser enviados antes da tracking de FAT. Não é obrigatório o número 
-              da chave. Caso aconteça o envio, é permitido que seja enviado somente uma chave entre todas as notas emitidas.<br><br>
-              Além disso, o envio da tracking indica que não será emitida mais nenhuma nota fiscal para o pedido. Portanto, as trackings de NFS enviados após uma tracking de FAT não serão 
-              contabilizados para os valores das apurações mensais de investimento, podendo causar divergências nos repasses.
-            </div>
-        </div>
-
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Limite dentro das requisições</div>
-            <div class="block-check-text">
-              O distribuidor deve seguir as boas práticas de requisições para a plataforma, independente do serviço. Sendo assim, solicitamos que as 
-              trackings sejam enviadas uma ação por requisição, pois o pedido possui um ciclo único e contínuo.
-            </div>
-        </div>
-
-    </div>
-
-    <div class="container" id="duvidas">
-      <div id="right" class="title">
-        <span>Dúvidas Frequentes</span>
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('a')">
-        <div class="block-pergunta-text" onclick="show_question('a')">
-          Como funciona o faturamento parcial dentro da plataforma?
-        </div>
-        <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
-      </div>
-      <div class="block-pergunta-res" id="a">
-        O faturamento parcial pode ocorrer quando o cliente solicita a quantidade de um produto no pedido que não está disponível em estoque. Neste caso o distribuidor irá 
-        realizar o faturamento podendo realizar tanto um corte parcial ou total em um dos produtos.<br><br>
-        Exemplo: Um pedido foi realizado com 10 unidades de um produto, porém, o distribuidor possui apenas 9 unidades em seu estoque, para não perder essa venda é possível 
-        faturar os 9 itens para o consumidor.<br><br>
-        <strong> O envio da nota fiscal (NFS) para a plataforma deve constar 9 itens faturados.</strong>
-      </div>
-    
-      <div class="block-pergunta" onclick="show_question('b')">
-        <div class="block-pergunta-text" onclick="show_question('b')">
-          Quais são as trackings obrigatórias de envio que fecham o ciclo de um pedido?
-        </div>
-        <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
-      </div>
-      <div class="block-pergunta-res" id="b">
-        As trackings que fecham o ciclo de um pedido são: ENT que se refere a entrega concluída e a tracking CAN que se refere ao cancelamento do pedido. Lembrando que após o 
-        recebimento desses trackings a plataforma desconsidera qualquer outro status de pedido enviado posteriormente.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('c')">
-        <div class="block-pergunta-text" onclick="show_question('c')">
-          Como realizo o faturamento para pedidos que contém bonificação (Kit Bonificado)?
-        </div>
-        <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
-      </div>
-      <div class="block-pergunta-res" id="c">
-        O distribuidor pode realizar o envio de duas formas:<br><br>
-        <strong>1 - </strong>Enviar duas notas fiscais (NFS), uma contendo os produtos que foram cobrados normalmente tendo o seu valor de venda e a tag kitSkuId sendo informada 
-        e outra nota fiscal contendo os itens bonificados onde o seu valor de venda será 0 e a tag kitSkuId também é informada no produto.<br><br>
-        <strong>2 - </strong>Enviar uma única nota fiscal (NFS) contendo nela os produtos cobrados e bonificados contendo a tag kitSkuId<br><br>
-        <strong>Vale ressaltar que todos os produtos bonificados obrigatoriamente precisam conter o seu valor de venda 0 na nota fiscal.</strong>
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('d')">
-        <div class="block-pergunta-text" onclick="show_question('d')">
-          É possível faturar com produto do tipo unidade um pedido feito com produto de múltiplo caixa?
-        </div>
-        <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
-      </div>
-      <div class="block-pergunta-res" id="d">
-        Não. Produtos em unidade e caixa são gerenciados de forma distinta na plataforma, portanto o envio da nota fiscal deve ser realizado com a mesma SKU informada no pedido. 
-        (Se for unitário, faturar o unitário. Se for caixa, faturar a caixa). Caso esses ítens não estejam em conformidade, haverá divergências em repasses e ruptura do pedido.        
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('e')">
-        <div class="block-pergunta-text" onclick="show_question('e')">
-          É possível enviar uma mesma tracking NFS mais de uma vez?
-        </div>
-        <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
-      </div>
-      <div class="block-pergunta-res" id="e">
-        Não! A plataforma identifica uma NFS de acordo com a sua chave informada e uma vez enviada ela não poderá ser substituída por outra posteriormente. Lembrando que nesse caso 
-        estamos falando de uma mesma NFS sendo reenviada. Ainda assim, um pedido pode ter N notas fiscais desde que a chave delas seja diferente.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('f')">
-        <div class="block-pergunta-text" onclick="show_question('f')">
-          É possível efetuar o faturamento de um pedido após o cancelamento dele?
-        </div>
-        <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
-      </div>
-      <div class="block-pergunta-res" id="f">
-        Não! Após o cancelamento do pedido, o ciclo dele é encerrado. O ideal nesses casos é a geração de um novo pedido pelo cliente.        
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('g')">
-        <div class="block-pergunta-text" onclick="show_question('g')">
-          É possível efetuar o faturamento do um pedido com método a vista antes de receber o pagamento?
-        </div>
-        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
-      </div>
-      <div class="block-pergunta-res" id="g">
-        Recomendamos que o distribuidor fature os pedidos à vista somente se receber a confirmação de pagamento pela plataforma! Apenas pedidos com método de boleto faturado 
-        podem ser faturados antes da confirmação de pagamento de acordo com a regra de negócio do distribuidor, uma vez que o mesmo faz todo o gerenciamento para esses pedidos.     
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('h')">
-        <div class="block-pergunta-text" onclick="show_question('h')">
-          Qual a média de tempo entre o envio de trackings?
-        </div>
-        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
-      </div>
-      <div class="block-pergunta-res" id="h">
-        Recomendamos que o ERP do distribuidor demore alguns minutos entre o envio das trackings NFS e FAT. Pois uma vez que a FAT é integrada, não serão mais aceitas NFS. Já as demais 
-        podem ser enviadas juntas desde que sejam enviadas na ordem correta do fluxo de status de pedido.   
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('i')">
-        <div class="block-pergunta-text" onclick="show_question('i')">
-          Um pedido pode receber mais de uma tracking NFS?
-        </div>
-        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
-      </div>
-      <div class="block-pergunta-res" id="i">
-        Sim! Cada NFS só pode ter UM pedido, mas um pedido pode ter N notas fiscais, seja por uma nota bonificada, uma nota de venda ou um faturamento dividido em algumas notas. Sendo
-        assim, ao faturar um pedido com mais de uma nota fiscal, será necessário gerar uma chave para cada nota e enviar todas as notas e chaves que estão relacionadas a esse pedido.      
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('j')">
-        <div class="block-pergunta-text"  onclick="show_question('j')">
-          É possível efetuar o envio de uma tracking NFS após o envio da tracking FAT?
-        </div>
-        <div class="block-pergunta-icon" id="qj"  onclick="show_question('j')"></div>
-      </div>
-      <div class="block-pergunta-res" id="j">
-        Não! Todas as trackings de Nota Fiscal devem ser enviadas obrigatoriamente antes da tracking de Faturamento Concluído. Caso seja enviado depois, as mesmas não serão 
-        integradas pela plataforma, retornando erro de envio.     
-      </div>
-    </div>
-
-    <footer>
-        <div class="footer-logo"></div>
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Tipos de integração
-          </div>
-
-          <ul class="footer-links">
-            <li>
-              <a href="processo-integracao.html" target="_blank">
-                Processo de integração </a>
-            </li>
-            <li>
-              <a href="requisicoes.html" target="_blank">
-                Limite de Requisições </a>
-            </li>
-            <li>
-              <a href="estoque.html" target="_blank">
-                Estoque </a>
-            </li>
-            <li>
-              <a href="politica-preco.html"target="_blank">
-                Política de Preço </a>
-            </li>
-            <li>
-              <a href="cliente.html" target="_blank">
-                Cliente </a>
-            </li>
-            <li>
-              <a href="status-cliente.html" target="_blank">
-                Status Cliente </a>
-            </li>
-            <li>
-              <a href="limite-credito.html" target="_blank">
-                Limite de Crédito </a>
-            </li>
-            <li>
-              <a href="pedido.html" target="_blank">
-                Pedido </a>
-            </li>
-            <li>
-              <a href="pagamento.html" target="_blank">
-                Pagamento </a>
-            </li>
-            <li>
-              <a href="trackings.html" target="_blank">
-                Tracking </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Melhorias	Integração
-          </div>
-
-          <ul class="footer-links">
-            <li>
-              <a href="programa-pontos.html" target="_blank">
-                Programa de pontos </a>
-            </li>
-            <li>
-              <a href="verba-flex.html" target="_blank">
-                Verba Flex </a>
-            </li>
-            <li>
-              <a href="carteira-vendedores.html" target="_blank">
-                Carteira de Vendedores </a>
-            </li>
-            <li>
-              <a href="hub-financeiro.html" target="_blank">
-                Hub financeiro </a>
-            </li>
-          </ul>
-        </div>
-
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Redes Sociais
-          </div>
-
-          <ul class="social-media">
-            <li>
-              <a href="https://www.instagram.com/infracommerce/" target="_blank">
-                <span id="instagram" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0" target="_blank">
-                <span id="whatsapp" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
-                <span id="linkedin" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/infracommerce/" target="_blank">
-                <span id="facebook" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
-                <span id="youtube" class="ico"></span>
-              </a>
-            </li>
-          </ul>
         </div>
     </footer>
 
     <script src="../js/script.js"></script>
-
 </body>
 
 </html>

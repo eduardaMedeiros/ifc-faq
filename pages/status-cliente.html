@@ -2,357 +2,378 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <title>Status de Cliente | Infracommerce</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
-  <link href="../css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/page-status-cliente.css" rel="stylesheet" type="text/css"/>
-  <title>Status de Cliente | Infracommerce</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/pages.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-top"></div> 
+    <header>
+        <div class="header-top"></div>
 
-        <div class="container-fluid">
-          <div class="header-container"> 
-            <div class="row">
-              <div class="header-logo"></div>   
-              <div class="header-menu">
-                <ul class="header-menu-nav">
-                    <li class="header-menu-item">
-                      <a href="../index.html">
-                        início </a>
+        <div class="navbar">
+            <div class="logo"></div>
+            <i class='bx bx-menu'></i>
+
+            <div class="nav-links">
+                <div class="sidebar">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="links">
+                    <li><a href="../index.html">início</a></li>
+                    <li>
+                        <a href="#">integrações</a>
+                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a onclick="atualizarpag('processo-integracao')">processo de integração</a></li>
+                            <li><a onclick="atualizarpag('requisicoes')">limite de requisições</a></li>
+                            <li><a onclick="atualizarpag('estoque')">estoque</a></li>
+                            <li><a onclick="atualizarpag('politica-preco')">política de preço</a></li>
+                            <li><a onclick="atualizarpag('cliente')">cliente</a></li>
+                            <li><a onclick="atualizarpag('status-cliente')">status de cliente</a></li>
+                            <li><a onclick="atualizarpag('limite-credito')">limite de crédito</a></li>
+                            <li><a onclick="atualizarpag('pedido')">pedido</a></li>
+                            <li><a onclick="atualizarpag('pagamento')">pagamento</a></li>
+                            <li><a onclick="atualizarpag('trackings')">trackings</a></li>
+                        </ul>
                     </li>
-                    <li class="header-menu-item">
-                      <a href="../index.html#integracao">
-                        integrações </a>
-                    </li>
-                    <li class="header-menu-item">
-                      <a href="#duvidas">
-                        dúvidas frequentes </a>
-                    </li>
-                    <li class="header-menu-item">
-                      <a href="../index.html#fale">
-                        fale conosco </a>
-                    </li>
-                  </ul>
-              </div>
+                    <li><a href="#section_4">dúvidas frequentes</a></li>
+                    <li><a href="../index.html#section_4">fale conosco</a></li>
+                </ul>
             </div>
-          </div>
         </div>
     </header>
-    <div class="header-space"></div>
-        
-    <div class="banner-container">
-        <div class="container-half">
-          <div class="banner-title">Como podemos ajudá-lo?</div>
 
-          <div class="search">
-						<input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Descreva aqui sobre a sua dúvida"/>
-					</div>
+    <section class="banner" id="section_1">
+        <div class="banner-title">Como podemos te ajudar?</div>
 
-          <div class="banner-text">
-            Pesquise sobre as possíveis dúvidas que podem ocorrer durante 
-            <br>
-            o processo de integração.
-          </div>
+        <div class="banner-search">
+            <input type="text" class="search-input" name="duvida" alt="char=500"
+                placeholder="Digite aqui sobre a sua dúvida" />
         </div>
+    </section>
 
-        <div class="container-block">
-          <div class="block">
+    <section class="container" id="section_2">
+        <div class="block">
             <div class="block-image" id="status"></div>
-            <div class="block-title">Status Cliente</div>
-            <div class="block-text">
-                O Status de cliente refere-se à posição, classificação ou condição de um cliente em relação
-                a uma empresa, organização ou sistema. Esse status geralmente é atribuído com base em diferentes
-                critérios, como o relacionamento do cliente com a empresa, histórico de compras, frequência de 
-                interações, nível de engajamento, valor financeiro e outros fatores relevantes.
-                <br><br>
-                Em nossa plataforma trabalhamos com 3 status PEN, APV e RPV:
-                <br><br>
-                <strong>PEN - </strong> 
-                Cliente Pré Aprovado, esse status é o inicial de todo cliente integrado na plataforma, nessa 
-                categoria o cliente pode efetuar pedidos com os meios de pagamento gerenciados pela 
-                Infracommerce, tais como PIX, Cartão de crédito e Boleto antecipado. 
-                <br><br>
-                <strong>APV - </strong>
-                Cliente Aprovado esse status é o que torna o cliente 100% ativo, com esse status o cliente poderá 
-                fazer qualquer compra que esteja atrelado a política de preço dele e ao seu valor de limite de 
-                crédito.
-                <br><br>
-                <strong>RPV - </strong>
-                Cliente Reprovado, com esse status o cliente sem permissão para efetuar nenhum tipo de comprar em
-                nossa plataforma, esse status indica que o cliente está inadequado para efetuar qualquer tipo de 
-                compra e nem ao menos ver os preços que estão atrelados a ele.
-              <br><br><br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="inicio">
-        <div id="left" class="title">
-            <span>Regras de Envio</span>
-        </div>
-
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Envio de Status de Cliente</div>
-            <div class="block-check-text">
-              Todo cliente recebido deverá ter um status atrelado a ele de acordo com a política empregada pelo distribuidor. Recomendados a atualização do status logo 
-              que o cliente é recebido para que ele possa efetuar compras
+            <div class="block-title">
+                Integração de Status de Cliente
+                <br>
+                Conheça o fluxo do processamento na plataforma e
+                tire suas dúvidas.
             </div>
         </div>
 
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Atualização de Status de Cliente</div>
-            <div class="block-check-text">
-              Para atualizar o status de um cliente na plataforma é apenas necessário enviar a requisição com o nosso status atribuído. Lembrando que pode levar 
-              alguns minutos para ser atualizado na plataforma e recomendamos a atualização da página.
+        <div class="block-text">
+            O Status de cliente refere-se à posição, classificação ou condição de um cliente em relação
+            a uma empresa, organização ou sistema. Esse status geralmente é atribuído com base em diferentes
+            critérios, como o relacionamento do cliente com a empresa, histórico de compras, frequência de
+            interações, nível de engajamento, valor financeiro e outros fatores relevantes.
+            <br><br>
+            Em nossa plataforma trabalhamos com 3 status PEN, APV e RPV:
+            <br><br>
+            <strong>PEN - </strong>
+            Cliente Pré Aprovado, esse status é o inicial de todo cliente integrado na plataforma, nessa
+            categoria o cliente pode efetuar pedidos com os meios de pagamento gerenciados pela
+            Infracommerce, tais como PIX, Cartão de crédito e Boleto antecipado.
+            <br><br>
+            <strong>APV - </strong>
+            Cliente Aprovado esse status é o que torna o cliente 100% ativo, com esse status o cliente poderá
+            fazer qualquer compra que esteja atrelado a política de preço dele e ao seu valor de limite de
+            crédito.
+            <br><br>
+            <strong>RPV - </strong>
+            Cliente Reprovado, com esse status o cliente sem permissão para efetuar nenhum tipo de comprar em
+            nossa plataforma, esse status indica que o cliente está inadequado para efetuar qualquer tipo de
+            compra e nem ao menos ver os preços que estão atrelados a ele.
+        </div>
+    </section>
+
+    <section class="container" id="section_3">
+        <div class="container-title">Boas práticas para o envio de requisições</div>
+
+        <div class="container-list">
+            <ul class="list">
+                <li class="item">
+                    <span class="list-title">Envio de Status de Cliente</span>
+                    <span class="list-text">
+                        Todo cliente recebido deverá ter um status atrelado a ele de acordo com a política empregada
+                        pelo distribuidor. Recomendados a atualização do status logo
+                        que o cliente é recebido para que ele possa efetuar compras
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Atualização de Status de Cliente</span>
+                    <span class="list-text">
+                        Para atualizar o status de um cliente na plataforma é apenas necessário enviar a requisição com
+                        o nosso status atribuído. Lembrando que pode levar
+                        alguns minutos para ser atualizado na plataforma e recomendamos a atualização da página.
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Habilitar Status PEN</span>
+                    <span class="list-text">
+                        O status PEN já é habilitado para todos os distribuidores, mas caso o mesmo opte por não
+                        utilizar este status é necessário apenas a solicitação da desativação
+                        para a equipe responsável de acordo com a fase do projeto.
+                    </span>
+                </li>
+
+                <li class="item">
+                    <span class="list-title">Limite dentro das requisições</span>
+                    <span class="list-text">
+                        O distribuidor deve seguir as boas práticas de requisições para a plataforma, independente do
+                        serviço. Sendo assim, solicitamos que não ultrapasse 100 CNPJs
+                        em uma única requisição de status de cliente.
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container" id="section_4">
+        <div class="container-title">Dúvidas Frequentes</div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como impossibilitar um cliente de efetuar compras no site?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Para isso, é necessário enviar status RPV(Reprovado) ao cliente. Dessa forma ele não conseguirá
+                        efetuar compras com nenhum método de pagamento.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    E como fazer com que esse(s) clientes voltem a comprar?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Para que seja possível efetuar compras novamente, os clientes devem receber status
+                        APV(Aprovado). Com isso, os produtos ficarão disponíveis novamente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Os clientes atualmente logo que se cadastram tem o status PEN mas gostaria de possibilitar a compra
+                    para os mesmos após análise interna da empresa. Como proceder?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Podemos desabilitar essa opção na etapa de integração ou após o Go-live do distribuidor via
+                        chamado para o time de NRP. Neste caso, a partir da desabilitação,
+                        os clientes só poderão efetuar compras após o envio de status de cliente aprovado.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Quando o cliente possui status PEN quais são os métodos de pagamento disponíveis para compra?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        O cliente poderá efetuar apenas pedidos com as condições de pagamento à vista, onde o
+                        processamento é responsável pela IFC.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    O cliente consegue efetuar pedidos com a condição de pagamento boleto faturado tendo apenas status
+                    APV?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Não! Lembrando que o cliente precisa obrigatoriamente possuir limite de crédito na plataforma
+                        para realizar pedidos com o método boleto faturado.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Quais são os critérios que devo utilizar para determinar o status RPV para um cliente?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Isso vai depender da regra de negócio de cada distribuidor, mas recomendamos o envio de status
+                        RPV para todos os clientes que não são confiáveis e que não devem efetuar compras na plataforma.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Como um cliente pode verificar seu status atual na plataforma?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Caso o cliente tenha status PEN ou APV, os produtos estarão disponíveis para adicionar no
+                        carrinho. Já com o status RPV, ao visualizar os produtos, o cliente terá a
+                        seguinte mensagem: “Seu cadastro não foi aprovado para este sortimento” e consequentemente não
+                        irá conseguir selecionar o produto para o carrinho.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Quais são as opções disponíveis para um cliente com o status "RPV" resolver sua situação e voltar a
+                    fazer compras na plataforma?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        O cliente poderá entrar em contato com o SAC para poder verificar a questão do seu status RPV.
+                        Será validado internamente com o distribuidor e caso o status
+                        esteja incorreto, será solicitado um novo envio de status e atualizado na plataforma.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Quais são as políticas de devolução e reembolso para clientes com diferentes status?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        O processo segue o mesmo para todos os clientes cadastrados na plataforma independente do seu
+                        status atual para determinado distribuidor.
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Habilitar Status PEN</div>
-            <div class="block-check-text">
-              O status PEN já é habilitado para todos os distribuidores, mas caso o mesmo opte por não utilizar este status é necessário apenas a solicitação da desativação 
-              para a equipe responsável de acordo com a fase do projeto.
+    <footer class="footer">
+        <div class="footer-col">
+            <div class="footer-logo"></div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Sobre nós</h4>
+            <ul>
+                <li>
+                    <a href="https://www.infracommerce.com.br/solucoes-d2c/" target="_blank">
+                        D2C </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/solucoes-b2b/" target="_blank">
+                        B2B </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-data/" target="_blank">
+                        infra.data </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-digital/" target="_blank">
+                        infra.digital </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-log/" target="_blank">
+                        infra.log </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-pay/" target="_blank">
+                        infra.pay </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-shop/" target="_blank">
+                        infra.shop </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Integrações</h4>
+            <ul>
+                <li>
+                    <a href="processo-integracao.html" target="_blank">
+                        processo de integração </a>
+                </li>
+                <li>
+                    <a href="requisicoes.html" target="_blank">
+                        limite de requisições </a>
+                </li>
+                <li>
+                    <a href="estoque.html" target="_blank">
+                        estoque </a>
+                </li>
+                <li>
+                    <a href="politica-preco.html" target="_blank">
+                        política de preço </a>
+                </li>
+                <li>
+                    <a href="cliente.html" target="_blank">
+                        cliente </a>
+                </li>
+                <li>
+                    <a href="status-cliente.html" target="_blank">
+                        status cliente </a>
+                </li>
+                <li>
+                    <a href="limite-credito.html" target="_blank">
+                        limite de crédito </a>
+                </li>
+                <li>
+                    <a href="pedido.html" target="_blank">
+                        pedido </a>
+                </li>
+                <li>
+                    <a href="pagamento.html" target="_blank">
+                        pagamento </a>
+                </li>
+                <li>
+                    <a href="trackings.html" target="_blank">
+                        tracking </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+                <a href="https://www.instagram.com/infracommerce/" target="_blank">
+                    <span id="instagram" class="ico"></span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0"
+                    target="_blank">
+                    <span id="whatsapp" class="ico"></span>
+                </a>
+                <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
+                    <span id="linkedin" class="ico"></span>
+                </a>
+                <a href="https://www.facebook.com/infracommerce/" target="_blank">
+                    <span id="facebook" class="ico"></span>
+                </a>
+                <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
+                    <span id="youtube" class="ico"></span>
+                </a>
             </div>
-        </div>
-
-        <div class="block-check">
-            <div class="block-check-image"></div>
-            <div class="block-check-title">Limite dentro das requisições</div>
-            <div class="block-check-text">
-              O distribuidor deve seguir as boas práticas de requisições para a plataforma, independente do serviço. Sendo assim, solicitamos que não ultrapasse 100 CNPJs 
-              em uma única requisição de status de cliente.
-            </div>
-        </div>
-
-    </div>
-
-    <div class="container" id="duvidas">
-      <div id="right" class="title">
-          <span>Dúvidas Frequentes</span>
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('a')">
-        <div class="block-pergunta-text" onclick="show_question('a')">
-          Como impossibilitar um cliente de efetuar compras no site?
-        </div>
-        <div class="block-pergunta-icon" id="qa" onclick="show_question('a')"></div>
-      </div>
-      <div class="block-pergunta-res" id="a">
-        Para isso, é necessário enviar status RPV(Reprovado) ao cliente. Dessa forma ele não conseguirá efetuar compras com nenhum método de pagamento.
-      </div>
-    
-      <div class="block-pergunta" onclick="show_question('b')">
-        <div class="block-pergunta-text" onclick="show_question('b')">
-          E como fazer com que esse(s) clientes voltem a comprar?
-        </div>
-        <div class="block-pergunta-icon" id="qb" onclick="show_question('b')"></div>
-      </div>
-      <div class="block-pergunta-res" id="b">
-        Para que seja possível efetuar compras novamente, os clientes devem receber status APV(Aprovado). Com isso, os produtos ficarão disponíveis novamente.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('c')">
-        <div class="block-pergunta-text" onclick="show_question('c')">
-          Os clientes atualmente logo que se cadastram tem o status PEN mas gostaria de possibilitar a compra para os mesmos após análise interna da empresa. Como proceder?
-        </div>
-        <div class="block-pergunta-icon" id="qc" onclick="show_question('c')"></div>
-      </div>
-      <div class="block-pergunta-res" id="c">
-        Podemos desabilitar essa opção na etapa de integração ou após o Go-live do distribuidor via chamado para o time de NRP. Neste caso, a partir da desabilitação, 
-        os clientes só poderão efetuar compras após o envio de status de cliente aprovado.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('d')">
-        <div class="block-pergunta-text" onclick="show_question('d')">
-          Quando o cliente possui status PEN quais são os métodos de pagamento disponíveis para compra?
-        </div>
-        <div class="block-pergunta-icon" id="qd" onclick="show_question('d')"></div>
-      </div>
-      <div class="block-pergunta-res" id="d">
-        O cliente poderá efetuar apenas pedidos com as condições de pagamento à vista, onde o processamento é responsável pela IFC.        
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('e')">
-        <div class="block-pergunta-text" onclick="show_question('e')">
-          O cliente consegue efetuar pedidos com a condição de pagamento boleto faturado tendo apenas status APV?
-        </div>
-        <div class="block-pergunta-icon" id="qe" onclick="show_question('e')"></div>
-      </div>
-      <div class="block-pergunta-res" id="e">
-        Não! Lembrando que o cliente precisa obrigatoriamente possuir limite de crédito na plataforma para realizar pedidos com o método boleto faturado.
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('f')">
-        <div class="block-pergunta-text" onclick="show_question('f')">
-          Quais são os critérios que devo utilizar para determinar o status RPV para um cliente?
-        </div>
-        <div class="block-pergunta-icon" id="qf" onclick="show_question('f')"></div>
-      </div>
-      <div class="block-pergunta-res" id="f">
-        Isso vai depender da regra de negócio de cada distribuidor, mas recomendamos o envio de status RPV para 
-        todos os clientes que não são confiáveis e que não devem efetuar compras na plataforma.        
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('g')">
-        <div class="block-pergunta-text" onclick="show_question('g')">
-          Como um cliente pode verificar seu status atual na plataforma?
-        </div>
-        <div class="block-pergunta-icon" id="qg" onclick="show_question('g')"></div>
-      </div>
-      <div class="block-pergunta-res" id="g">
-        Caso o cliente tenha status PEN ou APV, os produtos estarão disponíveis para adicionar no carrinho. Já com o status RPV, ao visualizar os produtos, o cliente terá a 
-        seguinte mensagem: “Seu cadastro não foi aprovado para este sortimento” e consequentemente não irá conseguir selecionar o produto para o carrinho.      
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('h')">
-        <div class="block-pergunta-text" onclick="show_question('h')">
-          Quais são as opções disponíveis para um cliente com o status "RPV" resolver sua situação e voltar a fazer compras na plataforma?
-        </div>
-        <div class="block-pergunta-icon" id="qh" onclick="show_question('h')"></div>
-      </div>
-      <div class="block-pergunta-res" id="h">
-        O cliente poderá entrar em contato com o SAC para poder verificar a questão do seu status RPV. Será validado internamente com o distribuidor e caso o status 
-        esteja incorreto, será solicitado um novo envio de status e atualizado na plataforma.      
-      </div>
-
-      <div class="block-pergunta" onclick="show_question('i')">
-        <div class="block-pergunta-text" onclick="show_question('i')">
-          Quais são as políticas de devolução e reembolso para clientes com diferentes status?
-        </div>
-        <div class="block-pergunta-icon" id="qi" onclick="show_question('i')"></div>
-      </div>
-      <div class="block-pergunta-res" id="i">
-        O processo segue o mesmo para todos os clientes cadastrados na plataforma independente do seu status atual para determinado distribuidor.      
-      </div>
-    </div>
-
-    <footer>
-        <div class="footer-logo"></div>
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Tipos de integração
-          </div>
-
-          <ul class="footer-links">
-            <li>
-              <a href="processo-integracao.html" target="_blank">
-                Processo de integração </a>
-            </li>
-            <li>
-              <a href="requisicoes.html" target="_blank">
-                Limite de Requisições </a>
-            </li>
-            <li>
-              <a href="estoque.html" target="_blank">
-                Estoque </a>
-            </li>
-            <li>
-              <a href="politica-preco.html"target="_blank">
-                Política de Preço </a>
-            </li>
-            <li>
-              <a href="cliente.html" target="_blank">
-                Cliente </a>
-            </li>
-            <li>
-              <a href="status-cliente.html" target="_blank">
-                Status Cliente </a>
-            </li>
-            <li>
-              <a href="limite-credito.html" target="_blank">
-                Limite de Crédito </a>
-            </li>
-            <li>
-              <a href="pedido.html" target="_blank">
-                Pedido </a>
-            </li>
-            <li>
-              <a href="pagamento.html" target="_blank">
-                Pagamento </a>
-            </li>
-            <li>
-              <a href="trackings.html" target="_blank">
-                Tracking </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Melhorias	Integração
-          </div>
-
-          <ul class="footer-links">
-            <li>
-              <a href="programa-pontos.html" target="_blank">
-                Programa de pontos </a>
-            </li>
-            <li>
-              <a href="verba-flex.html" target="_blank">
-                Verba Flex </a>
-            </li>
-            <li>
-              <a href="carteira-vendedores.html" target="_blank">
-                Carteira de Vendedores </a>
-            </li>
-            <li>
-              <a href="hub-financeiro.html" target="_blank">
-                Hub financeiro </a>
-            </li>
-          </ul>
-        </div>
-
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Redes Sociais
-          </div>
-
-          <ul class="social-media">
-            <li>
-              <a href="https://www.instagram.com/infracommerce/" target="_blank">
-                <span id="instagram" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0" target="_blank">
-                <span id="whatsapp" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
-                <span id="linkedin" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/infracommerce/" target="_blank">
-                <span id="facebook" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
-                <span id="youtube" class="ico"></span>
-              </a>
-            </li>
-          </ul>
         </div>
     </footer>
 
     <script src="../js/script.js"></script>
-
 </body>
 
 </html>

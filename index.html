@@ -2,346 +2,393 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <title>FAQ | Infracommerce</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 
-  <link href="css/header.css" rel="stylesheet" type="text/css"/>
-  <link href="css/content.css" rel="stylesheet" type="text/css"/>
-  <title>FAQ | Infracommerce</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/content.css">
 </head>
 
 <body>
-      <header class="header">
-        <div class="header-top"></div> 
+    <header>
+        <div class="header-top"></div>
 
-        <div class="container-fluid">
-          <div class="header-container"> 
-            <div class="row">
-              <div class="header-logo"></div>   
-              <div class="header-menu">
-                <ul class="header-menu-nav">
-                  <li class="header-menu-item">
-                    <a href="#">
-                      início </a>
-                  </li>
-                  <li class="header-menu-item">
-                    <a href="#integracao">
-                      integrações </a>
-                  </li>
-                  <li class="header-menu-item">
-                    <a href="#duvidas">
-                      dúvidas frequentes </a>
-                  </li>
-                  <li class="header-menu-item">
-                    <a href="#fale">
-                      fale conosco </a>
-                  </li>
+        <div class="navbar">
+            <div class="logo"></div>
+            <i class='bx bx-menu'></i>
+
+            <div class="nav-links">
+                <div class="sidebar">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="links">
+                    <li><a href="#">início</a></li>
+                    <li>
+                        <a href="#section_2">integrações</a>
+                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a onclick="atualizarpag('pages/processo-integracao')">processo de integração</a></li>
+                            <li><a onclick="atualizarpag('pages/requisicoes')">limite de requisições</a></li>
+                            <li><a onclick="atualizarpag('pages/estoque')">estoque</a></li>
+                            <li><a onclick="atualizarpag('pages/politica-preco')">política de preço</a></li>
+                            <li><a onclick="atualizarpag('pages/cliente')">cliente</a></li>
+                            <li><a onclick="atualizarpag('pages/status-cliente')">status de cliente</a></li>
+                            <li><a onclick="atualizarpag('pages/limite-credito')">limite de crédito</a></li>
+                            <li><a onclick="atualizarpag('pages/pedido')">pedido</a></li>
+                            <li><a onclick="atualizarpag('pages/pagamento')">pagamento</a></li>
+                            <li><a onclick="atualizarpag('pages/trackings')">trackings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section_3">dúvidas frequentes</a></li>
+                    <li><a href="#section_4">fale conosco</a></li>
                 </ul>
-              </div>
             </div>
-          </div>
         </div>
-      </header>
-      <div class="header-space"></div>
-        
-      <div class="banner-container">
-        <div class="container-half">
-          <div class="banner-title">Como podemos ajudá-lo?</div>
+    </header>
 
-          <div class="search">
-						<input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Descreva aqui sobre a sua dúvida"/>
-					</div>
+    <section class="banner" id="section_1">
+        <div class="banner-title">Como podemos te ajudar?</div>
 
-          <div class="banner-text">
-            Pesquise sobre as possíveis dúvidas que podem ocorrer durante 
-            <br>
-            o processo de integração.
-          </div>
+        <div class="banner-search">
+            <input type="text" class="search-input" name="duvida" alt="char=500"
+                placeholder="Digite aqui sobre a sua dúvida" />
         </div>
+    </section>
 
-        <div class="container-block" onclick="atualizarpag('pages/processo-integracao')">
-          <div class="block">
-            <div class="block-image"></div>
-            <div class="block-title"> Conheça o processo e as etapas da Integração de
-              Sellers</div>
+    <section class="banner-container" id="section_1">
+        <div class="block-image"></div>
+        <div class="block">
+            <div class="block-title">
+                FAQ: Perguntas Frequentes e Respostas Rápidas!
+                <br>
+                Conheça o processo e as etapas da Integração de Sellers e
+                tire suas dúvidas.
+            </div>
             <div class="block-text">
-              Entenda detalhadamente como funciona a integração dos Sellers dentro da nossa plataforma 
-              junto com todas as etapas do processo: Fase Inicial, Acompanhamento, Fase de Desenvolvimento, 
-              Fase de Homologação, Operação Assistida, Preenchimento dos Dados Cadastrais e Rituais de Comunicação. 
-              <br><br>
-              <a class="block-link" onclick="atualizarpag('pages/processo-integracao')">ver mais... </a>
+                Bem-vindo ao nosso Centro de Perguntas Frequentes (FAQ). Estamos aqui para fornecer respostas rápidas
+                e úteis para as dúvidas mais comuns que nossos clientes e visitantes possam ter. Se você está
+                procurando informações sobre nossos produtos, políticas ou como usar nossos serviços, você está no
+                lugar certo!
+                <br><br>
+                Entenda detalhadamente como funciona a integração dos Sellers dentro da nossa plataforma
+                junto com todas as etapas do processo: Fase Inicial, Acompanhamento, Fase de Desenvolvimento,
+                Fase de Homologação, Operação Assistida, Preenchimento dos Dados Cadastrais e Rituais de Comunicação.
+                <br><br>
+                <a class="block-link" onclick="atualizarpag('pages/processo-integracao')">ver mais... </a>
             </div>
-          </div>
         </div>
-      </div>
+    </section>
 
-      <div class="container" id="integracao">
-        <div id="right" class="title">
-          <span>Tipos de Integração</span>
-        </div>
+    <section class="container" id="section_2">
+        <div class="container-title">Integrações</div>
 
-        <div class="blocks-integracao">
-          <div class="block-tipo" onclick="atualizarpag('pages/requisicoes')">
-            <div id="requisicao" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Limite Requisições</div>
-            <div class="block-tipo-text">
-              Quantidade máxima de envios para a plataforma por período.
+        <div class="container-cards">
+            <div class="card" onclick="atualizarpag('pages/integracao')">
+                <div class="card-image" id="processo"></div>
+                <div class="card-title">Processo de Integração</div>
+                <div class="card-text">Etapas do processo para a inclusão de Sellers.</div>
             </div>
-          </div>
 
-          <div class="block-tipo" onclick="atualizarpag('pages/estoque')">
-            <div id="estoque" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Estoque</div>
-            <div class="block-tipo-text">
-              Quantidade disponível de produtos para venda.
+            <div class="card" onclick="atualizarpag('pages/requisicoes')">
+                <div class="card-image" id="requisicao"></div>
+                <div class="card-title">Limite Requisições</div>
+                <div class="card-text">Quantidade máxima de envios para a plataforma por período.</div>
             </div>
-          </div>
 
-          <div class="block-tipo" onclick="atualizarpag('pages/politica-preco')">
-            <div id="preco" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Política de Preço</div>
-            <div class="block-tipo-text">
-              Valor dos produtos segmentado pela regra de négocio do cliente.
+            <div class="card" onclick="atualizarpag('pages/estoque')">
+                <div class="card-image" id="estoque"></div>
+                <div class="card-title">Estoque</div>
+                <div class="card-text">Quantidade disponível de produtos para venda.</div>
             </div>
-          </div>
-        </div>
 
-        <div class="blocks-integracao">
-          <div class="block-tipo" onclick="atualizarpag('pages/cliente')">
-            <div id="cliente" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Cliente</div>
-            <div class="block-tipo-text">
-              Empresas que se cadastram e compram em nossas plataformas.
+            <div class="card" onclick="atualizarpag('pages/politica-preco')">
+                <div class="card-image" id="preco"></div>
+                <div class="card-title">Política de Preço</div>
+                <div class="card-text">Valor dos produtos segmentado pela regra de négocio do cliente.</div>
             </div>
-          </div>
 
-          <div class="block-tipo" onclick="atualizarpag('pages/status-cliente')">
-            <div id="status" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Status Cliente</div>
-            <div class="block-tipo-text">
-              Relação do cliente baseada em suas políticas de négocio.
+            <div class="card" onclick="atualizarpag('pages/cliente')">
+                <div class="card-image" id="cliente"></div>
+                <div class="card-title">Cliente</div>
+                <div class="card-text">Empresas que se cadastram e compram em nossas plataformas.</div>
             </div>
-          </div>
 
-          <div class="block-tipo" onclick="atualizarpag('pages/limite-credito')">
-            <div id="credito" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Limite de Crédito</div>
-            <div class="block-tipo-text">
-              Limite máximo autorizado para compras a crédito.
+            <div class="card" onclick="atualizarpag('pages/status-cliente')">
+                <div class="card-image" id="status"></div>
+                <div class="card-title">Status Cliente</div>
+                <div class="card-text">Relação do cliente baseada em suas políticas de négocio.</div>
             </div>
-          </div>
-        </div>
 
-        <div class="blocks-integracao">
-          <div class="block-tipo" onclick="atualizarpag('pages/pedido')">
-            <div id="pedido" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Pedido</div>
-            <div class="block-tipo-text">
-              Solicitação feita por um cliente para adquirir produtos na plataforma.
+            <div class="card" onclick="atualizarpag('pages/limite-credito')">
+                <div class="card-image" id="credito"></div>
+                <div class="card-title">Limite de Crédito</div>
+                <div class="card-text">Limite máximo autorizado para compras a crédito.</div>
             </div>
-          </div>
 
-          <div class="block-tipo" onclick="atualizarpag('pages/pagamento')">
-            <div id="pagamento" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Pagamento</div>
-            <div class="block-tipo-text">
-              Transação financeira para pagar pelo pedido solicitado via plataforma.
+            <div class="card" onclick="atualizarpag('pages/pedido')">
+                <div class="card-image" id="pedido"></div>
+                <div class="card-title">Pedido</div>
+                <div class="card-text">Solicitação feita por um cliente para adquirir produtos na plataforma.</div>
             </div>
-          </div>
 
-          <div class="block-tipo" onclick="atualizarpag('pages/trackings')">
-            <div id="trackings" class="block-tipo-image"></div>
-            <div class="block-tipo-title">Trackings</div>
-            <div class="block-tipo-text">
-              Status e fluxo do processamento dos pedidos.
+            <div class="card" onclick="atualizarpag('pages/pagamento')">
+                <div class="card-image" id="pagamento"></div>
+                <div class="card-title">Pagamento</div>
+                <div class="card-text">Transação financeira para pagar pelo pedido solicitado via plataforma.</div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="container" id="duvidas">
-        <div id="left" class="title">
-          <span>Dúvidas Frequentes</span>
-        </div>
-
-        <div class="block-pergunta" onclick="show_questionIndex('a')">
-          <div class="block-pergunta-text" onclick="show_questionIndex('a')">
-            O produto possui estoque e enviei o preço atualizado para a nova condição de pagamento, porém ela ainda não está visível na plataforma. Como seguir?
-          </div>
-          <div class="block-pergunta-icon" id="qa" onclick="show_questionIndex('a')"></div>
-        </div>
-        <div class="block-pergunta-res" id="a">
-          Para uma nova condição estar visível no site ela precisa estar ativa na plataforma. Contate nosso time de NRP para fazer a ativação e logo após envie 
-          o preço novamente para que esteja visível para os clientes.
-        </div>
-
-        <div class="block-pergunta" onclick="show_questionIndex('b')">
-          <div class="block-pergunta-text" onclick="show_questionIndex('b')">
-            Já efetuei todas as validações, mas ainda assim meu produto não é exibido no site. Quem devo contatar?
-          </div>
-          <div class="block-pergunta-icon" id="qb" onclick="show_questionIndex('b')"></div>
-        </div>
-        <div class="block-pergunta-res" id="b">
-          Nessas situações pode ser que o produto ainda não tenha cadastro na plataforma. Recomendados que seja contatado o time de NRP para efetuar essa validação 
-          e providenciar o cadastro do produto.
-        </div>
-      
-        <div class="block-pergunta" onclick="show_questionIndex('c')">
-            <div class="block-pergunta-text" onclick="show_questionIndex('c')">
-              É possível excluir alguma requisição enviada erroneamente?
+            <div class="card" onclick="atualizarpag('pages/trackings')">
+                <div class="card-image" id="trackings"></div>
+                <div class="card-title">Trackings</div>
+                <div class="card-text">Status e fluxo do processamento dos pedidos.</div>
             </div>
-            <div class="block-pergunta-icon" id="qc" onclick="show_questionIndex('c')"></div>
         </div>
-        <div class="block-pergunta-res" id="c">
-          Não, as requisições não podem ser excluídas! Mas muitas podem ser corrigidas apenas com um novo envio correto. 
-          <br>
-          Exemplo: Envio de estoque incorreto, o que fazer? Enviar uma nova requisição com 
-          o valor correto, ele sobrescreverá o valor enviado anteriormente.
-        </div>
+    </section>
 
-        <div class="block-pergunta" onclick="show_questionIndex('d')">
-            <div class="block-pergunta-text" onclick="show_questionIndex('d')">
-              Caso opte por não seguir com um dos cenários presentes no escopo de testes. Como prosseguir?
+    <section class="container" id="section_3">
+        <div class="container-title">Dúvidas Frequentes</div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    O produto possui estoque e enviei o preço atualizado para a nova condição de pagamento, porém ela
+                    ainda não está visível na plataforma. Como seguir?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Para uma nova condição estar visível no site ela precisa estar ativa na plataforma. Contate
+                        nosso time de NRP para fazer a ativação e logo após envie
+                        o preço novamente para que esteja visível para os clientes.
+                    </div>
+                </div>
             </div>
-            <div class="block-pergunta-icon" id="qd" onclick="show_questionIndex('d')"></div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Já efetuei todas as validações, mas ainda assim meu produto não é exibido no site. Quem devo
+                    contatar?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Nessas situações pode ser que o produto ainda não tenha cadastro na plataforma. Recomendados que
+                        seja contatado o time de NRP para efetuar essa validação
+                        e providenciar o cadastro do produto.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    É possível excluir alguma requisição enviada erroneamente?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Não, as requisições não podem ser excluídas! Mas muitas podem ser corrigidas apenas com um novo
+                        envio correto.
+                        <br>
+                        Exemplo: Envio de estoque incorreto, o que fazer? Enviar uma nova requisição com
+                        o valor correto, ele sobrescreverá o valor enviado anteriormente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Caso opte por não seguir com um dos cenários presentes no escopo de testes. Como prosseguir?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Caso o distribuidor não veja necessidade na realização de um dos cenários por não fazer parte da
+                        sua regra de negócio solicitamos o envio de
+                        um e-mail formalizando seu pedido e explicando o motivo da não realização.
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="block-pergunta-res" id="d">
-          Caso o distribuidor não veja necessidade na realização de um dos cenários por não fazer parte da sua regra de negócio solicitamos o envio de 
-          um e-mail formalizando seu pedido e explicando o motivo da não realização.         
+    </section>
+
+    <section class="container" id="section_4">
+        <div class="container-title">Fale Conosco</div>
+
+        <div class="container-cards">
+
+            <div class="contact-container">
+                <div class="contact">
+                    <div class="center-container">
+                        <div class="center-inner-container">
+                            <div class="form-title">Infra GPT</div>
+                            <div class="form-text">
+                                Tire suas dúvidas de integração com nossa assistente virtual! 
+                                <br><br>
+                                Foi criado o Infra GPT que está à disposição para responder às suas perguntas e fornecer suporte em tempo real.
+                                <br><br>
+                                <a class="form-link" href="https://sites.google.com/infracommerce.com.br/infragpt?usp=sharing">Acesse aqui... </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <div class="center-container">
+                        <div class="center-inner-container">
+                            <div class="form-title">Manual de Integração</div>
+                            <div class="form-text">
+                                Ficou com dúvidas mais técnicas referente ao desenvolvimento dos endpoints, envio de requisições de forma
+                                mais detalhada, etc?  
+                                <br><br>
+                                Acesse nosso manual de integração onde é explicado todos esses pontos e seus requisitos de integração!
+                                <br><br>
+                                <a class="form-link" href="https://developers.infracommerce.com.br/">Acesse aqui... </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="center-container">
+                    <div class="center-inner-container">
+                        <form action="#">
+                            <div class="form-title">E-mail</div>
+                            <div class="form-text">Preencha os campos abaixo com dúvidas que não foram encontradas
+                                em nossa FAQ até o momento.
+                                <br><br>
+                                * Obrigatório
+                            </div>
+
+                            <input type="text" placeholder="Nome *" />
+                            <input type="email" placeholder="E-mail *" />
+                            <input type="text" placeholder="Distribuidor *" />
+                            <input type="text" placeholder="Loja Integrada *" />
+
+                            <textarea rows="4" placeholder="Como podemos te ajudar? *"></textarea>
+
+                            <button>Enviar dados</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-col">
+            <div class="footer-logo"></div>
         </div>
 
-      </div>
-
-      <div class="container" id="fale">
-        <div id="right" class="title">
-          <span>Fale Conosco</span>
+        <div class="footer-col">
+            <h4>Sobre nós</h4>
+            <ul>
+                <li>
+                    <a href="https://www.infracommerce.com.br/solucoes-d2c/" target="_blank">
+                        D2C </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/solucoes-b2b/" target="_blank">
+                        B2B </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-data/" target="_blank">
+                        infra.data </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-digital/" target="_blank">
+                        infra.digital </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-log/" target="_blank">
+                        infra.log </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-pay/" target="_blank">
+                        infra.pay </a>
+                </li>
+                <li>
+                    <a href="https://www.infracommerce.com.br/infra-shop/" target="_blank">
+                        infra.shop </a>
+                </li>
+            </ul>
         </div>
 
-        <div class="fale-conosco-text">
-          Preencha os campos abaixo com dúvidas que não foram encontradas
-          <br>
-          em nossa FAQ até o momento.
+        <div class="footer-col">
+            <h4>Integrações</h4>
+            <ul>
+                <li>
+                    <a href="pages/processo-integracao.html" target="_blank">
+                        processo de integração </a>
+                </li>
+                <li>
+                    <a href="pages/requisicoes.html" target="_blank">
+                        limite de requisições </a>
+                </li>
+                <li>
+                    <a href="pages/estoque.html" target="_blank">
+                        estoque </a>
+                </li>
+                <li>
+                    <a href="pages/politica-preco.html" target="_blank">
+                        política de preço </a>
+                </li>
+                <li>
+                    <a href="pages/cliente.html" target="_blank">
+                        cliente </a>
+                </li>
+                <li>
+                    <a href="pages/status-cliente.html" target="_blank">
+                        status cliente </a>
+                </li>
+                <li>
+                    <a href="pages/limite-credito.html" target="_blank">
+                        limite de crédito </a>
+                </li>
+                <li>
+                    <a href="pages/pedido.html" target="_blank">
+                        pedido </a>
+                </li>
+                <li>
+                    <a href="pages/pagamento.html" target="_blank">
+                        pagamento </a>
+                </li>
+                <li>
+                    <a href="pages/trackings.html" target="_blank">
+                        tracking </a>
+                </li>
+            </ul>
         </div>
 
-        <div class="fale-conosco-image"></div>
-        <div class="fale-conosco-formulario">
-						<input type=hidden name="retURL" value="https://www.infracommerce.com.br/">
-
-						<div class="form-group">
-							<input type="text" class="form-input" name="name" alt="char=2" title="Nome" placeholder="Nome" />
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-input" name="loja" alt="char=2" title="Loja integrada" placeholder="Loja integrada" />
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-input" name="company" alt="char=2" title="Distribuidor" placeholder="Distribuidor" />
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-input" name="Contact_Email" alt="email" title="E-mail" placeholder="E-mail" />
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-input mask-phone" name="phone" alt="char=2" title="Telefone" placeholder="Telefone" />
-						</div>
-						<div class="form-group">
-							<textarea class="form-input" name="00N8Y00000FTpjI" alt="char=2" title="Mensagem" placeholder="Como podemos ajudar?"></textarea>
-						</div>
-
-            <button type="submit" class="btn-enviar">Enviar Dados</button>
+        <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+                <a href="https://www.instagram.com/infracommerce/" target="_blank">
+                    <span id="instagram" class="ico"></span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0"
+                    target="_blank">
+                    <span id="whatsapp" class="ico"></span>
+                </a>
+                <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
+                    <span id="linkedin" class="ico"></span>
+                </a>
+                <a href="https://www.facebook.com/infracommerce/" target="_blank">
+                    <span id="facebook" class="ico"></span>
+                </a>
+                <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
+                    <span id="youtube" class="ico"></span>
+                </a>
+            </div>
         </div>
-      </div>
-
-      <footer>
-        <div class="footer-logo"></div>
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Tipos de integração
-          </div>
-
-          <ul class="footer-links">
-            <li>
-              <a href="pages/processo-integracao.html" target="_blank">
-                Processo de integração </a>
-            </li>
-            <li>
-              <a href="pages/requisicoes.html" target="_blank">
-                Limite de Requisições </a>
-            </li>
-            <li>
-              <a href="pages/estoque.html" target="_blank">
-                Estoque </a>
-            </li>
-            <li>
-              <a href="pages/politica-preco.html" target="_blank">
-                Política de Preço </a>
-            </li>
-            <li>
-              <a href="pages/cliente.html" target="_blank">
-                Cliente </a>
-            </li>
-            <li>
-              <a href="pages/status-cliente.html" target="_blank">
-                Status Cliente </a>
-            </li>
-            <li>
-              <a href="pages/limite-credito.html" target="_blank">
-                Limite de Crédito </a>
-            </li>
-            <li>
-              <a href="pages/pedido.html" target="_blank">
-                Pedido </a>
-            </li>
-            <li>
-              <a href="pages/pagamento.html" target="_blank">
-                Pagamento </a>
-            </li>
-            <li>
-              <a href="pages/trackings.html" target="_blank">
-                Tracking </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-head">
-          <div class="footer-head-title">
-            Redes Sociais
-          </div>
-
-          <ul class="social-media">
-            <li>
-              <a href="https://www.instagram.com/infracommerce/" target="_blank">
-                <span id="instagram" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0" target="_blank">
-                <span id="whatsapp" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
-                <span id="linkedin" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/infracommerce/" target="_blank">
-                <span id="facebook" class="ico"></span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
-                <span id="youtube" class="ico"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+    </footer>
 
     <script src="js/script.js"></script>
-
 </body>
 
 </html>
