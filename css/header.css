@@ -115,6 +115,7 @@
     width: 9rem;
     height: 4rem;
     float: left;
+    cursor: pointer;
   }
   
   header .navbar {
