@@ -2,414 +2,414 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Estoque | Infracommerce</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <title>Estoque | Infracommerce</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
-    <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+  <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
 
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/pages.css">
 </head>
 
 <body>
-    <header>
-        <div class="header-top"></div>
+  <header>
+    <div class="header-top"></div>
 
-        <div class="navbar">
-            <div class="logo"></div>
-            <i class='bx bx-menu'></i>
+    <div class="navbar">
+      <div class="logo" onclick="atualizarpag('../index')"></div>
+      <i class='bx bx-menu'></i>
 
-            <div class="nav-links">
-                <div class="sidebar">
-                    <i class='bx bx-x'></i>
-                </div>
-
-                <ul class="links">
-                    <li><a href="../index.html">início</a></li>
-                    <li>
-                        <a href="#">integrações</a>
-                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-                        <ul class="htmlCss-sub-menu sub-menu">
-                            <li><a onclick="atualizarpag('processo-integracao')">processo de integração</a></li>
-                            <li><a onclick="atualizarpag('requisicoes')">limite de requisições</a></li>
-                            <li><a onclick="atualizarpag('estoque')">estoque</a></li>
-                            <li><a onclick="atualizarpag('politica-preco')">política de preço</a></li>
-                            <li><a onclick="atualizarpag('cliente')">cliente</a></li>
-                            <li><a onclick="atualizarpag('status-cliente')">status de cliente</a></li>
-                            <li><a onclick="atualizarpag('limite-credito')">limite de crédito</a></li>
-                            <li><a onclick="atualizarpag('pedido')">pedido</a></li>
-                            <li><a onclick="atualizarpag('pagamento')">pagamento</a></li>
-                            <li><a onclick="atualizarpag('trackings')">trackings</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#section_4">dúvidas frequentes</a></li>
-                    <li><a href="../index.html#section_4">fale conosco</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-    <section class="banner" id="section_1">
-        <div class="banner-title">Como podemos te ajudar?</div>
-
-        <div class="banner-search">
-            <input type="text" class="search-input" name="duvida" alt="char=500"
-                placeholder="Digite aqui sobre a sua dúvida" />
-        </div>
-    </section>
-
-    <section class="container" id="section_2">
-        <div class="block">
-            <div class="block-image" id="estoque"></div>
-            <div class="block-title">
-                Integração de Estoque
-                <br>
-                Conheça o fluxo do processamento na plataforma e
-                tire suas dúvidas.
-            </div>
+      <div class="nav-links">
+        <div class="sidebar">
+          <i class='bx bx-x'></i>
         </div>
 
-        <div class="block-text">
-            O Estoque de produtos para e-commerce B2B é uma parte crucial da cadeia de suprimentos e requer uma
-            gestão cuidadosa para garantir a satisfação dos clientes e o sucesso do negócio. Geralmente a
-            quantidade de estoque é controlado pelo sistema gerenciador (ERP) e enviado a informação parcial ou
-            completa da quantidade de produtos que o distribuidor deseja comercializar via sistema integrador
-            (Plataforma que envia as informações para o e commerce).
-            <br><br>
-            O padrão utilizado pela plataforma segue o padrão EAN/SKU sendo necessário que os produtos
-            estejam cadastrados no ERP e também no nosso ambiente, podendo ter diferenciações tanto em
-            unidade quanto em produtos com caixa.
-            <br><br>
-            Para os produtos caixa, o SKU segue o modelo: EAN + C + Quantidade de produtos vendidos
-            naquela caixa, sendo necessário que o distribuidor configure e cadastre os produtos
-            nesse padrão em seu ERP.
-            <br><br>
-            Segue 2 exemplos de SKU mostrando a diferença dele em unidade e em caixa:
-            <br><br>
-            <strong>Exemplo de SKU/EAN unitário: </strong>7891150058428
+        <ul class="links">
+          <li><a href="../index.html">início</a></li>
+          <li>
+            <a href="#">integrações</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a onclick="atualizarpag('processo-integracao')">processo de integração</a></li>
+              <li><a onclick="atualizarpag('requisicoes')">limite de requisições</a></li>
+              <li><a onclick="atualizarpag('estoque')">estoque</a></li>
+              <li><a onclick="atualizarpag('politica-preco')">política de preço</a></li>
+              <li><a onclick="atualizarpag('cliente')">cliente</a></li>
+              <li><a onclick="atualizarpag('status-cliente')">status de cliente</a></li>
+              <li><a onclick="atualizarpag('limite-credito')">limite de crédito</a></li>
+              <li><a onclick="atualizarpag('pedido')">pedido</a></li>
+              <li><a onclick="atualizarpag('pagamento')">pagamento</a></li>
+              <li><a onclick="atualizarpag('trackings')">trackings</a></li>
+            </ul>
+          </li>
+          <li><a href="#section_4">dúvidas frequentes</a></li>
+          <li><a href="../index.html#section_4">fale conosco</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="banner" id="section_1">
+    <div class="banner-title">Como podemos te ajudar?</div>
+
+    <div class="banner-search">
+      <input type="text" class="search-input" name="duvida" alt="char=500"
+        placeholder="Digite aqui sobre a sua dúvida" />
+    </div>
+  </section>
+
+  <section class="container" id="section_2">
+    <div class="block">
+      <div class="block-image" id="estoque"></div>
+      <div class="block-title">
+        Integração de Estoque
+        <br>
+        Conheça o fluxo do processamento na plataforma e
+        tire suas dúvidas.
+      </div>
+    </div>
+
+    <div class="block-text">
+      O Estoque de produtos para e-commerce B2B é uma parte crucial da cadeia de suprimentos e requer uma
+      gestão cuidadosa para garantir a satisfação dos clientes e o sucesso do negócio. Geralmente a
+      quantidade de estoque é controlado pelo sistema gerenciador (ERP) e enviado a informação parcial ou
+      completa da quantidade de produtos que o distribuidor deseja comercializar via sistema integrador
+      (Plataforma que envia as informações para o e commerce).
+      <br><br>
+      O padrão utilizado pela plataforma segue o padrão EAN/SKU sendo necessário que os produtos
+      estejam cadastrados no ERP e também no nosso ambiente, podendo ter diferenciações tanto em
+      unidade quanto em produtos com caixa.
+      <br><br>
+      Para os produtos caixa, o SKU segue o modelo: EAN + C + Quantidade de produtos vendidos
+      naquela caixa, sendo necessário que o distribuidor configure e cadastre os produtos
+      nesse padrão em seu ERP.
+      <br><br>
+      Segue 2 exemplos de SKU mostrando a diferença dele em unidade e em caixa:
+      <br><br>
+      <strong>Exemplo de SKU/EAN unitário: </strong>7891150058428
+      <br>
+      <strong>Exemplo do SKU/EAN 7891150058428 sendo vendido em uma caixa de 4 unidades:
+      </strong>7891150058428C4.
+    </div>
+  </section>
+
+  <section class="container" id="section_3">
+    <div class="container-title">Boas práticas para o envio de requisições</div>
+
+    <div class="container-list">
+      <ul class="list">
+        <li class="item">
+          <span class="list-title">Requisições</span>
+          <span class="list-text">
+            Importante que não seja enviada a carga FULL dos produtos a todo momento para não onerar
+            a fila de processamento da plataforma ocasionando limite excedido de requisições.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Quantidade de estoque</span>
+          <span class="list-text">
+            A quantidade enviada deve ser em número, sem casas decimais e, consequentemente,
+            sem ponto ou vírgula.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Atualização de estoque</span>
+          <span class="list-text">
+            Só enviar a integração de atualização de estoque para SKUs que tenham alteração
+            em sua quantidade de 5% ou mais desde a última integração enviado.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Período de envio</span>
+          <span class="list-text">
+            O distribuidor deve ser capaz de definir de quanto em quanto tempo a integração de estoque deve
+            ocorrer,
+            para que sejam enviadas em períodos pré-determinados e não a todo momento que há alguma
+            alteração de
+            estoque em algum SKU.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Produtos caixa</span>
+          <span class="list-text">
+            Para distribuidores que trabalham com venda de caixas ou múltiplos mas controlam seus
+            estoques em sistemas internos e centro de distribuição por unidades, é necessário que os
+            estoques sejam enviados para cada SKU respeitando a lógica de unidade ou caixa vendida no site.
+            Ou seja, neste caso, o estoque deve ser calculado para a versão da caixa.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Limite dentro das requisições</span>
+          <span class="list-text">
+            O distribuidor deve seguir as boas práticas de requisições para a plataforma, independente do
+            serviço. Sendo assim, solicitamos que não ultrapasse
+            100 SKUS em uma única requisição de estoque.
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container" id="section_4">
+    <div class="container-title">Dúvidas Frequentes</div>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Trabalho com estoque por disponibilidade. Como devo realizar o envio para a plataforma?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            É possível efetuar o envio de estoque por disponibilidade do produto para a plataforma! Para
+            mais informações de como a requisição é enviada,
+            acesse nosso manual de integração.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          A atualização de estoque na plataforma é imediata após o envio?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Não! Temos uma fila de processamento e o envio pode demorar cerca de alguns minutos para
+            atualizar na loja. Lembrando que nesses casos
+            recomendamos a atualização da página para validar a disponibilidade do produto.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          A quantidade de estoque disponível para compra fica visível para o cliente na loja?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Não! O cliente só saberá a quantidade disponível de estoque para um produto caso coloque no
+            carrinho a quantidade que excede este valor.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Porque o produto não está disponível no site?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Para o produto estar visível é necessário que o mesmo tenha estoque e preço. Nesses casos é
+            recomendado um novo envio atualizado para validação na plataforma.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Realizei o envio de estoque e preço porém o meu produto não está disponível no site. Como proceder?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Nesses casos o produto enviado pode não ter sido cadastrado na plataforma. Recomendamos que seja
+            aberto um chamado para o time de NRP para que possam verificar se o produto faz parte do
+            portfólio e assim, seja realizado o cadastro dele.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Realizei o envio de estoque para um produto caixa que possui na plataforma em unidade porém não está
+          visível na loja. Como proceder?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Recomendados a abertura de um chamado para o time de NRP efetuar o cadastro do múltiplo na
+            plataforma. Dependendo da regra de negócio habilitada de cada loja,
+            o cadastro é realizado automaticamente.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Como devemos lidar com produtos vendidos em caixas ou múltiplos, mas controlados em unidades no
+          estoque interno?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Para distribuidores que vendem caixas ou múltiplos mas controlam o estoque em unidades, o
+            estoque deve ser calculado com base na versão da caixa,
+            garantindo que a quantidade disponível seja precisa para a venda em unidades ou caixas.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          De quanto em quanto tempo devo programar meus envios de estoque?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            As atualizações devem ser enviadas apenas quando houver uma alteração de estoque de 5% ou mais
+            desde do produto desde a última integração. Recomendados que não seja enviado
+            a carga completa, apenas os produtos com a quantidade alterada para que não seja sobrecarregada
+            a fila.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          O que é necessário enviar para que o produto seja desativado no site?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            O produto pode ser desativado apenas enviando estoque ou preço zerado para ele. Recomendamos que
+            sejam realizados os dois envios por via das dúvidas.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Trabalho com uma numeração interna de produtos. Posso seguir com o envio de estoque com a numeração
+          que tenho cadastrada em meu ERP?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Não! A plataforma integra como padrão os produtos por sua SKU/EAN. Portanto, caso seja enviado
+            algum produto fora desse padrão, o mesmo não será integrado na plataforma e
+            por consequência não aparecerá para venda no site.
             <br>
-            <strong>Exemplo do SKU/EAN 7891150058428 sendo vendido em uma caixa de 4 unidades:
-            </strong>7891150058428C4.
+            Neste caso recomendamos a parametrização do código SKU/EAN para os produtos no ERP do
+            distribuidor.
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="container" id="section_3">
-        <div class="container-title">Boas práticas para o envio de requisições</div>
+  <footer class="footer">
+    <div class="footer-col">
+      <div class="footer-logo"></div>
+    </div>
 
-        <div class="container-list">
-            <ul class="list">
-                <li class="item">
-                    <span class="list-title">Requisições</span>
-                    <span class="list-text">
-                        Importante que não seja enviada a carga FULL dos produtos a todo momento para não onerar
-                        a fila de processamento da plataforma ocasionando limite excedido de requisições.
-                    </span>
-                </li>
+    <div class="footer-col">
+      <h4>Sobre nós</h4>
+      <ul>
+        <li>
+          <a href="https://www.infracommerce.com.br/solucoes-d2c/" target="_blank">
+            D2C </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/solucoes-b2b/" target="_blank">
+            B2B </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-data/" target="_blank">
+            infra.data </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-digital/" target="_blank">
+            infra.digital </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-log/" target="_blank">
+            infra.log </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-pay/" target="_blank">
+            infra.pay </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-shop/" target="_blank">
+            infra.shop </a>
+        </li>
+      </ul>
+    </div>
 
-                <li class="item">
-                    <span class="list-title">Quantidade de estoque</span>
-                    <span class="list-text">
-                        A quantidade enviada deve ser em número, sem casas decimais e, consequentemente,
-                        sem ponto ou vírgula.
-                    </span>
-                </li>
+    <div class="footer-col">
+      <h4>Integrações</h4>
+      <ul>
+        <li>
+          <a href="processo-integracao.html" target="_blank">
+            processo de integração </a>
+        </li>
+        <li>
+          <a href="requisicoes.html" target="_blank">
+            limite de requisições </a>
+        </li>
+        <li>
+          <a href="estoque.html" target="_blank">
+            estoque </a>
+        </li>
+        <li>
+          <a href="politica-preco.html" target="_blank">
+            política de preço </a>
+        </li>
+        <li>
+          <a href="cliente.html" target="_blank">
+            cliente </a>
+        </li>
+        <li>
+          <a href="status-cliente.html" target="_blank">
+            status cliente </a>
+        </li>
+        <li>
+          <a href="limite-credito.html" target="_blank">
+            limite de crédito </a>
+        </li>
+        <li>
+          <a href="pedido.html" target="_blank">
+            pedido </a>
+        </li>
+        <li>
+          <a href="pagamento.html" target="_blank">
+            pagamento </a>
+        </li>
+        <li>
+          <a href="trackings.html" target="_blank">
+            tracking </a>
+        </li>
+      </ul>
+    </div>
 
-                <li class="item">
-                    <span class="list-title">Atualização de estoque</span>
-                    <span class="list-text">
-                        Só enviar a integração de atualização de estoque para SKUs que tenham alteração
-                        em sua quantidade de 5% ou mais desde a última integração enviado.
-                    </span>
-                </li>
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <div class="social-links">
+        <a href="https://www.instagram.com/infracommerce/" target="_blank">
+          <span id="instagram" class="ico"></span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0"
+          target="_blank">
+          <span id="whatsapp" class="ico"></span>
+        </a>
+        <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
+          <span id="linkedin" class="ico"></span>
+        </a>
+        <a href="https://www.facebook.com/infracommerce/" target="_blank">
+          <span id="facebook" class="ico"></span>
+        </a>
+        <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
+          <span id="youtube" class="ico"></span>
+        </a>
+      </div>
+    </div>
+  </footer>
 
-                <li class="item">
-                    <span class="list-title">Período de envio</span>
-                    <span class="list-text">
-                        O distribuidor deve ser capaz de definir de quanto em quanto tempo a integração de estoque deve
-                        ocorrer,
-                        para que sejam enviadas em períodos pré-determinados e não a todo momento que há alguma
-                        alteração de
-                        estoque em algum SKU.
-                    </span>
-                </li>
-
-                <li class="item">
-                    <span class="list-title">Produtos caixa</span>
-                    <span class="list-text">
-                        Para distribuidores que trabalham com venda de caixas ou múltiplos mas controlam seus
-                        estoques em sistemas internos e centro de distribuição por unidades, é necessário que os
-                        estoques sejam enviados para cada SKU respeitando a lógica de unidade ou caixa vendida no site.
-                        Ou seja, neste caso, o estoque deve ser calculado para a versão da caixa.
-                    </span>
-                </li>
-
-                <li class="item">
-                    <span class="list-title">Limite dentro das requisições</span>
-                    <span class="list-text">
-                        O distribuidor deve seguir as boas práticas de requisições para a plataforma, independente do
-                        serviço. Sendo assim, solicitamos que não ultrapasse
-                        100 SKUS em uma única requisição de estoque.
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="container" id="section_4">
-        <div class="container-title">Dúvidas Frequentes</div>
-
-        <div class="accordion">
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Trabalho com estoque por disponibilidade. Como devo realizar o envio para a plataforma?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        É possível efetuar o envio de estoque por disponibilidade do produto para a plataforma! Para
-                        mais informações de como a requisição é enviada,
-                        acesse nosso manual de integração.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    A atualização de estoque na plataforma é imediata após o envio?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Não! Temos uma fila de processamento e o envio pode demorar cerca de alguns minutos para
-                        atualizar na loja. Lembrando que nesses casos
-                        recomendamos a atualização da página para validar a disponibilidade do produto.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    A quantidade de estoque disponível para compra fica visível para o cliente na loja?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Não! O cliente só saberá a quantidade disponível de estoque para um produto caso coloque no
-                        carrinho a quantidade que excede este valor.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Porque o produto não está disponível no site?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Para o produto estar visível é necessário que o mesmo tenha estoque e preço. Nesses casos é
-                        recomendado um novo envio atualizado para validação na plataforma.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Realizei o envio de estoque e preço porém o meu produto não está disponível no site. Como proceder?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Nesses casos o produto enviado pode não ter sido cadastrado na plataforma. Recomendamos que seja
-                        aberto um chamado para o time de NRP para que possam verificar se o produto faz parte do
-                        portfólio e assim, seja realizado o cadastro dele.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Realizei o envio de estoque para um produto caixa que possui na plataforma em unidade porém não está
-                    visível na loja. Como proceder?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Recomendados a abertura de um chamado para o time de NRP efetuar o cadastro do múltiplo na
-                        plataforma. Dependendo da regra de negócio habilitada de cada loja,
-                        o cadastro é realizado automaticamente.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Como devemos lidar com produtos vendidos em caixas ou múltiplos, mas controlados em unidades no
-                    estoque interno?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Para distribuidores que vendem caixas ou múltiplos mas controlam o estoque em unidades, o
-                        estoque deve ser calculado com base na versão da caixa,
-                        garantindo que a quantidade disponível seja precisa para a venda em unidades ou caixas.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    De quanto em quanto tempo devo programar meus envios de estoque?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        As atualizações devem ser enviadas apenas quando houver uma alteração de estoque de 5% ou mais
-                        desde do produto desde a última integração. Recomendados que não seja enviado
-                        a carga completa, apenas os produtos com a quantidade alterada para que não seja sobrecarregada
-                        a fila.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    O que é necessário enviar para que o produto seja desativado no site?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        O produto pode ser desativado apenas enviando estoque ou preço zerado para ele. Recomendamos que
-                        sejam realizados os dois envios por via das dúvidas.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Trabalho com uma numeração interna de produtos. Posso seguir com o envio de estoque com a numeração
-                    que tenho cadastrada em meu ERP?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Não! A plataforma integra como padrão os produtos por sua SKU/EAN. Portanto, caso seja enviado
-                        algum produto fora desse padrão, o mesmo não será integrado na plataforma e
-                        por consequência não aparecerá para venda no site.
-                        <br>
-                        Neste caso recomendamos a parametrização do código SKU/EAN para os produtos no ERP do
-                        distribuidor.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-col">
-            <div class="footer-logo"></div>
-        </div>
-
-        <div class="footer-col">
-            <h4>Sobre nós</h4>
-            <ul>
-                <li>
-                    <a href="https://www.infracommerce.com.br/solucoes-d2c/" target="_blank">
-                        D2C </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/solucoes-b2b/" target="_blank">
-                        B2B </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-data/" target="_blank">
-                        infra.data </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-digital/" target="_blank">
-                        infra.digital </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-log/" target="_blank">
-                        infra.log </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-pay/" target="_blank">
-                        infra.pay </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-shop/" target="_blank">
-                        infra.shop </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Integrações</h4>
-            <ul>
-                <li>
-                    <a href="processo-integracao.html" target="_blank">
-                        processo de integração </a>
-                </li>
-                <li>
-                    <a href="requisicoes.html" target="_blank">
-                        limite de requisições </a>
-                </li>
-                <li>
-                    <a href="estoque.html" target="_blank">
-                        estoque </a>
-                </li>
-                <li>
-                    <a href="politica-preco.html" target="_blank">
-                        política de preço </a>
-                </li>
-                <li>
-                    <a href="cliente.html" target="_blank">
-                        cliente </a>
-                </li>
-                <li>
-                    <a href="status-cliente.html" target="_blank">
-                        status cliente </a>
-                </li>
-                <li>
-                    <a href="limite-credito.html" target="_blank">
-                        limite de crédito </a>
-                </li>
-                <li>
-                    <a href="pedido.html" target="_blank">
-                        pedido </a>
-                </li>
-                <li>
-                    <a href="pagamento.html" target="_blank">
-                        pagamento </a>
-                </li>
-                <li>
-                    <a href="trackings.html" target="_blank">
-                        tracking </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Redes Sociais</h4>
-            <div class="social-links">
-                <a href="https://www.instagram.com/infracommerce/" target="_blank">
-                    <span id="instagram" class="ico"></span>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0"
-                    target="_blank">
-                    <span id="whatsapp" class="ico"></span>
-                </a>
-                <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
-                    <span id="linkedin" class="ico"></span>
-                </a>
-                <a href="https://www.facebook.com/infracommerce/" target="_blank">
-                    <span id="facebook" class="ico"></span>
-                </a>
-                <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
-                    <span id="youtube" class="ico"></span>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

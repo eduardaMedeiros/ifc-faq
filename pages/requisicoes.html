@@ -2,363 +2,363 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Limite de Requisições | Infracommerce</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <title>Limite de Requisições | Infracommerce</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
-    <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+  <link rel="stylesheet" href="https://use.typekit.net/mif0itk.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
 
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/pages.css">
 </head>
 
 <body>
-    <header>
-        <div class="header-top"></div>
+  <header>
+    <div class="header-top"></div>
 
-        <div class="navbar">
-            <div class="logo"></div>
-            <i class='bx bx-menu'></i>
+    <div class="navbar">
+      <div class="logo" onclick="atualizarpag('../index')"></div>
+      <i class='bx bx-menu'></i>
 
-            <div class="nav-links">
-                <div class="sidebar">
-                    <i class='bx bx-x'></i>
-                </div>
-
-                <ul class="links">
-                    <li><a href="../index.html">início</a></li>
-                    <li>
-                        <a href="#">integrações</a>
-                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-                        <ul class="htmlCss-sub-menu sub-menu">
-                            <li><a onclick="atualizarpag('processo-integracao')">processo de integração</a></li>
-                            <li><a onclick="atualizarpag('requisicoes')">limite de requisições</a></li>
-                            <li><a onclick="atualizarpag('estoque')">estoque</a></li>
-                            <li><a onclick="atualizarpag('politica-preco')">política de preço</a></li>
-                            <li><a onclick="atualizarpag('cliente')">cliente</a></li>
-                            <li><a onclick="atualizarpag('status-cliente')">status de cliente</a></li>
-                            <li><a onclick="atualizarpag('limite-credito')">limite de crédito</a></li>
-                            <li><a onclick="atualizarpag('pedido')">pedido</a></li>
-                            <li><a onclick="atualizarpag('pagamento')">pagamento</a></li>
-                            <li><a onclick="atualizarpag('trackings')">trackings</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#section_4">dúvidas frequentes</a></li>
-                    <li><a href="../index.html#section_4">fale conosco</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-    <section class="banner" id="section_1">
-        <div class="banner-title">Como podemos te ajudar?</div>
-
-        <div class="banner-search">
-            <input type="text" class="search-input" name="duvida" alt="char=500"
-                placeholder="Digite aqui sobre a sua dúvida" />
-        </div>
-    </section>
-
-    <section class="container" id="section_2">
-        <div class="block">
-            <div class="block-image" id="requisicao"></div>
-            <div class="block-title">
-                Limite de Requisições na plataforma
-                <br>
-                Conheça o fluxo do processamento na plataforma e
-                tire suas dúvidas.
-            </div>
+      <div class="nav-links">
+        <div class="sidebar">
+          <i class='bx bx-x'></i>
         </div>
 
-        <div class="block-text">
-            Para que possamos ter uma boa prática no recebimento das requisições e na utilização da plataforma,
-            viu-se a necessidade de criar uma política de limite de requisições, e dessa forma atender nossos
-            clientes com mais qualidade e segurança.
-            <br><br>
-            Cada integração terá seu limite permitido no período de 1 hora. Caso a quantidade de requisições
-            sejam superadas, o responsável pelo envio terá suas integrações bloqueadas e divididas para serem
-            processadas durante seu bloqueio, e o tempo de bloqueio será calculado pelo tempo necessário a ser
-            processado os registros excedentes ao limite enviado.
-        </div>
+        <ul class="links">
+          <li><a href="../index.html">início</a></li>
+          <li>
+            <a href="#">integrações</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a onclick="atualizarpag('processo-integracao')">processo de integração</a></li>
+              <li><a onclick="atualizarpag('requisicoes')">limite de requisições</a></li>
+              <li><a onclick="atualizarpag('estoque')">estoque</a></li>
+              <li><a onclick="atualizarpag('politica-preco')">política de preço</a></li>
+              <li><a onclick="atualizarpag('cliente')">cliente</a></li>
+              <li><a onclick="atualizarpag('status-cliente')">status de cliente</a></li>
+              <li><a onclick="atualizarpag('limite-credito')">limite de crédito</a></li>
+              <li><a onclick="atualizarpag('pedido')">pedido</a></li>
+              <li><a onclick="atualizarpag('pagamento')">pagamento</a></li>
+              <li><a onclick="atualizarpag('trackings')">trackings</a></li>
+            </ul>
+          </li>
+          <li><a href="#section_4">dúvidas frequentes</a></li>
+          <li><a href="../index.html#section_4">fale conosco</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-        <div class="block-subtitle">Retorno de envio</div>
-        <div class="block-text">
-            Após a exceção de envio, a plataforma retornará a seguinte mensagem de erro para as
-            requisições enviadas: <br>
+  <section class="banner" id="section_1">
+    <div class="banner-title">Como podemos te ajudar?</div>
+
+    <div class="banner-search">
+      <input type="text" class="search-input" name="duvida" alt="char=500"
+        placeholder="Digite aqui sobre a sua dúvida" />
+    </div>
+  </section>
+
+  <section class="container" id="section_2">
+    <div class="block">
+      <div class="block-image" id="requisicao"></div>
+      <div class="block-title">
+        Limite de Requisições na plataforma
+        <br>
+        Conheça o fluxo do processamento na plataforma e
+        tire suas dúvidas.
+      </div>
+    </div>
+
+    <div class="block-text">
+      Para que possamos ter uma boa prática no recebimento das requisições e na utilização da plataforma,
+      viu-se a necessidade de criar uma política de limite de requisições, e dessa forma atender nossos
+      clientes com mais qualidade e segurança.
+      <br><br>
+      Cada integração terá seu limite permitido no período de 1 hora. Caso a quantidade de requisições
+      sejam superadas, o responsável pelo envio terá suas integrações bloqueadas e divididas para serem
+      processadas durante seu bloqueio, e o tempo de bloqueio será calculado pelo tempo necessário a ser
+      processado os registros excedentes ao limite enviado.
+    </div>
+
+    <div class="block-subtitle">Retorno de envio</div>
+    <div class="block-text">
+      Após a exceção de envio, a plataforma retornará a seguinte mensagem de erro para as
+      requisições enviadas: <br>
+      <strong>
+        “Não foi possível executar essa integração, pois excede
+        ao limite permitido.”
+      </strong>
+      <br><br>
+      Para o tipo de integração excedida, durante o tempo de bloqueio não serão aceitas novas integrações,
+      todas as demais requisições serão aceitas normalmente se respeitarem os seus limites. Além disso, elas serão
+      diluídas ao longo do tempo de bloqueio, conforme o limite de envios autorizados por hora.
+    </div>
+  </section>
+
+  <section class="container" id="section_3">
+    <div class="container-title">Valores permitidos por hora</div>
+
+    <div class="container-list">
+      <ul class="list">
+        <li class="item">
+          <span class="list-title">Estoque</span>
+          <span class="list-text">
+            25.000 requisições de atualização de estoque para SKU's por hora.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Política de Preço</span>
+          <span class="list-text">
+            320 requisições atualizadas/enviadas de política de preços por hora.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Preços XML</span>
+          <span class="list-text">
+            4.000 requisições de alterações de preços em SKU's por hora.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Status de Cliente</span>
+          <span class="list-text">
+            4.000 requisições de alterações de Status de Cliente por hora.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Limite de Crédito</span>
+          <span class="list-text">
+            25.000 requisições de atualizações de limite de crédito para CNPJ's por hora.
+          </span>
+        </li>
+
+        <li class="item">
+          <span class="list-title">Trackings</span>
+          <span class="list-text">
+            1.000 requisições de Trackings alteradas por hora.
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container" id="section_4">
+    <div class="container-title">Dúvidas Frequentes</div>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Caso o limite de requisições seja ultrapassado e o envio continue, a plataforma processa as demais
+          requisições quando o bloqueio finalizar?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Não! Após a exceção do limite permitido, todas as demais requisições serão desconsideradas pela
+            plataforma, sendo necessário o reenvio delas após o desbloqueio.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Qual a média de tempo de bloqueio para o envio de requisições?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            O período de bloqueio varia de acordo com o tempo necessário para o processamento das
+            requisições enviadas. Para novos envios após o bloqueio, a plataforma informa o
+            tempo previsto para liberação da fila. Segue em exemplo de retorno:
+            <br>
             <strong>
-                “Não foi possível executar essa integração, pois excede
-                ao limite permitido.”
+              "Não conseguimos processar todas as suas integrações, pois a quantidade de registros que
+              você enviou está acima do limite permitido por hora. Seu limite por hora é: 2.000,
+              já o seu tempo de bloqueio é até 01/01/2023 às 17:00, para as demais filas, respeite seus
+              limites de envio.”
             </strong>
-            <br><br>
-            Para o tipo de integração excedida, durante o tempo de bloqueio não serão aceitas novas integrações,
-            todas as demais requisições serão aceitas normalmente se respeitarem os seus limites. Além disso, elas serão
-            diluídas ao longo do tempo de bloqueio, conforme o limite de envios autorizados por hora.
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="container" id="section_3">
-        <div class="container-title">Valores permitidos por hora</div>
-
-        <div class="container-list">
-            <ul class="list">
-                <li class="item">
-                    <span class="list-title">Estoque</span>
-                    <span class="list-text">
-                        25.000 requisições de atualização de estoque para SKU's por hora.
-                    </span>
-                </li>
-
-                <li class="item">
-                    <span class="list-title">Política de Preço</span>
-                    <span class="list-text">
-                        320 requisições atualizadas/enviadas de política de preços por hora.
-                    </span>
-                </li>
-
-                <li class="item">
-                    <span class="list-title">Preços XML</span>
-                    <span class="list-text">
-                        4.000 requisições de alterações de preços em SKU's por hora.
-                    </span>
-                </li>
-
-                <li class="item">
-                    <span class="list-title">Status de Cliente</span>
-                    <span class="list-text">
-                        4.000 requisições de alterações de Status de Cliente por hora.
-                    </span>
-                </li>
-
-                <li class="item">
-                    <span class="list-title">Limite de Crédito</span>
-                    <span class="list-text">
-                        25.000 requisições de atualizações de limite de crédito para CNPJ's por hora.
-                    </span>
-                </li>
-
-                <li class="item">
-                    <span class="list-title">Trackings</span>
-                    <span class="list-text">
-                        1.000 requisições de Trackings alteradas por hora.
-                    </span>
-                </li>
-            </ul>
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Caso seja enviado uma requisição com diversos CNPJ's para o envio de status de cliente ou limite de
+          crédito, será considerado pela plataforma apenas uma requisição?
         </div>
-    </section>
-
-    <section class="container" id="section_4">
-        <div class="container-title">Dúvidas Frequentes</div>
-
-        <div class="accordion">
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Caso o limite de requisições seja ultrapassado e o envio continue, a plataforma processa as demais
-                    requisições quando o bloqueio finalizar?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Não! Após a exceção do limite permitido, todas as demais requisições serão desconsideradas pela
-                        plataforma, sendo necessário o reenvio delas após o desbloqueio.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Qual a média de tempo de bloqueio para o envio de requisições?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        O período de bloqueio varia de acordo com o tempo necessário para o processamento das
-                        requisições enviadas. Para novos envios após o bloqueio, a plataforma informa o
-                        tempo previsto para liberação da fila. Segue em exemplo de retorno:
-                        <br>
-                        <strong>
-                            "Não conseguimos processar todas as suas integrações, pois a quantidade de registros que
-                            você enviou está acima do limite permitido por hora. Seu limite por hora é: 2.000,
-                            já o seu tempo de bloqueio é até 01/01/2023 às 17:00, para as demais filas, respeite seus
-                            limites de envio.”
-                        </strong>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Caso seja enviado uma requisição com diversos CNPJ's para o envio de status de cliente ou limite de
-                    crédito, será considerado pela plataforma apenas uma requisição?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Não! Conforme a tabela de referência, é considerado o CNPJ enviado para atualização e não uma
-                        requisição com diversos CNPJs inclusos.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Trabalho com diversos produtos na plataforma e eles precisam ser atualizados recorrentemente para
-                    que o estoque físico bata com o que
-                    está disponível na plataforma. Como proceder?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Recomendados que o distribuidor atualize apenas os produtos cujo estoque teve alteração ao
-                        decorrer do período da última atualização.
-                        Os demais produtos que não tiveram alteração de estoque, não devem ser enviados.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    Temos mais de 320 tabelas de preços configuradas na plataforma e realizamos atualizações de preços
-                    regularmente, além de inclusão de clientes. Como proceder?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Recomendamos que seja enviada primeiro as políticas de preço com mais exigência para a
-                        plataforma sem que o limite seja excedido e as demais sejam enviadas ao decorrer do dia.
-                        <br>
-                        Caso não seja possível este cenário, recomendamos que o distribuidor analise quais são as
-                        tabelas de preço que possuem realmente clientes incluídos, que efetuam compras e
-                        possuem status aprovado, para que desta forma apenas essas políticas sejam atualizadas no
-                        período disponível.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-item-header">
-                    De acordo com minha regra de negócio os envios serão excedidos com frequência. Como proceder?
-                </div>
-                <div class="accordion-item-body">
-                    <div class="accordion-item-body-content">
-                        Caso o distribuidor tenha analisado todos os cenários possíveis e ainda assim continue tendo
-                        bloqueios de envio o mesmo pode contatar o time
-                        responsável para uma reunião de alinhamento para que todos os envolvidos possam entender o
-                        cenário e ajudar com os próximos passos.
-                    </div>
-                </div>
-            </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Não! Conforme a tabela de referência, é considerado o CNPJ enviado para atualização e não uma
+            requisição com diversos CNPJs inclusos.
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer class="footer">
-        <div class="footer-col">
-            <div class="footer-logo"></div>
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Trabalho com diversos produtos na plataforma e eles precisam ser atualizados recorrentemente para
+          que o estoque físico bata com o que
+          está disponível na plataforma. Como proceder?
         </div>
-
-        <div class="footer-col">
-            <h4>Sobre nós</h4>
-            <ul>
-                <li>
-                    <a href="https://www.infracommerce.com.br/solucoes-d2c/" target="_blank">
-                        D2C </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/solucoes-b2b/" target="_blank">
-                        B2B </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-data/" target="_blank">
-                        infra.data </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-digital/" target="_blank">
-                        infra.digital </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-log/" target="_blank">
-                        infra.log </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-pay/" target="_blank">
-                        infra.pay </a>
-                </li>
-                <li>
-                    <a href="https://www.infracommerce.com.br/infra-shop/" target="_blank">
-                        infra.shop </a>
-                </li>
-            </ul>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Recomendados que o distribuidor atualize apenas os produtos cujo estoque teve alteração ao
+            decorrer do período da última atualização.
+            Os demais produtos que não tiveram alteração de estoque, não devem ser enviados.
+          </div>
         </div>
+      </div>
 
-        <div class="footer-col">
-            <h4>Integrações</h4>
-            <ul>
-                <li>
-                    <a href="processo-integracao.html" target="_blank">
-                        processo de integração </a>
-                </li>
-                <li>
-                    <a href="requisicoes.html" target="_blank">
-                        limite de requisições </a>
-                </li>
-                <li>
-                    <a href="estoque.html" target="_blank">
-                        estoque </a>
-                </li>
-                <li>
-                    <a href="politica-preco.html" target="_blank">
-                        política de preço </a>
-                </li>
-                <li>
-                    <a href="cliente.html" target="_blank">
-                        cliente </a>
-                </li>
-                <li>
-                    <a href="status-cliente.html" target="_blank">
-                        status cliente </a>
-                </li>
-                <li>
-                    <a href="limite-credito.html" target="_blank">
-                        limite de crédito </a>
-                </li>
-                <li>
-                    <a href="pedido.html" target="_blank">
-                        pedido </a>
-                </li>
-                <li>
-                    <a href="pagamento.html" target="_blank">
-                        pagamento </a>
-                </li>
-                <li>
-                    <a href="trackings.html" target="_blank">
-                        tracking </a>
-                </li>
-            </ul>
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Temos mais de 320 tabelas de preços configuradas na plataforma e realizamos atualizações de preços
+          regularmente, além de inclusão de clientes. Como proceder?
         </div>
-
-        <div class="footer-col">
-            <h4>Redes Sociais</h4>
-            <div class="social-links">
-                <a href="https://www.instagram.com/infracommerce/" target="_blank">
-                    <span id="instagram" class="ico"></span>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0"
-                    target="_blank">
-                    <span id="whatsapp" class="ico"></span>
-                </a>
-                <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
-                    <span id="linkedin" class="ico"></span>
-                </a>
-                <a href="https://www.facebook.com/infracommerce/" target="_blank">
-                    <span id="facebook" class="ico"></span>
-                </a>
-                <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
-                    <span id="youtube" class="ico"></span>
-                </a>
-            </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Recomendamos que seja enviada primeiro as políticas de preço com mais exigência para a
+            plataforma sem que o limite seja excedido e as demais sejam enviadas ao decorrer do dia.
+            <br>
+            Caso não seja possível este cenário, recomendamos que o distribuidor analise quais são as
+            tabelas de preço que possuem realmente clientes incluídos, que efetuam compras e
+            possuem status aprovado, para que desta forma apenas essas políticas sejam atualizadas no
+            período disponível.
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script src="../js/script.js"></script>
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          De acordo com minha regra de negócio os envios serão excedidos com frequência. Como proceder?
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Caso o distribuidor tenha analisado todos os cenários possíveis e ainda assim continue tendo
+            bloqueios de envio o mesmo pode contatar o time
+            responsável para uma reunião de alinhamento para que todos os envolvidos possam entender o
+            cenário e ajudar com os próximos passos.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-col">
+      <div class="footer-logo"></div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Sobre nós</h4>
+      <ul>
+        <li>
+          <a href="https://www.infracommerce.com.br/solucoes-d2c/" target="_blank">
+            D2C </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/solucoes-b2b/" target="_blank">
+            B2B </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-data/" target="_blank">
+            infra.data </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-digital/" target="_blank">
+            infra.digital </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-log/" target="_blank">
+            infra.log </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-pay/" target="_blank">
+            infra.pay </a>
+        </li>
+        <li>
+          <a href="https://www.infracommerce.com.br/infra-shop/" target="_blank">
+            infra.shop </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Integrações</h4>
+      <ul>
+        <li>
+          <a href="processo-integracao.html" target="_blank">
+            processo de integração </a>
+        </li>
+        <li>
+          <a href="requisicoes.html" target="_blank">
+            limite de requisições </a>
+        </li>
+        <li>
+          <a href="estoque.html" target="_blank">
+            estoque </a>
+        </li>
+        <li>
+          <a href="politica-preco.html" target="_blank">
+            política de preço </a>
+        </li>
+        <li>
+          <a href="cliente.html" target="_blank">
+            cliente </a>
+        </li>
+        <li>
+          <a href="status-cliente.html" target="_blank">
+            status cliente </a>
+        </li>
+        <li>
+          <a href="limite-credito.html" target="_blank">
+            limite de crédito </a>
+        </li>
+        <li>
+          <a href="pedido.html" target="_blank">
+            pedido </a>
+        </li>
+        <li>
+          <a href="pagamento.html" target="_blank">
+            pagamento </a>
+        </li>
+        <li>
+          <a href="trackings.html" target="_blank">
+            tracking </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <div class="social-links">
+        <a href="https://www.instagram.com/infracommerce/" target="_blank">
+          <span id="instagram" class="ico"></span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+5511940163144&text=Quero+falar+com+um+especialista&app_absent=0"
+          target="_blank">
+          <span id="whatsapp" class="ico"></span>
+        </a>
+        <a href="https://www.linkedin.com/company/infracommerce/" target="_blank">
+          <span id="linkedin" class="ico"></span>
+        </a>
+        <a href="https://www.facebook.com/infracommerce/" target="_blank">
+          <span id="facebook" class="ico"></span>
+        </a>
+        <a href="https://www.youtube.com/channel/UCMTRfzdvbTB0HTQPvwpwhLg" target="_blank">
+          <span id="youtube" class="ico"></span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
 </body>
 
 </html>
