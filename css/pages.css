@@ -166,7 +166,6 @@
     border-left: 4px solid var(--primaryColor);
     transition: all 0.3s ease;
     position: relative;
-    cursor: pointer;
     border-radius: 4px;
     overflow: hidden;
 }
