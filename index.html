@@ -36,20 +36,20 @@
                         <a href="#section_2">Integrações</a>
                         <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
                         <ul class="htmlCss-sub-menu sub-menu">
-                            <li><a onclick="atualizarpag('pages/processo-integracao')">Processo de Integração</a></li>
-                            <li><a onclick="atualizarpag('pages/requisicoes')">Limite de Requisições</a></li>
+                            <li><a onclick="atualizarpag('pages/processo-integracao')">Processo de integração</a></li>
+                            <li><a onclick="atualizarpag('pages/requisicoes')">Limite de requisições</a></li>
                             <li><a onclick="atualizarpag('pages/estoque')">Estoque</a></li>
-                            <li><a onclick="atualizarpag('pages/politica-preco')">Política de Preço</a></li>
+                            <li><a onclick="atualizarpag('pages/politica-preco')">Política de preço</a></li>
                             <li><a onclick="atualizarpag('pages/cliente')">Cliente</a></li>
-                            <li><a onclick="atualizarpag('pages/status-cliente')">Status de Cliente</a></li>
-                            <li><a onclick="atualizarpag('pages/limite-credito')">Limite de Crédito</a></li>
+                            <li><a onclick="atualizarpag('pages/status-cliente')">Status de cliente</a></li>
+                            <li><a onclick="atualizarpag('pages/limite-credito')">Limite de crédito</a></li>
                             <li><a onclick="atualizarpag('pages/pedido')">Pedido</a></li>
                             <li><a onclick="atualizarpag('pages/pagamento')">Pagamento</a></li>
                             <li><a onclick="atualizarpag('pages/trackings')">Trackings</a></li>
                         </ul>
                     </li>
-                    <li><a href="#section_3">Dúvidas Frequentes</a></li>
-                    <li><a href="#section_4">Fale Conosco</a></li>
+                    <li><a href="#section_3">Dúvidas frequentes</a></li>
+                    <li><a href="#section_4">Fale conosco</a></li>
                 </ul>
             </div>
         </div>
@@ -155,7 +155,7 @@
     </section>
 
     <section class="container" id="section_3">
-        <div class="container-title">Dúvidas Frequentes</div>
+        <div class="container-title">Dúvidas frequentes</div>
 
         <div class="accordion">
             <div class="accordion-item">
@@ -214,7 +214,7 @@
     </section>
 
     <section class="container" id="section_4">
-        <div class="container-title">Fale Conosco</div>
+        <div class="container-title">Fale conosco</div>
 
         <div class="container-cards">
 
@@ -240,7 +240,7 @@
                 <div class="contact">
                     <div class="center-container">
                         <div class="center-inner-container">
-                            <div class="form-title">Manual de Integração</div>
+                            <div class="form-title">Manual de integração</div>
                             <div class="form-text">
                                 Ficou com dúvidas mais técnicas referente ao desenvolvimento dos endpoints, envio de
                                 requisições de forma
@@ -260,7 +260,7 @@
             <div class="form-container">
                 <div class="center-container">
                     <div class="center-inner-container">
-                        <form action="#">
+                        <form id="form-contato">
                             <div class="form-title">E-mail</div>
                             <div class="form-text">Preencha os campos abaixo com dúvidas que não foram encontradas
                                 em nossa FAQ até o momento.
@@ -268,14 +268,16 @@
                                 * Obrigatório
                             </div>
 
-                            <input type="text" placeholder="Nome *" required />
-                            <input type="email" placeholder="E-mail *" required />
-                            <input type="text" placeholder="Distribuidor *" required />
-                            <input type="text" placeholder="Loja Integrada *" required />
+                            <input name="Nome" type="text" placeholder="Nome *" required />
+                            <input name="Email" type="email" placeholder="E-mail *" required />
+                            <input name="Distribuidor" type="text" placeholder="Distribuidor *" required />
+                            <input name="Loja" type="text" placeholder="Loja Integrada *" required />
 
-                            <textarea rows="4" placeholder="Como podemos te ajudar? *" required></textarea>
+                            <textarea name="Observacao" rows="4" placeholder="Como podemos te ajudar? *" required></textarea>
 
-                            <button type="submit">Enviar dados</button>
+                            <button id="btn-enviar" type="submit">
+                                Enviar Dados
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -327,11 +329,11 @@
             <ul>
                 <li>
                     <a href="pages/processo-integracao.html" target="_blank">
-                        Processo de Integração </a>
+                        Processo de integração </a>
                 </li>
                 <li>
                     <a href="pages/requisicoes.html" target="_blank">
-                        Limite de Requisições </a>
+                        Limite de requisições </a>
                 </li>
                 <li>
                     <a href="pages/estoque.html" target="_blank">
@@ -339,7 +341,7 @@
                 </li>
                 <li>
                     <a href="pages/politica-preco.html" target="_blank">
-                        Política de Preço </a>
+                        Política de preço </a>
                 </li>
                 <li>
                     <a href="pages/cliente.html" target="_blank">
@@ -347,11 +349,11 @@
                 </li>
                 <li>
                     <a href="pages/status-cliente.html" target="_blank">
-                        Status de Cliente </a>
+                        Status de cliente </a>
                 </li>
                 <li>
                     <a href="pages/limite-credito.html" target="_blank">
-                        Limite de Crédito </a>
+                        Limite de crédito </a>
                 </li>
                 <li>
                     <a href="pages/pedido.html" target="_blank">
