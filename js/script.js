@@ -4,6 +4,17 @@ function atualizarpag(pagina) {
 }
 
 //funcoes do header
+$('.links a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+    targetOffset = $(id).offset().top;
+      
+    $('html, body').animate({ 
+      scrollTop: targetOffset - 120
+    }, 500);
+  });
+  
+
 let navbar = document.querySelector(".navbar");
 let navLinks = document.querySelector(".nav-links");
 let menuOpenBtn = document.querySelector(".navbar .bx-menu");
@@ -48,13 +59,15 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
     });
 });
 
+
+//funcoes formulario excel
 const button = document.querySelector('#btn-enviar');
 
-const addLoading = () =>{
+const addLoading = () => {
     button.innerHTML = '<div class="loading"></div>';
 }
 
-const removeLoading = () =>{
+const removeLoading = () => {
     button.innerHTML = 'Dados enviados!';
 
     document.querySelector('input[name=Nome]').value = '';
@@ -74,7 +87,7 @@ const handleSubmit = (event) => {
     const loja = document.querySelector('input[name=Loja]').value;
     const obs = document.querySelector('textarea[name=Observacao]').value;
 
-    fetch('https://api.sheetmonkey.io/form/928Za6QB7wbk1jFUZRZeQv',{
+    fetch('https://api.sheetmonkey.io/form/928Za6QB7wbk1jFUZRZeQv', {
         method: 'post',
         headers: {
             'Accept': 'application/json',
@@ -91,3 +104,4 @@ const handleSubmit = (event) => {
 }
 
 document.querySelector('#form-contato').addEventListener('submit', handleSubmit);
+
