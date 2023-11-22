@@ -33,7 +33,7 @@
         <ul class="links">
           <li><a href="../index.html">Início</a></li>
           <li>
-            <a href="#section_2">Integrações</a>
+            <a>Integrações</a>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
             <ul class="htmlCss-sub-menu sub-menu">
               <li><a onclick="atualizarpag('processo-integracao')">Processo de integração</a></li>
@@ -63,7 +63,7 @@
     </div>
   </section>
 
-  <section class="container" id="section_2">
+  <section class="container" id="CL001">
     <div class="block">
       <div class="block-image" id="cliente"></div>
       <div class="block-title">
@@ -92,7 +92,7 @@
 
     <div class="container-list">
       <ul class="list">
-        <li class="item">
+        <li class="item" id="CL002">
           <span class="list-title">Status dos novos cliente</span>
           <span class="list-text">
             Todo novo cliente cadastrado na plataforma é enviado para o distribuidor e seu o retorno de
@@ -103,7 +103,7 @@
           </span>
         </li>
 
-        <li class="item">
+        <li class="item" id="CL003">
           <span class="list-title">Status para clientes já integrados</span>
           <span class="list-text">
             Quando um cliente já existente na plataforma recebe uma atualização dos dados, é enviado uma
@@ -112,7 +112,7 @@
           </span>
         </li>
 
-        <li class="item">
+        <li class="item" id="CL004">
           <span class="list-title">Envio massivo de clientes</span>
           <span class="list-text">
             Durante a implantação será enviado para o distribuidor os clientes de forma massiva, atendidos
@@ -124,7 +124,7 @@
           </span>
         </li>
 
-        <li class="item">
+        <li class="item" id="CL005">
           <span class="list-title">Atualização de cadastro</span>
           <span class="list-text">
             Importante ressaltar que caso o distribuidor não deseja que informações cadastrais enviadas
@@ -142,7 +142,7 @@
 
     <div class="accordion">
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL006">
           Quais as informações do cliente são enviadas para os distribuidores?
         </div>
         <div class="accordion-item-body">
@@ -155,7 +155,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL007">
           Preciso de mais informações do cliente para concluir o cadastro dele dentro do ERP. Como proceder?
         </div>
         <div class="accordion-item-body">
@@ -167,7 +167,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL008">
           Quais os dados que o cliente pode atualizar na plataforma?
         </div>
         <div class="accordion-item-body">
@@ -179,7 +179,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL009">
           O endereço de um dos meus clientes está desatualizado na receita. Consequentemente acontece o mesmo
           na plataforma. Como proceder?
         </div>
@@ -192,7 +192,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL010">
           O endereço do meu cliente foi atualizado na receita, porém não houve atualização na plataforma. Como
           proceder?
         </div>
@@ -205,7 +205,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL011">
           Por que não consigo efetuar um pedido de boleto faturado sendo que o cliente possui limite de
           crédito ou status APV?
         </div>
@@ -223,7 +223,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL012">
           Porque o cliente está visualizando os preços errados ou de outra política de preço?
         </div>
         <div class="accordion-item-body">
@@ -237,7 +237,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL013">
           Porque clientes específicos não visualizam alguns produtos?
         </div>
         <div class="accordion-item-body">
@@ -249,7 +249,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL014">
           Após a virada de produção, como os clientes da Infracommerce são enviados para o distribuidor?
         </div>
         <div class="accordion-item-body">
@@ -264,7 +264,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL015">
           Os clientes que já tenho na minha base precisam possuir cadastro na plataforma Infracommerce para
           efetuar pedidos?
         </div>
@@ -284,7 +284,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="CL016">
           Os clientes atualmente logo que se cadastram tem o status PEN mas gostaria de possibilitar a compra
           para os mesmos após análise interna. Como proceder?
         </div>
@@ -294,30 +294,6 @@
             chamado para o time de NRP.
             Neste caso, a partir da desabilitação, os clientes só poderão efetuar compras após o envio de
             status de cliente aprovado.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <div class="accordion-item-header">
-          Como impossibilitar um cliente de efetuar compras no site?
-        </div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            Para isso, é necessário enviar status RPV(Reprovado) ao cliente. Dessa forma ele não conseguirá
-            efetuar compras com nenhum método de pagamento.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <div class="accordion-item-header">
-          E como fazer com que esse(s) clientes voltem a comprar?
-        </div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            Para que seja possível efetuar compras novamente, os clientes devem receber status
-            APV(Aprovado). Com isso, os produtos ficarão disponíveis novamente.
           </div>
         </div>
       </div>
