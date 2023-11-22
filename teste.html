@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Search Functionality</title>
+</head>
+<body>
+    <input type="text" id="search-input" placeholder="Search..." oninput="advancedSearch()" />
+    <h2>Items</h2>
+    <div id="items-container"></div>
+
+    <script>
+        // Mock items data
+        const items = [
+            { name: "Macbook Pro", category: "Electronics", price: 1200, link: "https://www.apple.com/macbook-pro/" },
+            { name: "IPhone 12", category: "Electronics", price: 600, link: "https://www.apple.com/iphone-12/" },
+            { name: "Washing Machine", category: "Home Appliances", price: 500, link: "https://www.washingmachine.com/" },
+            // Add more items as needed
+        ];
+
+        function advancedSearch() {
+            const searchText = document.getElementById("search-input").value.toLowerCase();
+
+            // You can add more filter criteria here as needed
+            const filteredItems = items.filter(item =>
+                item.name.toLowerCase().includes(searchText) ||
+                item.category.toLowerCase().includes(searchText)
+            );
+
+            displayItems(filteredItems);
+        }
+
+        function displayItems(filteredItems) {
+            const itemsContainer = document.getElementById("items-container");
+            itemsContainer.innerHTML = "";
+
+            filteredItems.forEach(item => {
+                const itemElement = document.createElement("div");
+                const linkElement = document.createElement("a");
+                linkElement.href = item.link;
+                linkElement.textContent = `${item.name}, ${item.category}, $${item.price}`;
+                itemElement.appendChild(linkElement);
+                itemsContainer.appendChild(itemElement);
+            });
+        }
+
+        // Display all items initially
+        displayItems(items);
+    </script>
+</body>
+</html>

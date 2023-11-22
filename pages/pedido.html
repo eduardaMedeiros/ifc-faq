@@ -33,7 +33,7 @@
         <ul class="links">
           <li><a href="../index.html">Início</a></li>
           <li>
-            <a href="#section_2">Integrações</a>
+            <a>Integrações</a>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
             <ul class="htmlCss-sub-menu sub-menu">
               <li><a onclick="atualizarpag('processo-integracao')">Processo de integração</a></li>
@@ -63,7 +63,7 @@
     </div>
   </section>
 
-  <section class="container" id="section_2">
+  <section class="container" id="PE001">
     <div class="block">
       <div class="block-image" id="pedido"></div>
       <div class="block-title">
@@ -90,7 +90,7 @@
       </strong>
     </div>
 
-    <div class="block-subtitle">Pedidos com promoções</div>
+    <div class="block-subtitle" id="PE002">Pedidos com promoções</div>
     <div class="block-text">
       Promoções referem-se a estratégias de marketing usadas por empresas para oferecer descontos ou
       incentivos temporários aos consumidores, a fim de aumentar as vendas, atrair novos clientes ou
@@ -107,7 +107,7 @@
       a sua regra de négocio.
     </div>
 
-    <div class="block-subtitle">Pedidos com bonificações (Kit Bonificado)</div>
+    <div class="block-subtitle" id="PE003">Pedidos com bonificações (Kit Bonificado)</div>
     <div class="block-text">
       O termo "Kit Bonificado" no contexto do e-commerce refere-se a um tipo específico de oferta ou
       promoção em que um conjunto de produtos ou serviços relacionados é vendido como um pacote, muitas
@@ -139,7 +139,7 @@
 
     <div class="container-list">
       <ul class="list">
-        <li class="item">
+        <li class="item" id="PE004">
           <span class="list-title">Integração de pedido</span>
           <span class="list-text">
             Devido ao fato da plataforma Infrashop trabalhar com filas distintas de integração,
@@ -148,7 +148,7 @@
           </span>
         </li>
 
-        <li class="item">
+        <li class="item" id="PE005">
           <span class="list-title">Reprocessamento do pedido</span>
           <span class="list-text">
             Caso haja alguma falha no envio do pedido (Por conta de erro no web service do
@@ -158,7 +158,7 @@
           </span>
         </li>
 
-        <li class="item">
+        <li class="item" id="PE006">
           <span class="list-title">Retorno da requisição de pedido</span>
           <span class="list-text">
             É necessário que o Distribuidor receba a requisição e retorne uma resposta imediatamente para
@@ -167,7 +167,7 @@
           </span>
         </li>
 
-        <li class="item">
+        <li class="item" id="PE007">
           <span class="list-title">Processamento do pedido</span>
           <span class="list-text">
             Caso o distribuidor tenha regras de validação de estoque ou outros pontos, não deve rejeitar
@@ -187,7 +187,7 @@
 
     <div class="accordion">
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE008">
           Quais são as informações enviadas dentro da requisição de pedido?
         </div>
         <div class="accordion-item-body">
@@ -206,7 +206,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE009">
           É possível que um pedido seja enviado primeiro antes que o cadastro do cliente integre no ERP do
           distribuidor?
         </div>
@@ -226,7 +226,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE010">
           Como identificar uma promoção (desconto) aplicado em um produto na requisição de pedido?
         </div>
         <div class="accordion-item-body">
@@ -245,7 +245,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE011">
           Como identificar a condição de pagamento escolhida para aquele pedido?
         </div>
         <div class="accordion-item-body">
@@ -260,7 +260,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE012">
           Como funciona o Kit Bonificado?
         </div>
         <div class="accordion-item-body">
@@ -274,7 +274,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE013">
           Como identifico a bonificação de itens dentro da uma requisição de pedido?
         </div>
         <div class="accordion-item-body">
@@ -287,7 +287,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE014">
           É possível personalizar ou criar Kits Bonificados de acordo com as preferências dos clientes?
         </div>
         <div class="accordion-item-body">
@@ -302,7 +302,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE015">
           Quais são as trackings obrigatórias de envio que fecham o ciclo de um pedido?
         </div>
         <div class="accordion-item-body">
@@ -316,7 +316,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE016">
           Como são tratados os casos de falhas ou erros na integração dos pedidos entre a plataforma e o ERP
           do distribuidor?
         </div>
@@ -331,7 +331,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE017">
           O pedido foi faturado, porém não foi entregue ou o cliente devolveu. Como proceder?
         </div>
         <div class="accordion-item-body">
@@ -344,7 +344,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header" id="PE018">
           Quais são as informações de rastreamento e acompanhamento dos pedidos que são transmitidas na
           integração?
         </div>
