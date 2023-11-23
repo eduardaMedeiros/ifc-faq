@@ -17,6 +17,16 @@
   <link rel="stylesheet" href="../css/pages.css">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6X96J19W1M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-6X96J19W1M');
+</script>
+
 <body>
   <header>
     <div class="header-top"></div>
@@ -70,7 +80,8 @@
 
     <div class="banner-search">
       <div class="search-header">
-        <input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Digite a sua dúvida" onkeyup="advancedSearch()"/>
+        <input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Digite a sua dúvida"
+          onkeyup="advancedSearch()" />
         <div class="search-button"></div>
       </div>
       <ul class="search-result"></ul>
