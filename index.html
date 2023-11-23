@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/content.css">
 </head>
 
-<body>
+<body id="index">
     <header>
         <div class="header-top"></div>
 
@@ -69,13 +69,15 @@
         </div>
 
         <div class="banner-search">
-            <input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Digite a sua dúvida" />
+            <div class="search-header">
+                <input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Digite a sua dúvida" onkeyup="advancedSearch()"/>
+                <div class="search-button"></div>
+            </div>
+            <ul class="search-result"></ul>
         </div>
     </section>
 
     <section class="container" id="section_2">
-        <div class="container-title">Tópicos abordados</div>
-
         <div class="container-cards">
             <div class="card" onclick="atualizarpag('pages/processo-integracao')">
                 <div class="card-image" id="processo"></div>
@@ -175,7 +177,8 @@
                                 Acesse nosso manual de integração onde é explicado todos esses pontos e seus requisitos
                                 de integração!
                                 <br><br>
-                                <a class="form-link" href="https://developers.infracommerce.com.br/docs/middleware/pry5qdf6ha7zy-1-manual-de-integracoes-b2-b#1-introdu%C3%A7%C3%A3o"
+                                <a class="form-link"
+                                    href="https://developers.infracommerce.com.br/docs/middleware/pry5qdf6ha7zy-1-manual-de-integracoes-b2-b#1-introdu%C3%A7%C3%A3o"
                                     target="_blank">Acesse aqui... </a>
                             </div>
                         </div>
@@ -188,7 +191,8 @@
                     <div class="center-inner-container" id="IN003">
                         <form id="form-contato">
                             <div class="form-title">Deixe aqui sua sugestão :)</div>
-                            <div class="form-text">Preencha os campos abaixo com <strong>dúvidas</strong> que não foram encontradas
+                            <div class="form-text">Preencha os campos abaixo com <strong>dúvidas</strong> que não foram
+                                encontradas
                                 em nossa FAQ até o momento e <strong>novas melhorias</strong>!
                                 <br><br>
                                 * Obrigatório

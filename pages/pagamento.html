@@ -33,7 +33,7 @@
         <ul class="links">
           <li><a href="../index.html">Início</a></li>
           <li>
-            <a>Integrações</a>
+            <a>Tópicos abordados</a>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
             <ul class="htmlCss-sub-menu sub-menu">
               <li><a onclick="atualizarpag('processo-integracao')">Processo de integração</a></li>
@@ -49,17 +49,31 @@
             </ul>
           </li>
           <li><a href="#section_4">Dúvidas frequentes</a></li>
-          <li><a href="../index.html#section_4">Fale conosco</a></li>
         </ul>
       </div>
     </div>
   </header>
 
   <section class="banner" id="section_1">
-    <div class="banner-title">Como podemos te ajudar?</div>
+    <div class="banner-title">
+      FAQ: Perguntas frequentes e respostas rápidas!
+      <br>
+      Como podemos te ajudar?
+    </div>
+
+    <div class="banner-text">
+      Estamos aqui para fornecer respostas rápidas
+      e úteis para as dúvidas mais comuns que nossos clientes e visitantes possam ter. Se você está
+      procurando informações sobre nossos produtos, políticas ou como usar nossos serviços, você está no
+      lugar certo!
+    </div>
 
     <div class="banner-search">
-      <input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Digite a sua dúvida" />
+      <div class="search-header">
+        <input type="text" class="search-input" name="duvida" alt="char=500" placeholder="Digite a sua dúvida" onkeyup="advancedSearch()"/>
+        <div class="search-button"></div>
+      </div>
+      <ul class="search-result"></ul>
     </div>
   </section>
 
@@ -268,7 +282,7 @@
         </div>
       </div>
 
-      <div class="accordion-item" >
+      <div class="accordion-item">
         <div class="accordion-item-header" id="PA014">
           Quais são as opções de parcelamento disponíveis na plataforma para pedidos com condição de pagamento
           Cartão de Crédito?

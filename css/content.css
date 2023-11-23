@@ -231,15 +231,6 @@ button:hover {
 }
 
 @media (max-width:1400px) {
-    .search-input {
-        width: 60%;
-    }
-
-    .banner-container {
-        margin: 3rem 0 0 0;
-        padding: 0 100px;
-    }
-
     .container {
         padding: 0 100px;
         margin: 4rem 0;
@@ -270,15 +261,6 @@ button:hover {
 }
 
 @media (max-width:1200px) {
-    .search-input {
-        width: 70%;
-    }
-
-    .banner-container {
-        margin: 3rem 0 0 0;
-        padding: 0 90px;
-    }
-
     .container {
         padding: 0 90px;
         margin: 4rem 0 0 0;
@@ -313,17 +295,6 @@ button:hover {
 }
 
 @media (max-width:768px) {
-    .search-input {
-        width: 80%;
-    }
-
-    .banner-container {
-        flex-direction: column;
-        align-items: center;
-        margin: 3rem 0 0 0;
-        padding: 0 70px;
-    }
-
     .container {
         padding: 0 70px;
         margin: 4rem 0 0 0;
@@ -366,44 +337,4 @@ button:hover {
     .center-container {
         padding: 2rem 3rem;
     }
-}
-
-#processo {
-    background-image: url(../img/integracao.png);
-}
-
-#requisicao {
-    background-image: url(../img/limite.png);
-}
-
-#estoque {
-    background-image: url(../img/estoque.png);
-}
-
-#preco {
-    background-image: url(../img/preco.png);
-}
-
-#cliente {
-    background-image: url(../img/cliente.png);
-}
-
-#status {
-    background-image: url(../img/status.png);
-}
-
-#credito {
-    background-image: url(../img/credito.png);
-}
-
-#pedido {
-    background-image: url(../img/pedido.png);
-}
-
-#pagamento {
-    background-image: url(../img/pagamento.png);
-}
-
-#trackings {
-    background-image: url(../img/tracking.png);
 }
