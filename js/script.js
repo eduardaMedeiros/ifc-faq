@@ -314,7 +314,14 @@ function pageResult(pagina, id) {
     if (document.getElementById("index") == null) {
         window.location = pagina;
     } else {
-        window.location = "pages/" + pagina;
+
+        if(id == "IN001" || id == "IN002" ){
+            window.open(pagina, '_blank');
+        }else if(id == "IN003" ){
+            window.location = pagina;
+        }else{
+            window.location = "pages/" + pagina;
+        }
     }
 }
 
