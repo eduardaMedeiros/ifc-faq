@@ -291,7 +291,7 @@ const handleSubmit = (event) => {
     const loja = document.querySelector('input[name=Loja]').value;
     const obs = document.querySelector('textarea[name=Observacao]').value;
 
-    fetch('https://api.sheetmonkey.io/form/928Za6QB7wbk1jFUZRZeQv', {
+    fetch('https://api.sheetmonkey.io/form/3ti9VCAQUe6y7BaDbiwor3', {
         method: 'post',
         headers: {
             'Accept': 'application/json',
